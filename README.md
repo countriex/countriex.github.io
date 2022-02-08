@@ -1,3 +1,3 @@
-# MagicCrypto.github.io
+# MagicCrypto
 
 Homepage: https://magiccrypto.github.io/

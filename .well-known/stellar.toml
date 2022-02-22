@@ -1,0 +1,32 @@
+# MagicCrypto <MagicCrypto.github.io>
+VERSION="2.2.0"
+NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
+
+[DOCUMENTATION]
+ORG_NAME="MagicCrypto"
+ORG_URL="https://magiccrypto.github.io/"
+ORG_LOGO = "https://magiccrypto.github.io/favicon.ico"
+ORG_OFFICIAL_EMAIL="0xMagicCrypto@gmail.com"
+ORG_SUPPORT_EMAIL="0xMagicCrypto@gmail.com"
+ORG_TWITTER="0xMagicCrypto"
+ORG_DESCRIPTION="MagicCrypto: Create Value to both Crypto Space and Real World!"
+
+[[CURRENCIES]]
+code = "TEST1"
+name = "TEST1"
+issuer = "GDJKBIYIPBE2NC5XIZX6GCFZHVWFUA7ONMQUOOVTLIM3BESTI4BYADAN"
+is_asset_anchored = false
+display_decimals = 7
+desc="TEST1...TODO...."
+image="https://magiccrypto.github.io/icons/MVOTEicon.png"
+conditions="90% rewarded to TEST1 voters via a deflationary distribution so that it would not stop: the initial day is 24,000 tokens, and next day is 0.999*LastDay."
+
+[[CURRENCIES]]
+code = "TEST2"
+name = "TEST2"
+issuer = "GDJKBIYIPBE2NC5XIZX6GCFZHVWFUA7ONMQUOOVTLIM3BESTI4BYADAN"
+is_asset_anchored = false
+display_decimals = 7
+desc="TEST2...TODO...."
+image="https://magiccrypto.github.io/icons/MTESTicon.png"
+conditions="90% rewarded to TEST2 voters via a deflationary distribution so that it would not stop: the initial day is 24,000 tokens, and next day is 0.999*LastDay."

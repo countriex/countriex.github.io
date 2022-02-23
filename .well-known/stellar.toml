@@ -19,7 +19,7 @@ is_asset_anchored = false
 display_decimals = 7
 desc="MagicVote (MVOTE) is a Sustainable and Open Voting Protocol for Voting-based Farm Platforms. It introduces an interesting mechanism of calculating hourly MVOTE reward by incentivizing not only voting but also LP and burning. Please checkout the MVOTE whitepaper for details. The total supply of MVOTE is 26,666,660 only, which is also deflationary due to multiple utility of MVOTE."
 image="https://magiccrypto.github.io/icons/MVOTEicon.png"
-conditions="90% rewarded to our voters via a deflationary distribution so that reward would 'never' stop: the initial day is 24,000 tokens, and next day is 0.999*LastDay."
+conditions="90% rewarded to voters via a deflationary distribution so that reward would \"never\" end: initial day is 24,000, and next day is 0.999*LastDay."
 
 [[CURRENCIES]]
 code = "TESTVOTE"
@@ -29,4 +29,4 @@ is_asset_anchored = false
 display_decimals = 7
 desc="TESTVOTE is a test token of MVOTE. It can also prevent the copies of MVOTE tokens. It safeguards the value of MVOTE."
 image="https://magiccrypto.github.io/icons/MTESTicon.png"
-conditions="90% rewarded to our voters via a deflationary distribution so that reward would 'never' stop: the initial day is 24,000 tokens, and next day is 0.999*LastDay."
+conditions="90% rewarded to voters via a deflationary distribution so that reward would \"never\" end: initial day is 24,000, and next day is 0.999*LastDay."

@@ -99,6 +99,7 @@ function close_public() {
 }
 
 function popup_burn(pair) {
+    document.getElementById('signupModal_burn').classList.add(pair);
     let imageNames = pair.split('_');
     // console.log(imageNames.length, imageNames);
     for(let i = 0; i < imageNames.length; i++)
@@ -159,10 +160,16 @@ function close_burn() {
     blur.classList.toggle('active');
     var popup_bn = document.getElementById('signupModal_burn');
     popup_bn.classList.toggle('active');
+    document.getElementsByClassName('pair_input_value')[0].value = "0";
+    document.getElementsByClassName('balance-num')[0].innerHTML = "0";
 }
 
 function reset_burn_num() {
-    document.getElementsByClassName('pair_input_value')[0].value = "";
+    document.getElementsByClassName('pair_input_value')[0].value = "0";
+}
+
+function change_burn_num(value) {
+    document.getElementsByClassName('balance-num')[0].innerHTML = value;
 }
 
 function toggle_login_arrow() {
@@ -452,7 +459,10 @@ function generateTxXDR(burnAccount, burnAsset, burnAmount, server=STELLAR_SERVER
     return txXDR;
 }
 
-async function submitTx(txXDR) {
+async function submitTx() {
+    let txAmount = document.getElementsByClassName('pair_input_value')[0].value;
+    let pair = document.getElementById('signupModal_burn').classList.item(1);
+    console.log(pair);
     if (CURRENT_LOGIN_METHOD === 1) {
         try {
             var signedTx = await window.freighterApi.signTransaction(txXDR, NETWORK_TEXT);
@@ -476,7 +486,15 @@ async function submitTx(txXDR) {
         }
     } else if (CURRENT_LOGIN_METHOD === 2) {
         //TODO: Copy tx XDR and redirect to https://laboratory.stellar.org/#txsigner?network=public
+        if(txAmount == 0){
+            alert('Please input value of burn');
+        } else {
+            document.getElementsByClassName('burn-submit-btn')[0].setAttribute("target","_blank");
+            document.getElementsByClassName('burn-submit-btn')[0].href = "https://laboratory.stellar.org/#txsigner?network=public";
+        }
         return 0;
+    } else {
+        alert('Please login');
     }
 }
 

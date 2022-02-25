@@ -423,11 +423,11 @@ body {
 .main .main_container .main_XLM_MVOTE,
 .main .main_container .main_MVOTE_USDC,
 .main .main_container .main_MVOTE_yXLM,
-.main .main_container .main_MVOTE_AQUA,
-.main .main_container .main_MVOTE_LSP,
+.main .main_container .main_AQUA_MVOTE,
+.main .main_container .main_LSP_MVOTE,
 .main .main_container .main_MVOTE_PYBC,
-.main .main_container .main_MVOTE_BTC,
-.main .main_container .main_MVOTE_ETH {
+.main .main_container .main_BTC_MVOTE,
+.main .main_container .main_ETH_MVOTE {
     display: flex;
     text-align: left;
     width: 100%;
@@ -452,9 +452,6 @@ body {
 }
 
 .pair_content .pair_image .xlm_img {
-    border-radius: 50%;
-    border: 2px solid rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
     z-index: 1;
     position: relative;
     width: 30px;
@@ -464,7 +461,6 @@ body {
 }
 
 .pair_content .pair_image .mvote_img {
-    border-radius: 50%;
     z-index: 0;
     box-sizing: content-box;
     position: relative;
@@ -474,6 +470,12 @@ body {
     display: flex;
     align-items: center;
 }
+
+img[alt*="logo"] {
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+ }
 
 .main .main_content .pair .pair_content .pair_descr {
     display: flex;
@@ -492,7 +494,7 @@ body {
 
 .pair_content .pair_descr .pair_descr_curr .curr_content {
     display: inline-flex;
-    width: 135px;
+    width: 120px;
 }
 
 .pair_content .pair_descr .pair_descr_curr .curr_tag {

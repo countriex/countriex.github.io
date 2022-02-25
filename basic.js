@@ -13,12 +13,24 @@ if (IS_DEBUG) {
     NETWORK_TEXT = "PUBLIC";
 }
 STELLAR_SERVER = new StellarSdk.Server(SEVER_URL);
+
+XLM_ASSET = new StellarSdk.Asset.native();
+MVOTE_ASSET = new StellarSdk.Asset("PYBC", "GBVB43NLVIP2USHXSKI7QQCZKZU2Z6U6A5PAHMIW7LLNVMQJTOX2BZI5");
+AQUA_ASSET = new StellarSdk.Asset("AQUA", "GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA");
+PYBC_ASSET = new StellarSdk.Asset("PYBC", "GBVB43NLVIP2USHXSKI7QQCZKZU2Z6U6A5PAHMIW7LLNVMQJTOX2BZI5");
+
+XLM_PYBC_POOL = new StellarSdk.LiquidityPoolAsset(XLM_ASSET, PYBC_ASSET, 30);
+XLM_PYBC_VOTE = StellarSdk.Keypair.fromPublicKey("GDLJR23GLUMUTYOH2M6CMLBCLM4F7COSRCM6ZR2C43FMSC5MYW2WH44J");
+XLM_MVOTE_BURN = StellarSdk.Keypair.fromPublicKey("GCK5NJEQF4AW7IZ3EOSEP5A5KNGVARB7NWSO2OU2OO7UXC73WYKT4Y3D");
+
 CURRENT_LOGIN_METHOD = 0;
 CURRENT_USER_ACCOUNT = "";
+
 PAIR_NUMBER = 8;
 
 var mvoteIntervalId;
 var clockIntervalId;
+
 
 function clock() {
     let timeStamp = Number(1000*10*60);
@@ -185,11 +197,12 @@ function toggle_logout() {
 function logout() {
     document.getElementsByClassName('login_button')[0].innerHTML = 'Connect Wallet';
     CURRENT_LOGIN_METHOD = 0;
-    for (let i = 0; i < 8; i++) {
-        document.getElementsByClassName('lock_num')[i].innerHTML = 0;
-        document.getElementsByClassName('lp_num')[i].innerHTML = 0;
-        document.getElementsByClassName('mvote_num')[i].innerHTML = 0;
-        document.getElementsByClassName('your_num')[i].innerHTML = 0;
+    for (let i = 0; i < PAIR_NUMBER; i++) {
+        document.getElementsByClassName('lock_num')[i].innerHTML = "NA";
+        document.getElementsByClassName('lp_num')[i].innerHTML = "NA";
+        document.getElementsByClassName('mvote_num')[i].innerHTML = "NA";
+        document.getElementsByClassName('your_num')[i].innerHTML = "NA";
+        document.getElementsByClassName('burn_num_1')[i].innerHTML = 0;
       }
     toggle_login_arrow();
     toggle_logout();
@@ -201,7 +214,7 @@ function check_login() {
         console.log(`login success`);
         document.getElementsByClassName('menu-login-btn')[0].style.pointerEvents = 'none';
         clockIntervalId = clock(); // first start
-        mvoteIntervalId = setInterval(clock, 1000*10*60);
+        mvoteIntervalId = setInterval(()=> {clockIntervalId = clock()}, 1000*10*60);
     }
     else {
         console.log(`login fail`);
@@ -270,7 +283,7 @@ async function freight_login() {
     check_login();
 }
 
-async function getAquaVote(voteAsset, voteKeypair, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+async function getAquaVote(voteKeypair, voteAsset=AQUA_ASSET, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
     }
@@ -348,7 +361,7 @@ async function getLPShare(LPAsset, server=STELLAR_SERVER, userAccount=CURRENT_US
 
     totalAmount = parseFloat(response['total_shares']);
 
-    var userBalances = userAccount['balances']
+    var userBalances = userAccount['balances'];
     for (var bIndex in userBalances) {
         if (userBalances[bIndex]['asset_type'] === "liquidity_pool_shares") {
             if (userBalances[bIndex]['liquidity_pool_id'] === poolId) {
@@ -363,7 +376,7 @@ async function getLPShare(LPAsset, server=STELLAR_SERVER, userAccount=CURRENT_US
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 
-async function getMVoteBurn(burnAccount, burnAsset, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+async function getMVoteBurn(burnAccount, burnAsset=MVOTE_ASSET, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
     }
@@ -423,18 +436,28 @@ async function getMVoteBurn(burnAccount, burnAsset, server=STELLAR_SERVER, userA
         }
     }
     console.log(`${records.length} burns in total, ${userAmount}/${totalAmount}`);
-    for(let i = 0; i < PAIR_NUMBER; i++){
+    for (let i = 0; i < PAIR_NUMBER; i++) {
         let tmpMvoteNum = (userAmount * 100/ totalAmount).toFixed(4);
-        if(isNaN(tmpMvoteNum))
+        if (isNaN(tmpMvoteNum)) {
             tmpMvoteNum = (0).toString();
-        else
-            tmpMvoteNum = (tmpMvoteNum).toString()
+        } else {
+            tmpMvoteNum = (tmpMvoteNum).toString();
+        }
         document.getElementsByClassName('mvote_num')[i].innerHTML = tmpMvoteNum + '%';
     }
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 
-function generateTxXDR(burnAccount, burnAsset, burnAmount, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+function calReward(voteAmount, lpAmount, burnAmount) {
+    let averageReward, finalReward;
+    averageReward = (voteAmount*0.01*2 + lpAmount*0.01*1 + burnAmount*0.01*1) / 4;
+    finalReward = Math.min(voteAmount*0.01, averageReward);
+    for (let i = 0; i < PAIR_NUMBER; i++) {
+        document.getElementsByClassName('your_num')[i].innerHTML = (finalReward*100).toFixed(4) + '%';
+    }
+}
+
+function generateTxXDR(burnAccount, burnAmount, burnAsset=MVOTE_ASSET, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
     }
@@ -460,9 +483,20 @@ function generateTxXDR(burnAccount, burnAsset, burnAmount, server=STELLAR_SERVER
 }
 
 async function submitTx() {
-    let txAmount = document.getElementsByClassName('pair_input_value')[0].value;
-    let pair = document.getElementById('signupModal_burn').classList.item(1);
-    console.log(pair);
+    // TODO: change pair into account
+    // let pair = document.getElementById('signupModal_burn').classList.item(1);
+    // console.log(pair);
+
+    let burnAccount = XLM_MVOTE_BURN;
+    let burnAmount = parseFloat(document.getElementsByClassName('pair_input_value')[0].value);
+
+    if (burnAmount <= 0) {
+        alert('Please input value of burn');
+        return 0;
+    }
+
+    let txXDR = generateTxXDR(burnAccount, burnAmount);
+
     if (CURRENT_LOGIN_METHOD === 1) {
         try {
             var signedTx = await window.freighterApi.signTransaction(txXDR, NETWORK_TEXT);
@@ -485,29 +519,55 @@ async function submitTx() {
             return 0;
         }
     } else if (CURRENT_LOGIN_METHOD === 2) {
-        //TODO: Copy tx XDR and redirect to https://laboratory.stellar.org/#txsigner?network=public
-        if(txAmount == 0){
-            alert('Please input value of burn');
-        } else {
-            document.getElementsByClassName('burn-submit-btn')[0].setAttribute("target","_blank");
-            document.getElementsByClassName('burn-submit-btn')[0].href = "https://laboratory.stellar.org/#txsigner?network=public";
-        }
-        return 0;
+        alert(`Please copy the transaction XDR bellow and paste into Stellar Laboratory: ${txXDR}`);
+        document.getElementsByClassName('burn-submit-btn')[0].setAttribute("target","_blank");
+        document.getElementsByClassName('burn-submit-btn')[0].href = "https://laboratory.stellar.org/#txsigner?network=public";
     } else {
         alert('Please login');
+        return 0;
     }
 }
 
+function checkTrustline(targetAsset=MVOTE_ASSET, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+    if (userAccount === "") {
+        return 0;
+    }
+
+    var assetBalance = -1;
+
+    var userBalances = userAccount['balances'];
+    for (var bIndex in userBalances) {
+        if (userBalances[bIndex]['asset_type'] !== "liquidity_pool_shares" &&
+            userBalances[bIndex]['asset_type'] !== "native" &&
+            userBalances[bIndex]['asset_code'] === targetAsset.getCode() &&
+            userBalances[bIndex]['asset_issuer'] === targetAsset.getIssuer()) {
+                assetBalance = parseFloat(userBalances[bIndex]['balance']);
+                break;
+        }
+    }
+
+    if (assetBalance >= 0) {
+        console.log(`You have ${targetAsset.getCode()} trustline with ${assetBalance} balance.`);
+    } else {
+        console.log(`You don't have ${targetAsset.getCode()} trustline.`);
+    }
+
+    return assetBalance;
+}
+
 async function test() {
-    var XLM = new StellarSdk.Asset.native();
-    var AQUA = new StellarSdk.Asset("AQUA", "GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA");
-    var PYBC = new StellarSdk.Asset("PYBC", "GBVB43NLVIP2USHXSKI7QQCZKZU2Z6U6A5PAHMIW7LLNVMQJTOX2BZI5");
-
-    var XLM_PYBC_VOTE = StellarSdk.Keypair.fromPublicKey("GDLJR23GLUMUTYOH2M6CMLBCLM4F7COSRCM6ZR2C43FMSC5MYW2WH44J");
-    var XLM_PYBC_POOL = new StellarSdk.LiquidityPoolAsset(XLM, PYBC, 30);
-    var XLM_MVOTE_BURN = StellarSdk.Keypair.fromPublicKey("GCK5NJEQF4AW7IZ3EOSEP5A5KNGVARB7NWSO2OU2OO7UXC73WYKT4Y3D");
-
-    await getAquaVote(AQUA, XLM_PYBC_VOTE);
-    await getLPShare(XLM_PYBC_POOL);
-    await getMVoteBurn(XLM_MVOTE_BURN, AQUA);
+    let voteAmount, lpAmount, burnAmount
+    voteAmount = await getAquaVote(XLM_PYBC_VOTE).then((AquaVote)=>{ return AquaVote['userAmount']/ AquaVote['totalAmount']});
+    lpAmount = await getLPShare(XLM_PYBC_POOL).then((LPShare)=>{ return LPShare['userAmount']/ LPShare['totalAmount']});
+    burnAmount = await getMVoteBurn(XLM_MVOTE_BURN).then((MVoteBurn)=>{
+        for (let i = 0; i < PAIR_NUMBER; i++) {
+            document.getElementsByClassName('burn_num_1')[i].innerHTML = MVoteBurn['userAmount'].toFixed(0);
+            document.getElementsByClassName('burn_num_2')[i].innerHTML = MVoteBurn['totalAmount'].toFixed(0);
+        }
+        return MVoteBurn['userAmount']/ MVoteBurn['totalAmount']});
+    console.log(voteAmount, lpAmount, burnAmount);
+    if (isNaN(burnAmount)) {
+        burnAmount = 0;
+    }
+    calReward(voteAmount, lpAmount, burnAmount);
 }

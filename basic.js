@@ -14,14 +14,37 @@ if (IS_DEBUG) {
 }
 STELLAR_SERVER = new StellarSdk.Server(SEVER_URL);
 
-XLM_ASSET = new StellarSdk.Asset.native();
-MVOTE_ASSET = new StellarSdk.Asset("PYBC", "GBVB43NLVIP2USHXSKI7QQCZKZU2Z6U6A5PAHMIW7LLNVMQJTOX2BZI5");
-AQUA_ASSET = new StellarSdk.Asset("AQUA", "GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA");
-PYBC_ASSET = new StellarSdk.Asset("PYBC", "GBVB43NLVIP2USHXSKI7QQCZKZU2Z6U6A5PAHMIW7LLNVMQJTOX2BZI5");
+MVT = new StellarSdk.Asset("MVT", "GDPTX2Z3HTJKCHTT5JHCL7M5MD7P2HVV7QUDCTBIHW2BYLO3XR4VSRSA");
+TESTVOTE = new StellarSdk.Asset("TESTVOTE", "GDPTX2Z3HTJKCHTT5JHCL7M5MD7P2HVV7QUDCTBIHW2BYLO3XR4VSRSA");
 
-XLM_PYBC_POOL = new StellarSdk.LiquidityPoolAsset(XLM_ASSET, PYBC_ASSET, 30);
-XLM_PYBC_VOTE = StellarSdk.Keypair.fromPublicKey("GDLJR23GLUMUTYOH2M6CMLBCLM4F7COSRCM6ZR2C43FMSC5MYW2WH44J");
-XLM_MVOTE_BURN = StellarSdk.Keypair.fromPublicKey("GCK5NJEQF4AW7IZ3EOSEP5A5KNGVARB7NWSO2OU2OO7UXC73WYKT4Y3D");
+XLM = new StellarSdk.Asset.native()
+yXLM = new StellarSdk.Asset("yXLM", "GARDNV3Q7YGT4AKSDF25LT32YSCCW4EV22Y2TV3I2PU2MMXJTEDL5T55");
+USDC = new StellarSdk.Asset("USDC", "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN");
+LSP = new StellarSdk.Asset("AQUA", "GAB7STHVD5BDH3EEYXPI3OM7PCS4V443PYB5FNT6CFGJVPDLMKDM24WK");
+AQUA = new StellarSdk.Asset("AQUA", "GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA");
+BTC = new StellarSdk.Asset("BTC", "GDPJALI4AZKUU2W426U5WKMAT6CN3AJRPIIRYR2YM54TL2GDWO5O2MZM");
+ETH = new StellarSdk.Asset("ETH", "GBFXOHVAS43OIWNIO7XLRJAHT3BICFEIKOJLZVXNT572MISM4CMGSOCC");
+PYBC = new StellarSdk.Asset("PYBC", "GBVB43NLVIP2USHXSKI7QQCZKZU2Z6U6A5PAHMIW7LLNVMQJTOX2BZI5");
+
+XLM_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GDE5UPEZB63KPP7VVJW3MSVMFT4Z6ATAMDZISWOPRD36D2FOOSSGEHJR");
+MVT_yXLM_VOTE = StellarSdk.Keypair.fromPublicKey("GBK2LJBQUZOGRM3SVGHRRY5P7QFSN635HNQZJQSHNJIRS4GQYXJ6LBRG");
+MVT_USDC_VOTE = StellarSdk.Keypair.fromPublicKey("GCP3QE6QZLBBCC7I526POQUKEGZUPDKN24J52AGW2IL3BU6IT2OABWGF");
+LSP_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GD5FVR34DDOGAKB7QM4PBMH6HWWZ6YZJAXO5ZFQ6NQ5OPAUQEO6H3U47");
+AQUA_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GCTOZAS33DTMEPQ6K4CCG5LKYV73FKDAZPTJ23Q53MY65BV3LRK7U6TS");
+BTC_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GCKUUBESSY7SC7G4JEFANHFUKK4XSQ32DOHTQFLAAPPULSMMGZDZZG7V");
+ETH_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GA4OYMGT7VEHVIXJADAANUFDPXETH5BUHHLMR6TEJPLLZ4EYX457GAGU");
+MVT_PYBC_VOTE = StellarSdk.Keypair.fromPublicKey("GAGM3GI24FEYNQ6LD62U4LFPXPIOBSQL6QASDXTR6BHJ4EYIX5BDSMCS");
+
+XLM_MVT_POOL = new StellarSdk.LiquidityPoolAsset(XLM, MVT);
+MVT_yXLM_POOL = new StellarSdk.LiquidityPoolAsset(MVT, yXLM);
+MVT_USDC_POOL = new StellarSdk.LiquidityPoolAsset(MVT, USDC);
+LSP_MVT_POOL = new StellarSdk.LiquidityPoolAsset(LSP, MVT);
+AQUA_MVT_POOL = new StellarSdk.LiquidityPoolAsset(AQUA, MVT);
+BTC_MVT_POOL = new StellarSdk.LiquidityPoolAsset(BTC, MVT);
+ETH_MVT_POOL = new StellarSdk.LiquidityPoolAsset(ETH, MVT);
+MVT_PYBC_POOL = new StellarSdk.LiquidityPoolAsset(MVT, PYBC);
+
+XLM_MVT_BURN = StellarSdk.Keypair.fromPublicKey("GCK5NJEQF4AW7IZ3EOSEP5A5KNGVARB7NWSO2OU2OO7UXC73WYKT4Y3D");
 
 CURRENT_LOGIN_METHOD = 0;
 CURRENT_USER_ACCOUNT = "";
@@ -99,7 +122,7 @@ function popup_public() {
     var popup_public = document.getElementById('signupModal_public');
     popup_public.classList.toggle('active');
     document.querySelector("body").style.overflow = 'hidden';  //prevent page scrolling
-    console.log(StellarSdk);
+    document.getElementsByClassName('public_input_value')[0].value = "";
 }
 
 function close_public() {
@@ -180,6 +203,12 @@ function reset_burn_num() {
     document.getElementsByClassName('pair_input_value')[0].value = "0";
 }
 
+function burn_keyup(input) {
+    let tmp = input.toString().replace(/^0+/, '');
+    console.log(`tmp:`, tmp);
+    document.getElementsByClassName('pair_input_value')[0].value = input.toString().replace(/^0+/, '');
+}
+
 function change_burn_num(value) {
     document.getElementsByClassName('balance-num')[0].innerHTML = value;
 }
@@ -203,7 +232,9 @@ function logout() {
         document.getElementsByClassName('mvote_num')[i].innerHTML = "NA";
         document.getElementsByClassName('your_num')[i].innerHTML = "NA";
         document.getElementsByClassName('burn_num_1')[i].innerHTML = 0;
-      }
+    }
+    CURRENT_USER_ACCOUNT = "";
+    CURRENT_LOGIN_METHOD = 0;
     toggle_login_arrow();
     toggle_logout();
     check_login();
@@ -215,6 +246,7 @@ function check_login() {
         document.getElementsByClassName('menu-login-btn')[0].style.pointerEvents = 'none';
         clockIntervalId = clock(); // first start
         mvoteIntervalId = setInterval(()=> {clockIntervalId = clock()}, 1000*10*60);
+        test();
     }
     else {
         console.log(`login fail`);
@@ -234,14 +266,13 @@ async function publickey_login() {
             document.getElementsByClassName('login_button')[0].innerHTML = Account.accountId().slice(0, 4) + '...' + Account.accountId().slice(-5, -1);
             document.getElementsByClassName('menu-login-btn')[0].setAttribute("pointer-events", "none");
             toggle_login_arrow();
+            CURRENT_LOGIN_METHOD = 2;
         })
         .catch((e) => {
             console.log(`This account is INVALID!`);
             console.error(e);
         });
 
-    test();
-    CURRENT_LOGIN_METHOD = 2;
     check_login();
 }
 
@@ -268,22 +299,20 @@ async function freight_login() {
                     document.getElementsByClassName('login_button')[0].innerHTML = Account.accountId().slice(0, 4) + '...' + Account.accountId().slice(-5, -1);
                     document.getElementsByClassName('menu-login-btn')[0].setAttribute("pointer-events", "none");
                     toggle_login_arrow();
+                    CURRENT_LOGIN_METHOD = 1;
                 })
                 .catch((e) => {
                     console.log(`This account is INVALID!`);
                     console.error(e);
                 });
-
-            CURRENT_LOGIN_METHOD = 1;
         }
     } else {
         alert(`Please download the Freighter extension first!`);
     }
-    test();
     check_login();
 }
 
-async function getAquaVote(voteKeypair, voteAsset=AQUA_ASSET, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+async function getAquaVote(voteKeypair, voteAsset=AQUA, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
     }
@@ -376,7 +405,7 @@ async function getLPShare(LPAsset, server=STELLAR_SERVER, userAccount=CURRENT_US
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 
-async function getMVoteBurn(burnAccount, burnAsset=MVOTE_ASSET, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+async function getMVoteBurn(burnAccount, burnAsset=MVT, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
     }
@@ -457,7 +486,7 @@ function calReward(voteAmount, lpAmount, burnAmount) {
     }
 }
 
-function generateTxXDR(burnAccount, burnAmount, burnAsset=MVOTE_ASSET, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+function generateTxXDR(burnAccount, burnAmount, burnAsset=MVT, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
     }
@@ -487,9 +516,10 @@ async function submitTx() {
     // let pair = document.getElementById('signupModal_burn').classList.item(1);
     // console.log(pair);
 
-    let burnAccount = XLM_MVOTE_BURN;
-    let burnAmount = parseFloat(document.getElementsByClassName('pair_input_value')[0].value);
-
+    let burnAccount = XLM_MVT_BURN;
+    let burnAmount = document.getElementsByClassName('pair_input_value')[0].value;
+    close_burn();
+    console.log(typeof(burnAmount));
     if (burnAmount <= 0) {
         alert('Please input value of burn');
         return 0;
@@ -528,7 +558,7 @@ async function submitTx() {
     }
 }
 
-function checkTrustline(targetAsset=MVOTE_ASSET, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+function checkTrustline(targetAsset=MVT, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
     }
@@ -557,9 +587,9 @@ function checkTrustline(targetAsset=MVOTE_ASSET, server=STELLAR_SERVER, userAcco
 
 async function test() {
     let voteAmount, lpAmount, burnAmount
-    voteAmount = await getAquaVote(XLM_PYBC_VOTE).then((AquaVote)=>{ return AquaVote['userAmount']/ AquaVote['totalAmount']});
-    lpAmount = await getLPShare(XLM_PYBC_POOL).then((LPShare)=>{ return LPShare['userAmount']/ LPShare['totalAmount']});
-    burnAmount = await getMVoteBurn(XLM_MVOTE_BURN).then((MVoteBurn)=>{
+    voteAmount = await getAquaVote(XLM_MVT_VOTE).then((AquaVote)=>{ return AquaVote['userAmount']/ AquaVote['totalAmount']});
+    lpAmount = await getLPShare(XLM_MVT_POOL).then((LPShare)=>{ return LPShare['userAmount']/ LPShare['totalAmount']});
+    burnAmount = await getMVoteBurn(XLM_MVT_BURN).then((MVoteBurn)=>{
         for (let i = 0; i < PAIR_NUMBER; i++) {
             document.getElementsByClassName('burn_num_1')[i].innerHTML = MVoteBurn['userAmount'].toFixed(0);
             document.getElementsByClassName('burn_num_2')[i].innerHTML = MVoteBurn['totalAmount'].toFixed(0);

@@ -751,7 +751,7 @@
                 <div class="public_inputs">
                     <div class="input_content">
                         <div class="public_input">
-                            <input placeholder="GXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" maxlength="56" class="public_input_value" value="">
+                            <input placeholder="GXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" maxlength="56" class="public_input_value" value="" required>
                         </div>
                         <div class="connect_btn">
                             <div class="connect_btn_content">
@@ -820,7 +820,7 @@
                                         <div class="pair-ctn-num">
                                             <div class="pair-ctn-num-main">
                                                 <div class="pair-input">
-                                                <input placeholder="" type="number" required onblur="change_burn_num(this.value)" value="0" maxlength="20" class="pair_input_value">
+                                                <input placeholder="" type="number" required onblur="change_burn_num(this.value)" value="0" onkeyup="burn_keyup(this.value)" maxlength="20" class="pair_input_value">
                                                 </div>
                                                 <div class="pair-input-close" onclick="reset_burn_num()">
                                                     <i class="fa fa-times"></i>
@@ -843,7 +843,7 @@
                         <div class="input_footer">
                             <div class="burn-btn-content">
                                 <div class="burn-btn-main">
-                                    <a href="" class="burn-submit-btn" role="button" onclick="submitTx()"> Submit </a>
+                                    <a class="burn-submit-btn" role="button" onclick="submitTx()"> Submit </a>
                                 </div>
                             </div>
                         </div>

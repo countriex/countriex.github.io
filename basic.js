@@ -447,9 +447,9 @@ async function getLPShare(pairIndex, server=STELLAR_SERVER, userAccount=CURRENT_
 }
 
 async function getMVoteBurn(pairIndex, burnAsset=MVT, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
-    if (userAccount === "") {
-        return 0;
-    }
+    // if (userAccount === "") {
+    //     return 0;
+    // }
 
     var burnAccount = PAIRS_LIST[pairIndex]['BURN'];
 
@@ -496,8 +496,10 @@ async function getMVoteBurn(pairIndex, burnAsset=MVT, server=STELLAR_SERVER, use
             records[recordIndex]['asset_issuer'] === burnAsset.getIssuer()) {
             var burnAmount = parseFloat(records[recordIndex]['amount']);
             var fromAccount = records[recordIndex]['from'];
-            if (fromAccount === userAccount.accountId()) {
-                userAmount = userAmount + burnAmount;
+            if (userAccount !== "") {
+                if (fromAccount === userAccount.accountId()) {
+                    userAmount = userAmount + burnAmount;
+                }
             }
             totalAmount = totalAmount + burnAmount;
         }
@@ -540,7 +542,7 @@ function generateTxXDR(pairIndex, burnAmount, burnAsset=MVT, server=STELLAR_SERV
             StellarSdk.Operation.payment({
                 destination: burnAccount.publicKey(),
                 asset: burnAsset,
-                amount: burnAmount
+                amount: burnAmount.toString()
             })
         )
         .setTimeout(600)
@@ -621,6 +623,20 @@ function checkTrustline(targetAsset=MVT, server=STELLAR_SERVER, userAccount=CURR
     }
 
     return assetBalance;
+}
+
+
+async function withoutLogin() {
+    for (let i = 0; i < PAIR_NUMBER; i++) {
+        let burnAmount;
+        burnAmount = await getMVoteBurn(i).then((MVoteBurn) => {
+            return MVoteBurn['userAmount'] / MVoteBurn['totalAmount']
+        });
+        console.log(burnAmount);
+        if (isNaN(burnAmount)) {
+            burnAmount = 0;
+        }
+    }
 }
 
 async function test() {

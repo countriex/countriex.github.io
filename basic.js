@@ -272,7 +272,7 @@ async function publickey_login() {
         .then((Account) => {
             console.log(Account.accountId());
             CURRENT_USER_ACCOUNT = Account;
-            document.getElementsByClassName('login_button')[0].innerHTML = Account.accountId().slice(0, 4) + '...' + Account.accountId().slice(-5, -1);
+            document.getElementsByClassName('login_button')[0].innerHTML = Account.accountId().slice(0, 4) + '...' + Account.accountId().slice(-4);
             document.getElementsByClassName('menu-login-btn')[0].setAttribute("pointer-events", "none");
             toggle_login_arrow();
             CURRENT_LOGIN_METHOD = 2;
@@ -305,7 +305,7 @@ async function freight_login() {
                 .then((Account) => {
                     console.log(Account.accountId());
                     CURRENT_USER_ACCOUNT = Account;
-                    document.getElementsByClassName('login_button')[0].innerHTML = Account.accountId().slice(0, 4) + '...' + Account.accountId().slice(-5, -1);
+                    document.getElementsByClassName('login_button')[0].innerHTML = Account.accountId().slice(0, 4) + '...' + Account.accountId().slice(-4);
                     document.getElementsByClassName('menu-login-btn')[0].setAttribute("pointer-events", "none");
                     toggle_login_arrow();
                     CURRENT_LOGIN_METHOD = 1;
@@ -504,7 +504,7 @@ function generateTxXDR(burnAccount, burnAmount, burnAsset=MVT, server=STELLAR_SE
 
     var tx = new StellarSdk.TransactionBuilder(
         userAccount, {
-            fee: StellarSdk.BASE_FEE,
+            fee: '10000',
             networkPassphrase: NETWORK_PASSPHRASE
         }
     )

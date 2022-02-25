@@ -236,6 +236,8 @@ function close_burn() {
     document.getElementsByClassName('burn-submit-btn')[0].style.pointerEvents = 'auto';
     document.getElementsByClassName('title-tip-span')[0].classList.add('active');
     document.getElementsByClassName('title-tip-span')[1].classList.remove('active');
+    document.getElementById('signupModal_burn').classList.remove(document.getElementById('signupModal_burn').classList.item(1));
+
 }
 
 function reset_burn_num() {
@@ -512,7 +514,9 @@ async function getMVoteBurn(pairIndex, burnAsset=MVT, server=STELLAR_SERVER, use
     } else {
         tmpMvoteNum = (tmpMvoteNum).toString();
     }
-    document.getElementsByClassName('mvote_num')[pairIndex].innerHTML = tmpMvoteNum + '%';
+    if (userAccount !== "") {
+        document.getElementsByClassName('mvote_num')[pairIndex].innerHTML = tmpMvoteNum + '%';
+    }
     document.getElementsByClassName('burn_num_1')[pairIndex].innerHTML = `${userAmount}`;
     document.getElementsByClassName('burn_num_2')[pairIndex].innerHTML = `${totalAmount}`;     
     return {'userAmount': userAmount, 'totalAmount': totalAmount};

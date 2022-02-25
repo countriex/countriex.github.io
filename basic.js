@@ -17,7 +17,7 @@ STELLAR_SERVER = new StellarSdk.Server(SEVER_URL);
 MVT = new StellarSdk.Asset("MVT", "GDPTX2Z3HTJKCHTT5JHCL7M5MD7P2HVV7QUDCTBIHW2BYLO3XR4VSRSA");
 TESTVOTE = new StellarSdk.Asset("TESTVOTE", "GDPTX2Z3HTJKCHTT5JHCL7M5MD7P2HVV7QUDCTBIHW2BYLO3XR4VSRSA");
 
-XLM = new StellarSdk.Asset.native()
+XLM = new StellarSdk.Asset.native();
 yXLM = new StellarSdk.Asset("yXLM", "GARDNV3Q7YGT4AKSDF25LT32YSCCW4EV22Y2TV3I2PU2MMXJTEDL5T55");
 USDC = new StellarSdk.Asset("USDC", "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN");
 LSP = new StellarSdk.Asset("AQUA", "GAB7STHVD5BDH3EEYXPI3OM7PCS4V443PYB5FNT6CFGJVPDLMKDM24WK");
@@ -35,14 +35,14 @@ BTC_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GCKUUBESSY7SC7G4JEFANHFUKK4XSQ3
 ETH_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GA4OYMGT7VEHVIXJADAANUFDPXETH5BUHHLMR6TEJPLLZ4EYX457GAGU");
 MVT_PYBC_VOTE = StellarSdk.Keypair.fromPublicKey("GAGM3GI24FEYNQ6LD62U4LFPXPIOBSQL6QASDXTR6BHJ4EYIX5BDSMCS");
 
-XLM_MVT_POOL = new StellarSdk.LiquidityPoolAsset(XLM, MVT);
-MVT_yXLM_POOL = new StellarSdk.LiquidityPoolAsset(MVT, yXLM);
-MVT_USDC_POOL = new StellarSdk.LiquidityPoolAsset(MVT, USDC);
-LSP_MVT_POOL = new StellarSdk.LiquidityPoolAsset(LSP, MVT);
-AQUA_MVT_POOL = new StellarSdk.LiquidityPoolAsset(AQUA, MVT);
-BTC_MVT_POOL = new StellarSdk.LiquidityPoolAsset(BTC, MVT);
-ETH_MVT_POOL = new StellarSdk.LiquidityPoolAsset(ETH, MVT);
-MVT_PYBC_POOL = new StellarSdk.LiquidityPoolAsset(MVT, PYBC);
+XLM_MVT_POOL = new StellarSdk.LiquidityPoolAsset(XLM, MVT, 30);
+MVT_yXLM_POOL = new StellarSdk.LiquidityPoolAsset(MVT, yXLM, 30);
+MVT_USDC_POOL = new StellarSdk.LiquidityPoolAsset(MVT, USDC, 30);
+LSP_MVT_POOL = new StellarSdk.LiquidityPoolAsset(LSP, MVT, 30);
+AQUA_MVT_POOL = new StellarSdk.LiquidityPoolAsset(AQUA, MVT, 30);
+BTC_MVT_POOL = new StellarSdk.LiquidityPoolAsset(BTC, MVT, 30);
+ETH_MVT_POOL = new StellarSdk.LiquidityPoolAsset(ETH, MVT, 30);
+MVT_PYBC_POOL = new StellarSdk.LiquidityPoolAsset(MVT, PYBC, 30);
 
 XLM_MVT_BURN = StellarSdk.Keypair.fromPublicKey("GCK5NJEQF4AW7IZ3EOSEP5A5KNGVARB7NWSO2OU2OO7UXC73WYKT4Y3D");
 
@@ -197,6 +197,8 @@ function close_burn() {
     popup_bn.classList.toggle('active');
     document.getElementsByClassName('pair_input_value')[0].value = "0";
     document.getElementsByClassName('balance-num')[0].innerHTML = "0";
+    document.getElementsByClassName('stellar_copy_link')[0].classList.remove('active');
+    document.getElementsByClassName('burn-submit-btn')[0].style.pointerEvents = 'auto';
 }
 
 function reset_burn_num() {
@@ -363,8 +365,9 @@ async function getAquaVote(voteKeypair, voteAsset=AQUA, server=STELLAR_SERVER, u
         totalAmount = totalAmount + voteAmount;
     }
     console.log(`${records.length} votes in total, ${userAmount}/${totalAmount}`);
-    for(let i = 0; i < PAIR_NUMBER; i++)
+    for(let i = 0; i < PAIR_NUMBER; i++) {
         document.getElementsByClassName('lock_num')[i].innerHTML = (userAmount * 100/ totalAmount).toFixed(4) + '%';
+    }
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 
@@ -400,8 +403,9 @@ async function getLPShare(LPAsset, server=STELLAR_SERVER, userAccount=CURRENT_US
         }
     }
     console.log(`${userAmount}/${totalAmount}`);
-    for(let i = 0; i < PAIR_NUMBER; i++)
+    for(let i = 0; i < PAIR_NUMBER; i++) {
         document.getElementsByClassName('lp_num')[i].innerHTML = (userAmount * 100/ totalAmount).toFixed(4) + '%';
+    }
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 
@@ -518,8 +522,6 @@ async function submitTx() {
 
     let burnAccount = XLM_MVT_BURN;
     let burnAmount = document.getElementsByClassName('pair_input_value')[0].value;
-    close_burn();
-    console.log(typeof(burnAmount));
     if (burnAmount <= 0) {
         alert('Please input value of burn');
         return 0;
@@ -549,7 +551,10 @@ async function submitTx() {
             return 0;
         }
     } else if (CURRENT_LOGIN_METHOD === 2) {
-        alert(`Please copy the transaction XDR bellow and paste into Stellar Laboratory: ${txXDR}`);
+        alert(`Please copy the transaction XDR`);
+        document.getElementsByClassName('stellar_copy_link')[0].classList.add('active');
+        document.getElementsByClassName('link-ctn-text')[0].innerHTML = `${txXDR}`;
+        document.getElementsByClassName('burn-submit-btn')[0].style.pointerEvents = 'none';
         document.getElementsByClassName('burn-submit-btn')[0].setAttribute("target","_blank");
         document.getElementsByClassName('burn-submit-btn')[0].href = "https://laboratory.stellar.org/#txsigner?network=public";
     } else {

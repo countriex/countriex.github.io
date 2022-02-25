@@ -218,7 +218,7 @@ function popup_burn(pair) {
     var popup_bn = document.getElementById('signupModal_burn');
     popup_bn.classList.toggle('active');
     var userBalance = checkTrustline();
-    if(userBalance > 0){
+    if(userBalance >= 0){
         document.getElementsByClassName('title-tip-span')[0].classList.remove('active');
         document.getElementsByClassName('title-tip-span')[1].classList.add('active');
         document.getElementsByClassName('title-tip-span-text')[0].innerHTML = userBalance.toString();

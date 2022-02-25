@@ -20,29 +20,29 @@ TESTVOTE = new StellarSdk.Asset("TESTVOTE", "GDPTX2Z3HTJKCHTT5JHCL7M5MD7P2HVV7QU
 XLM = new StellarSdk.Asset.native();
 yXLM = new StellarSdk.Asset("yXLM", "GARDNV3Q7YGT4AKSDF25LT32YSCCW4EV22Y2TV3I2PU2MMXJTEDL5T55");
 USDC = new StellarSdk.Asset("USDC", "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN");
-LSP = new StellarSdk.Asset("AQUA", "GAB7STHVD5BDH3EEYXPI3OM7PCS4V443PYB5FNT6CFGJVPDLMKDM24WK");
+LSP = new StellarSdk.Asset("LSP", "GAB7STHVD5BDH3EEYXPI3OM7PCS4V443PYB5FNT6CFGJVPDLMKDM24WK");
 AQUA = new StellarSdk.Asset("AQUA", "GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA");
 BTC = new StellarSdk.Asset("BTC", "GDPJALI4AZKUU2W426U5WKMAT6CN3AJRPIIRYR2YM54TL2GDWO5O2MZM");
 ETH = new StellarSdk.Asset("ETH", "GBFXOHVAS43OIWNIO7XLRJAHT3BICFEIKOJLZVXNT572MISM4CMGSOCC");
 PYBC = new StellarSdk.Asset("PYBC", "GBVB43NLVIP2USHXSKI7QQCZKZU2Z6U6A5PAHMIW7LLNVMQJTOX2BZI5");
 
 XLM_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GDE5UPEZB63KPP7VVJW3MSVMFT4Z6ATAMDZISWOPRD36D2FOOSSGEHJR");
-MVT_yXLM_VOTE = StellarSdk.Keypair.fromPublicKey("GBK2LJBQUZOGRM3SVGHRRY5P7QFSN635HNQZJQSHNJIRS4GQYXJ6LBRG");
 MVT_USDC_VOTE = StellarSdk.Keypair.fromPublicKey("GCP3QE6QZLBBCC7I526POQUKEGZUPDKN24J52AGW2IL3BU6IT2OABWGF");
-LSP_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GD5FVR34DDOGAKB7QM4PBMH6HWWZ6YZJAXO5ZFQ6NQ5OPAUQEO6H3U47");
+MVT_yXLM_VOTE = StellarSdk.Keypair.fromPublicKey("GBK2LJBQUZOGRM3SVGHRRY5P7QFSN635HNQZJQSHNJIRS4GQYXJ6LBRG");
 AQUA_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GCTOZAS33DTMEPQ6K4CCG5LKYV73FKDAZPTJ23Q53MY65BV3LRK7U6TS");
+LSP_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GD5FVR34DDOGAKB7QM4PBMH6HWWZ6YZJAXO5ZFQ6NQ5OPAUQEO6H3U47");
+MVT_PYBC_VOTE = StellarSdk.Keypair.fromPublicKey("GAGM3GI24FEYNQ6LD62U4LFPXPIOBSQL6QASDXTR6BHJ4EYIX5BDSMCS");
 BTC_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GCKUUBESSY7SC7G4JEFANHFUKK4XSQ32DOHTQFLAAPPULSMMGZDZZG7V");
 ETH_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GA4OYMGT7VEHVIXJADAANUFDPXETH5BUHHLMR6TEJPLLZ4EYX457GAGU");
-MVT_PYBC_VOTE = StellarSdk.Keypair.fromPublicKey("GAGM3GI24FEYNQ6LD62U4LFPXPIOBSQL6QASDXTR6BHJ4EYIX5BDSMCS");
 
 XLM_MVT_POOL = new StellarSdk.LiquidityPoolAsset(XLM, MVT, 30);
-MVT_yXLM_POOL = new StellarSdk.LiquidityPoolAsset(MVT, yXLM, 30);
 MVT_USDC_POOL = new StellarSdk.LiquidityPoolAsset(MVT, USDC, 30);
-LSP_MVT_POOL = new StellarSdk.LiquidityPoolAsset(LSP, MVT, 30);
+MVT_yXLM_POOL = new StellarSdk.LiquidityPoolAsset(MVT, yXLM, 30);
 AQUA_MVT_POOL = new StellarSdk.LiquidityPoolAsset(AQUA, MVT, 30);
+LSP_MVT_POOL = new StellarSdk.LiquidityPoolAsset(LSP, MVT, 30);
+MVT_PYBC_POOL = new StellarSdk.LiquidityPoolAsset(MVT, PYBC, 30);
 BTC_MVT_POOL = new StellarSdk.LiquidityPoolAsset(BTC, MVT, 30);
 ETH_MVT_POOL = new StellarSdk.LiquidityPoolAsset(ETH, MVT, 30);
-MVT_PYBC_POOL = new StellarSdk.LiquidityPoolAsset(MVT, PYBC, 30);
 
 XLM_MVT_BURN  = StellarSdk.Keypair.fromPublicKey('GCSJUSJWBSH7NW6HJMFOWQMJXECRVI4JXCCCMYEA5TS6SC625BOFN7CF');
 MVT_USDC_BURN = StellarSdk.Keypair.fromPublicKey('GCLZZAN6SUM4WAZXLSUS65QN23FXMB7IY6TO2FG2SB3MPUL3D3O6KUGG');
@@ -55,6 +55,28 @@ ETH_MVT_BURN  = StellarSdk.Keypair.fromPublicKey('GB7OBJWXMM44SG6JBUDIVIONJF3OZ4
 
 CURRENT_LOGIN_METHOD = 0;
 CURRENT_USER_ACCOUNT = "";
+
+PAIRS_LIST = [
+    {'VOTE': XLM_MVT_VOTE, 'POOL': XLM_MVT_POOL, 'BURN': XLM_MVT_BURN},
+    {'VOTE': MVT_USDC_VOTE, 'POOL': MVT_USDC_POOL, 'BURN': MVT_USDC_BURN},
+    {'VOTE': MVT_yXLM_VOTE, 'POOL': MVT_yXLM_POOL, 'BURN': MVT_yXLM_BURN},
+    {'VOTE': AQUA_MVT_VOTE, 'POOL': AQUA_MVT_POOL, 'BURN': AQUA_MVT_BURN},
+    {'VOTE': LSP_MVT_VOTE, 'POOL': LSP_MVT_POOL, 'BURN': LSP_MVT_BURN},
+    {'VOTE': MVT_PYBC_VOTE, 'POOL': MVT_PYBC_POOL, 'BURN': MVT_PYBC_BURN},
+    {'VOTE': BTC_MVT_VOTE, 'POOL': BTC_MVT_POOL, 'BURN': BTC_MVT_BURN},
+    {'VOTE': ETH_MVT_VOTE, 'POOL': ETH_MVT_POOL, 'BURN': ETH_MVT_BURN},
+];
+
+NAME_INDEX_DICT = {
+    'XLM_MVOTE': 0,
+    'MVOTE_USDC': 1,
+    'MVOTE_yXLM': 2,
+    'AQUA_MVOTE': 3,
+    'LSP_MVOTE': 4,
+    'MVOTE_PYBC': 5,
+    'BTC_MVOTE': 6,
+    'ETH_MVOTE': 7,
+};
 
 PAIR_NUMBER = 8;
 
@@ -195,6 +217,12 @@ function popup_burn(pair) {
     blur.classList.toggle('active');
     var popup_bn = document.getElementById('signupModal_burn');
     popup_bn.classList.toggle('active');
+    var userBalance = checkTrustline();
+    if(userBalance >= 0){
+        document.getElementsByClassName('title-tip-span')[0].classList.remove('active');
+        document.getElementsByClassName('title-tip-span')[1].classList.add('active');
+        document.getElementsByClassName('title-tip-span-text')[0].innerHTML = userBalance.toString();
+    } 
 }
 
 function close_burn() {
@@ -206,6 +234,8 @@ function close_burn() {
     document.getElementsByClassName('balance-num')[0].innerHTML = "0";
     document.getElementsByClassName('stellar_copy_link')[0].classList.remove('active');
     document.getElementsByClassName('burn-submit-btn')[0].style.pointerEvents = 'auto';
+    document.getElementsByClassName('title-tip-span')[0].classList.add('active');
+    document.getElementsByClassName('title-tip-span')[1].classList.remove('active');
 }
 
 function reset_burn_num() {
@@ -321,10 +351,12 @@ async function freight_login() {
     check_login();
 }
 
-async function getAquaVote(voteKeypair, voteAsset=AQUA, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+async function getAquaVote(pairIndex, voteAsset=AQUA, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
     }
+
+    var voteKeypair = PAIRS_LIST[pairIndex]['VOTE'];
 
     var cursor = "";
     var records = [];
@@ -372,16 +404,16 @@ async function getAquaVote(voteKeypair, voteAsset=AQUA, server=STELLAR_SERVER, u
         totalAmount = totalAmount + voteAmount;
     }
     console.log(`${records.length} votes in total, ${userAmount}/${totalAmount}`);
-    for(let i = 0; i < PAIR_NUMBER; i++) {
-        document.getElementsByClassName('lock_num')[i].innerHTML = (userAmount * 100/ totalAmount).toFixed(4) + '%';
-    }
+    document.getElementsByClassName('lock_num')[pairIndex].innerHTML = (userAmount * 100/ totalAmount).toFixed(4) + '%';
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 
-async function getLPShare(LPAsset, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+async function getLPShare(pairIndex, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
     }
+
+    var LPAsset = PAIRS_LIST[pairIndex]['POOL'];
 
     var totalAmount = 0;
     var userAmount = 0;
@@ -410,16 +442,16 @@ async function getLPShare(LPAsset, server=STELLAR_SERVER, userAccount=CURRENT_US
         }
     }
     console.log(`${userAmount}/${totalAmount}`);
-    for(let i = 0; i < PAIR_NUMBER; i++) {
-        document.getElementsByClassName('lp_num')[i].innerHTML = (userAmount * 100/ totalAmount).toFixed(4) + '%';
-    }
+    document.getElementsByClassName('lp_num')[pairIndex].innerHTML = (userAmount * 100/ totalAmount).toFixed(4) + '%';
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 
-async function getMVoteBurn(burnAccount, burnAsset=MVT, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+async function getMVoteBurn(pairIndex, burnAsset=MVT, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
     }
+
+    var burnAccount = PAIRS_LIST[pairIndex]['BURN'];
 
     var cursor = "";
     var records = [];
@@ -476,31 +508,29 @@ async function getMVoteBurn(burnAccount, burnAsset=MVT, server=STELLAR_SERVER, u
         }
     }
     console.log(`${records.length} burns in total, ${userAmount}/${totalAmount}`);
-    for (let i = 0; i < PAIR_NUMBER; i++) {
-        let tmpMvoteNum = (userAmount * 100/ totalAmount).toFixed(4);
-        if (isNaN(tmpMvoteNum)) {
-            tmpMvoteNum = (0).toString();
-        } else {
-            tmpMvoteNum = (tmpMvoteNum).toString();
-        }
-        document.getElementsByClassName('mvote_num')[i].innerHTML = tmpMvoteNum + '%';
+    let tmpMvoteNum = (userAmount * 100/ totalAmount).toFixed(4);
+    if (isNaN(tmpMvoteNum)) {
+        tmpMvoteNum = (0).toString();
+    } else {
+        tmpMvoteNum = (tmpMvoteNum).toString();
     }
+    document.getElementsByClassName('mvote_num')[pairIndex].innerHTML = tmpMvoteNum + '%';
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 
-function calReward(voteAmount, lpAmount, burnAmount) {
+function calReward(pairIndex, voteAmount, lpAmount, burnAmount) {
     let averageReward, finalReward;
     averageReward = (voteAmount*2 + lpAmount*1 + burnAmount*1) / 4;
     finalReward = Math.min(voteAmount, averageReward);
-    for (let i = 0; i < PAIR_NUMBER; i++) {
-        document.getElementsByClassName('your_num')[i].innerHTML = (finalReward*100).toFixed(4) + '%';
-    }
+    document.getElementsByClassName('your_num')[pairIndex].innerHTML = (finalReward*100).toFixed(4) + '%';
 }
 
-function generateTxXDR(burnAccount, burnAmount, burnAsset=MVT, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
+function generateTxXDR(pairIndex, burnAmount, burnAsset=MVT, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
     }
+
+    var burnAccount = PAIRS_LIST[pairIndex]['BURN'];
 
     var tx = new StellarSdk.TransactionBuilder(
         userAccount, {
@@ -526,15 +556,17 @@ async function submitTx() {
     // TODO: change pair into account
     // let pair = document.getElementById('signupModal_burn').classList.item(1);
     // console.log(pair);
+    // let burnAccount = XLM_MVT_BURN;
+    var pairName = document.getElementById('signupModal_burn').classList.item(1);
+    let pairIndex = NAME_INDEX_DICT[pairName];
 
-    let burnAccount = XLM_MVT_BURN;
     let burnAmount = document.getElementsByClassName('pair_input_value')[0].value;
     if (burnAmount <= 0) {
         alert('Please input value of burn');
         return 0;
     }
 
-    let txXDR = generateTxXDR(burnAccount, burnAmount);
+    let txXDR = generateTxXDR(pairIndex, burnAmount);
 
     if (CURRENT_LOGIN_METHOD === 1) {
         try {
@@ -598,18 +630,21 @@ function checkTrustline(targetAsset=MVT, server=STELLAR_SERVER, userAccount=CURR
 }
 
 async function test() {
-    let voteAmount, lpAmount, burnAmount
-    voteAmount = await getAquaVote(XLM_MVT_VOTE).then((AquaVote)=>{ return AquaVote['userAmount']/ AquaVote['totalAmount']});
-    lpAmount = await getLPShare(XLM_MVT_POOL).then((LPShare)=>{ return LPShare['userAmount']/ LPShare['totalAmount']});
-    burnAmount = await getMVoteBurn(XLM_MVT_BURN).then((MVoteBurn)=>{
-        for (let i = 0; i < PAIR_NUMBER; i++) {
+
+    for (let i = 0; i < PAIR_NUMBER; i++) {
+        let voteAmount, lpAmount, burnAmount;
+        voteAmount = await getAquaVote(i).then((AquaVote)=>{ return AquaVote['userAmount']/ AquaVote['totalAmount']});
+        lpAmount = await getLPShare(i).then((LPShare)=>{ return LPShare['userAmount']/ LPShare['totalAmount']});
+        burnAmount = await getMVoteBurn(i).then((MVoteBurn)=>{
             document.getElementsByClassName('burn_num_1')[i].innerHTML = MVoteBurn['userAmount'].toFixed(0);
             document.getElementsByClassName('burn_num_2')[i].innerHTML = MVoteBurn['totalAmount'].toFixed(0);
+            return MVoteBurn['userAmount']/ MVoteBurn['totalAmount']});
+
+        console.log(voteAmount, lpAmount, burnAmount);
+        if (isNaN(burnAmount)) {
+            burnAmount = 0;
         }
-        return MVoteBurn['userAmount']/ MVoteBurn['totalAmount']});
-    console.log(voteAmount, lpAmount, burnAmount);
-    if (isNaN(burnAmount)) {
-        burnAmount = 0;
+        calReward(i, voteAmount, lpAmount, burnAmount);
     }
-    calReward(voteAmount, lpAmount, burnAmount);
+
 }

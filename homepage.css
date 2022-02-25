@@ -1,0 +1,74 @@
+*{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main_container {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.main_container .introduce {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.main_container .introduce .introduce-header {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.introduce .introduce-header .introduce-header-issuer {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.introduce-header .introduce-header-issuer .header-issuer-title,
+.introduce-header .introduce-header-issuer .header-issuer-addr {
+    margin: 0 0 10px;
+}
+
+.introduce .introduce-header .introduce-header-ctn {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.introduce-header .introduce-header-ctn .header-ctn-text,
+.introduce-header .introduce-header-ctn .header-ctn-tip {
+    line-height: 1.6;
+    margin-top: 5px;
+}
+
+.main_container .introduce .ppt-image {
+    display: flex;
+    flex-direction: column;
+}
+
+.introduce .ppt-image .ppt-image-header{
+    margin-top: 15px;
+}
+
+.introduce .ppt-image .ppt-image-ctn {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.ppt-image .ppt-image-ctn .ppt-image-row1,
+.ppt-image .ppt-image-ctn .ppt-image-row2 {
+    display: inline-flex;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.ppt-image .ppt-image-ctn .ppt-image-row1 {
+    border-bottom: rgb(202, 192, 192) 1.5px solid;
+}
+
+.ppt-image .ppt-image-ctn .ppt-image-col1 {
+    border-right: rgb(202, 192, 192) 1.5px solid;
+}

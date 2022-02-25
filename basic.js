@@ -582,20 +582,24 @@ async function submitTx() {
             var signedTx = await window.freighterApi.signTransaction(txXDR, NETWORK_TEXT);
         } catch (e) {
             console.log(`Error ${e} in freighter signTransaction().`);
+            alert(`Fail to sign the transaction.`);
             return 0;
         }
         try{
             var txToSubmit = StellarSdk.TransactionBuilder.fromXDR(signedTx, SEVER_URL);
         } catch (e) {
             console.log(`Error ${e} in freighter buildTransaction().`);
+            alert(`Fail to build the transaction.`);
             return 0;
         }
         try{
             var response = await STELLAR_SERVER.submitTransaction(txToSubmit);
             console.log(`Transaction submitted with response ${response}.`);
+            alert(`Successfully send the transaction.`);
             return 0;
         } catch (e) {
             console.log(`Error ${e} in freighter submitTransaction().`);
+            alert(`Fail to submit the transaction.`);
             return 0;
         }
     } else if (CURRENT_LOGIN_METHOD === 2) {

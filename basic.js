@@ -178,7 +178,7 @@ function popup_burn(pair) {
                 break;
             case "MVOTE":
                 document.getElementById(tmpIdName).src = "./icons/MVOTEicon.png";
-                document.getElementById(tmpPairName).innerHTML = "MVOTE";
+                document.getElementById(tmpPairName).innerHTML = "MVT";
                 break;
             case "USDC":
                 document.getElementById(tmpIdName).src = "https://www.centre.io/images/usdc/usdc-icon-86074d9d49.png";

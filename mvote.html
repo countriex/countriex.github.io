@@ -820,10 +820,10 @@
                                         <div class="pair-ctn-num">
                                             <div class="pair-ctn-num-main">
                                                 <div class="pair-input">
-                                                <input placeholder="" type="number" required onblur="change_burn_num(this.value)" value="0" onkeyup="burn_keyup(this.value)" maxlength="20" class="pair_input_value">
+                                                <input placeholder="" type="number" required value="1" onkeyup="burn_keyup(this.value)" maxlength="20" class="pair_input_value">
                                                 </div>
-                                                <div class="pair-input-close" onclick="reset_burn_num()">
-                                                    <i class="fa fa-times"></i>
+                                                <div class="pair-input-close" onclick="confirm_burn_num()">
+                                                    <i class="fa fa-check"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -831,7 +831,7 @@
                                     <div class="balance-tip">
                                         <div class="balance-left">Burn:</div>
                                         <div class="balance-right">
-                                            <div class="balance-tip-text"><span class="balance-num">0</span>&nbsp;&nbsp;MVT</div>
+                                            <div class="balance-tip-text"><span class="balance-num">1</span>&nbsp;&nbsp;MVT</div>
                                             <div class="balance-tip-img">
                                                 <img src="./icons/MVOTEicon.png" width="35" height="35">    
                                             </div>
@@ -842,8 +842,8 @@
                         </div>
                         <div class="input_footer">
                             <div class="burn-btn-content">
-                                <div class="burn-btn-main">
-                                    <a class="burn-submit-btn" role="button" onclick="submitTx()"> Submit </a>
+                                <div class="burn-btn-main disabled">
+                                    <button class="burn-submit-btn" role="button" onclick="submitTx()"> Submit </button>
                                 </div>
                             </div>
                         </div>

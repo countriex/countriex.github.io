@@ -218,7 +218,7 @@ function popup_burn(pair) {
     var popup_bn = document.getElementById('signupModal_burn');
     popup_bn.classList.toggle('active');
     var userBalance = checkTrustline();
-    if(userBalance >= 0){
+    if(userBalance > 0){
         document.getElementsByClassName('title-tip-span')[0].classList.remove('active');
         document.getElementsByClassName('title-tip-span')[1].classList.add('active');
         document.getElementsByClassName('title-tip-span-text')[0].innerHTML = userBalance.toString();
@@ -230,29 +230,29 @@ function close_burn() {
     blur.classList.toggle('active');
     var popup_bn = document.getElementById('signupModal_burn');
     popup_bn.classList.toggle('active');
-    document.getElementsByClassName('pair_input_value')[0].value = "0";
-    document.getElementsByClassName('balance-num')[0].innerHTML = "0";
+    document.getElementsByClassName('pair_input_value')[0].value = "1";
+    document.getElementsByClassName('balance-num')[0].innerHTML = "1";
     document.getElementsByClassName('stellar_copy_link')[0].classList.remove('active');
     document.getElementsByClassName('burn-submit-btn')[0].style.pointerEvents = 'auto';
     document.getElementsByClassName('title-tip-span')[0].classList.add('active');
     document.getElementsByClassName('title-tip-span')[1].classList.remove('active');
     document.getElementById('signupModal_burn').classList.remove(document.getElementById('signupModal_burn').classList.item(1));
-
+    document.getElementsByClassName('burn-btn-main')[0].classList.add('disabled');
+    document.getElementsByClassName('title-tip-span-text')[0].innerHTML = "NA";
 }
 
-function reset_burn_num() {
-    document.getElementsByClassName('pair_input_value')[0].value = "0";
+function confirm_burn_num() {
+    document.getElementsByClassName('balance-num')[0].innerHTML = document.getElementsByClassName('pair_input_value')[0].value;
+    document.getElementsByClassName('burn-btn-main')[0].classList.remove('disabled');
 }
 
 function burn_keyup(input) {
-    let tmp = input.toString().replace(/^0+/, '');
-    console.log(`tmp:`, tmp);
-    document.getElementsByClassName('pair_input_value')[0].value = input.toString().replace(/^0+/, '');
+    let tmp = Number(input);
+    if(tmp<1) {
+        document.getElementsByClassName('pair_input_value')[0].value = "1";
+    }
 }
 
-function change_burn_num(value) {
-    document.getElementsByClassName('balance-num')[0].innerHTML = value;
-}
 
 function toggle_login_arrow() {
     document.getElementsByClassName('menu-login-arrow')[0].classList.toggle('active');
@@ -613,7 +613,7 @@ async function submitTx() {
 
 function checkTrustline(targetAsset=MVT, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
-        return 0;
+        return -1;
     }
 
     var assetBalance = -1;

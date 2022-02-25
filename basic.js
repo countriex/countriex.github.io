@@ -535,7 +535,7 @@ function calPairReward(pairIndex, totalBurn) {
         sumBurn += totalBurn[i];
     }
     var pairReward = totalBurn[pairIndex] / sumBurn * 0.7;
-    document.getElementsByClassName('xxx')[pairIndex].innerHTML = (pairReward*100).toFixed(4) + '%';
+    document.getElementsByClassName('reward_num')[pairIndex].innerHTML = (pairReward*100).toFixed(4) + '%';
 }
 
 function generateTxXDR(pairIndex, burnAmount, burnAsset=MVT, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {

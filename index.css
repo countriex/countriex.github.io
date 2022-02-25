@@ -1195,9 +1195,5 @@ img[alt*="logo"] {
     width: 100%;
     height: 100%;
     text-align: center;
+    overflow: scroll;
 }
-
-.copy_link .link-ctn p{
-    margin: none;
-}
-

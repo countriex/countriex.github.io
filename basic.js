@@ -44,7 +44,14 @@ BTC_MVT_POOL = new StellarSdk.LiquidityPoolAsset(BTC, MVT, 30);
 ETH_MVT_POOL = new StellarSdk.LiquidityPoolAsset(ETH, MVT, 30);
 MVT_PYBC_POOL = new StellarSdk.LiquidityPoolAsset(MVT, PYBC, 30);
 
-XLM_MVT_BURN = StellarSdk.Keypair.fromPublicKey("GCK5NJEQF4AW7IZ3EOSEP5A5KNGVARB7NWSO2OU2OO7UXC73WYKT4Y3D");
+XLM_MVT_BURN  = StellarSdk.Keypair.fromPublicKey('GCSJUSJWBSH7NW6HJMFOWQMJXECRVI4JXCCCMYEA5TS6SC625BOFN7CF');
+MVT_USDC_BURN = StellarSdk.Keypair.fromPublicKey('GCLZZAN6SUM4WAZXLSUS65QN23FXMB7IY6TO2FG2SB3MPUL3D3O6KUGG');
+MVT_yXLM_BURN = StellarSdk.Keypair.fromPublicKey('GCGP7YS75XXAD6FIFO6EZR2FDDDDLYPT4PNFGBGVE37ZVVSCDZ3QDPEI');
+AQUA_MVT_BURN = StellarSdk.Keypair.fromPublicKey('GCDWMVJKWC6B3QSPKL2O4YPZYB4ULE34XRLAAQGVQU5GL44ZCVM2PQWP');
+LSP_MVT_BURN  = StellarSdk.Keypair.fromPublicKey('GD7WM5PLNKVM4EZPXKF6I3XEMUMRZJTZVYH5ZJFLP4GDZRJEE66MUDKC');
+MVT_PYBC_BURN = StellarSdk.Keypair.fromPublicKey('GBCFFN3COAQO23YFUFAM26K6H625YEYYJTKUDLC6FATDYXFOIX4K3WOO');
+BTC_MVT_BURN  = StellarSdk.Keypair.fromPublicKey('GBJV575LXINH6WXB4VREFF2KGDFG4Q4P2TZB7AXJRZZURXOYNCWLOJUL');
+ETH_MVT_BURN  = StellarSdk.Keypair.fromPublicKey('GB7OBJWXMM44SG6JBUDIVIONJF3OZ4EKPPL3YJIIUDZHOZNO7QOZTVSF');
 
 CURRENT_LOGIN_METHOD = 0;
 CURRENT_USER_ACCOUNT = "";
@@ -483,8 +490,8 @@ async function getMVoteBurn(burnAccount, burnAsset=MVT, server=STELLAR_SERVER, u
 
 function calReward(voteAmount, lpAmount, burnAmount) {
     let averageReward, finalReward;
-    averageReward = (voteAmount*0.01*2 + lpAmount*0.01*1 + burnAmount*0.01*1) / 4;
-    finalReward = Math.min(voteAmount*0.01, averageReward);
+    averageReward = (voteAmount*2 + lpAmount*1 + burnAmount*1) / 4;
+    finalReward = Math.min(voteAmount, averageReward);
     for (let i = 0; i < PAIR_NUMBER; i++) {
         document.getElementsByClassName('your_num')[i].innerHTML = (finalReward*100).toFixed(4) + '%';
     }

@@ -490,15 +490,10 @@ async function getMVoteBurn(pairIndex, burnAsset=MVT, server=STELLAR_SERVER, use
     var userAmount = 0;
     var totalAmount = 0;
     for (var recordIndex in records) {
-        if (records[recordIndex]['type'] !== "payments") {
-            continue;
-        } else if (records[recordIndex]['asset_type'] === "native") {
-            continue;
-        } else if (records[recordIndex]['asset_code'] !== burnAsset.getCode()) {
-            continue;
-        } else if (records[recordIndex]['asset_issuer'] !== burnAsset.getIssuer()) {
-            continue;
-        } else {
+        if (records[recordIndex]['type'] === "payment" &&
+            records[recordIndex]['asset_type'] !== "native" &&
+            records[recordIndex]['asset_code'] === burnAsset.getCode() &&
+            records[recordIndex]['asset_issuer'] === burnAsset.getIssuer()) {
             var burnAmount = parseFloat(records[recordIndex]['amount']);
             var fromAccount = records[recordIndex]['from'];
             if (fromAccount === userAccount.accountId()) {
@@ -507,6 +502,7 @@ async function getMVoteBurn(pairIndex, burnAsset=MVT, server=STELLAR_SERVER, use
             totalAmount = totalAmount + burnAmount;
         }
     }
+
     console.log(`${records.length} burns in total, ${userAmount}/${totalAmount}`);
     let tmpMvoteNum = (userAmount * 100/ totalAmount).toFixed(4);
     if (isNaN(tmpMvoteNum)) {
@@ -515,6 +511,8 @@ async function getMVoteBurn(pairIndex, burnAsset=MVT, server=STELLAR_SERVER, use
         tmpMvoteNum = (tmpMvoteNum).toString();
     }
     document.getElementsByClassName('mvote_num')[pairIndex].innerHTML = tmpMvoteNum + '%';
+    document.getElementsByClassName('burn_num_1')[pairIndex].innerHTML = `${userAmount}`;
+    document.getElementsByClassName('burn_num_2')[pairIndex].innerHTML = `${totalAmount}`;     
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 
@@ -553,10 +551,6 @@ function generateTxXDR(pairIndex, burnAmount, burnAsset=MVT, server=STELLAR_SERV
 }
 
 async function submitTx() {
-    // TODO: change pair into account
-    // let pair = document.getElementById('signupModal_burn').classList.item(1);
-    // console.log(pair);
-    // let burnAccount = XLM_MVT_BURN;
     var pairName = document.getElementById('signupModal_burn').classList.item(1);
     let pairIndex = NAME_INDEX_DICT[pairName];
 
@@ -635,11 +629,7 @@ async function test() {
         let voteAmount, lpAmount, burnAmount;
         voteAmount = await getAquaVote(i).then((AquaVote)=>{ return AquaVote['userAmount']/ AquaVote['totalAmount']});
         lpAmount = await getLPShare(i).then((LPShare)=>{ return LPShare['userAmount']/ LPShare['totalAmount']});
-        burnAmount = await getMVoteBurn(i).then((MVoteBurn)=>{
-            document.getElementsByClassName('burn_num_1')[i].innerHTML = MVoteBurn['userAmount'].toFixed(0);
-            document.getElementsByClassName('burn_num_2')[i].innerHTML = MVoteBurn['totalAmount'].toFixed(0);
-            return MVoteBurn['userAmount']/ MVoteBurn['totalAmount']});
-
+        burnAmount = await getMVoteBurn(i).then((MVoteBurn)=>{return MVoteBurn['userAmount']/ MVoteBurn['totalAmount']});
         console.log(voteAmount, lpAmount, burnAmount);
         if (isNaN(burnAmount)) {
             burnAmount = 0;

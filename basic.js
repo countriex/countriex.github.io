@@ -529,6 +529,15 @@ function calReward(pairIndex, voteAmount, lpAmount, burnAmount) {
     document.getElementsByClassName('your_num')[pairIndex].innerHTML = (finalReward*100).toFixed(4) + '%';
 }
 
+function calPairReward(pairIndex, totalBurn) {
+    var sumBurn = 0;
+    for (let i = 0; i < totalBurn.length; i++) {
+        sumBurn += totalBurn[i];
+    }
+    var pairReward = totalBurn[pairIndex] / sumBurn * 0.7;
+    document.getElementsByClassName('xxx')[pairIndex].innerHTML = (pairReward*100).toFixed(4) + '%';
+}
+
 function generateTxXDR(pairIndex, burnAmount, burnAsset=MVT, server=STELLAR_SERVER, userAccount=CURRENT_USER_ACCOUNT) {
     if (userAccount === "") {
         return 0;
@@ -631,9 +640,12 @@ function checkTrustline(targetAsset=MVT, server=STELLAR_SERVER, userAccount=CURR
 
 
 async function withoutLogin() {
+    var totalBurn = [];
+
     for (let i = 0; i < PAIR_NUMBER; i++) {
         let burnAmount;
         burnAmount = await getMVoteBurn(i).then((MVoteBurn) => {
+            totalBurn.push(MVoteBurn['totalAmount']);
             return MVoteBurn['userAmount'] / MVoteBurn['totalAmount']
         });
         console.log(burnAmount);
@@ -641,20 +653,29 @@ async function withoutLogin() {
             burnAmount = 0;
         }
     }
+
+    for (let i = 0; i < PAIR_NUMBER; i++) {
+        calPairReward(i, totalBurn);
+    }
 }
 
 async function test() {
+    var totalBurn = [];
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
         let voteAmount, lpAmount, burnAmount;
         voteAmount = await getAquaVote(i).then((AquaVote)=>{ return AquaVote['userAmount']/ AquaVote['totalAmount']});
         lpAmount = await getLPShare(i).then((LPShare)=>{ return LPShare['userAmount']/ LPShare['totalAmount']});
-        burnAmount = await getMVoteBurn(i).then((MVoteBurn)=>{return MVoteBurn['userAmount']/ MVoteBurn['totalAmount']});
+        burnAmount = await getMVoteBurn(i).then((MVoteBurn)=>{totalBurn.push(MVoteBurn['totalAmount']); return MVoteBurn['userAmount']/ MVoteBurn['totalAmount']});
         console.log(voteAmount, lpAmount, burnAmount);
         if (isNaN(burnAmount)) {
             burnAmount = 0;
         }
         calReward(i, voteAmount, lpAmount, burnAmount);
+    }
+
+    for (let i = 0; i < PAIR_NUMBER; i++) {
+        calPairReward(i, totalBurn);
     }
 
 }

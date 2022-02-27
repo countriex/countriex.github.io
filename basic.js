@@ -287,6 +287,7 @@ function logout() {
     }
     CURRENT_USER_ACCOUNT = "";
     CURRENT_LOGIN_METHOD = 0;
+    UPDATE_SWITCH = 1;
     toggle_login_arrow();
     toggle_logout();
     check_login();

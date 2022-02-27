@@ -78,7 +78,12 @@
                     <header class="explore">
                         <div class="explore-left">
                             <h3>MagicVoTe</h3>
-                            <div class="explore-main">(the frontend refreshes every 10 minutes while the backend snapshots once per hour, so it may take at most 1 hour for your change to be effective)</div>
+                            <div class="explore-main">
+                                <i>
+                                    <div>(The frontend refreshes every 10 minutes while the backend snapshots once per hour, </div>
+                                    <div>&nbsp;so it may take at most 1 hour for your change to be effective for our reward bot.)</div>
+                                </i>
+                            </div>
                         </div>
                         <div class="explore-right">
                             <div class="modify_tip">Last updated <span class="modify_tip_num">just now</span></div>
@@ -820,7 +825,7 @@
                                         <div class="pair-ctn-num">
                                             <div class="pair-ctn-num-main">
                                                 <div class="pair-input">
-                                                <input placeholder="" type="number" required value="1" onkeyup="burn_keyup(this.value)" maxlength="20" class="pair_input_value">
+                                                <input placeholder="" type="number" value="1" onkeyup="burn_keyup(this.value)" maxlength="20" class="pair_input_value">
                                                 </div>
                                                 <div class="pair-input-close" onclick="confirm_burn_num()">
                                                     <i class="fa fa-check"></i>
@@ -845,6 +850,9 @@
                                 <div class="burn-btn-main disabled">
                                     <button class="burn-submit-btn" role="button" onclick="submitTx()"> Submit </button>
                                 </div>
+                                <div class="burn-loader-ctn">
+                                    <div class="burn-loader"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -855,7 +863,13 @@
             <div class="copy_link">
                 <div class="link-ctn" style="word-break: break-all;">
                     <div>
-                        Please copy transaction XDR and paste into Stellar Laboratory: 
+                        <b>1. Please click the below url and go to Stellar Laboratory:</b>
+                    </div>
+                    <div>
+                        <a class="link-ctn-url" target="_blank" href="">https://laboratory.stellar.org/#txsigner?network=public</a>
+                    </div>
+                    <div>
+                        <b>2. Then copy the transaction XDR and paste into Stellar Laboratory:</b> 
                     </div>
                     <div class="link-ctn-text">
                         None

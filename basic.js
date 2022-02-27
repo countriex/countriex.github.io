@@ -79,13 +79,13 @@ NAME_INDEX_DICT = {
 };
 
 PAIR_NUMBER = 8;
-
+UPDATE_TIME = 1000*60;  // one min
 var mvoteIntervalId;
 var clockIntervalId;
 
 
 function clock() {
-    let timeStamp = Number(1000*10*60);
+    let timeStamp = Number(10*UPDATE_TIME);
     let before = new Date().getTime();
     const clockInterval = setInterval(function() {
         var now = new Date().getTime();
@@ -93,36 +93,38 @@ function clock() {
         if (distance > timeStamp) {
             clearInterval(clockInterval);
             console.log(`clock time is up`);
-        } else if(distance >= (9000*60)) {
+        } else if(distance >= (9*UPDATE_TIME)) {
             console.log(`last update 9 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = '9 minutes ago';
-        } else if(distance >= (8000*60)) {
+        } else if(distance >= (8*UPDATE_TIME)) {
             console.log(`last update 8 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = '8 minutes ago';
-        } else if(distance >= (7000*60)) {
+        } else if(distance >= (7*UPDATE_TIME)) {
             console.log(`last update 7 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = '7 minutes ago';
-        } else if(distance >= (6000*60)) {
+        } else if(distance >= (6*UPDATE_TIME)) {
             console.log(`last update 6 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = '6 minutes ago';
-        } else if(distance >= (5000*60)) {
+        } else if(distance >= (5*UPDATE_TIME)) {
             console.log(`last update 5 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = '5 minutes ago';
-        } else if(distance >= (4000*60)) {
+        } else if(distance >= (4*UPDATE_TIME)) {
             console.log(`last update 4 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = '4 minutes ago';
-        } else if(distance >= (3000*60)) {
+        } else if(distance >= (3*UPDATE_TIME)) {
             console.log(`last update 3 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = '3 minutes ago';
-        } else if(distance >= (2000*60)) {
+        } else if(distance >= (2*UPDATE_TIME)) {
             console.log(`last update 2 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = '2 minutes ago';
-        } else if(distance >= (1000*60)) {
+        } else if(distance >= (1*UPDATE_TIME)) {
             console.log(`last update 1 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = '1 minute ago';
         } else if(distance >= (0)) {
             console.log(`last update 0 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = 'just now';
+            test();
+            withoutLogin();
         }
     }, 1000);
     return clockInterval;
@@ -163,6 +165,10 @@ function close_public() {
 }
 
 function popup_burn(pair) {
+    if(CURRENT_USER_ACCOUNT === ""){
+        alert('Please login.');
+        return 0;
+    }
     document.getElementById('signupModal_burn').classList.add(pair);
     let imageNames = pair.split('_');
     // console.log(imageNames.length, imageNames);
@@ -233,26 +239,26 @@ function close_burn() {
     document.getElementsByClassName('pair_input_value')[0].value = "1";
     document.getElementsByClassName('balance-num')[0].innerHTML = "1";
     document.getElementsByClassName('stellar_copy_link')[0].classList.remove('active');
-    document.getElementsByClassName('burn-submit-btn')[0].style.pointerEvents = 'auto';
     document.getElementsByClassName('title-tip-span')[0].classList.add('active');
     document.getElementsByClassName('title-tip-span')[1].classList.remove('active');
     document.getElementById('signupModal_burn').classList.remove(document.getElementById('signupModal_burn').classList.item(1));
     document.getElementsByClassName('burn-btn-main')[0].classList.add('disabled');
+    document.getElementsByClassName('burn-submit-btn')[0].style.pointerEvents = 'none';
     document.getElementsByClassName('title-tip-span-text')[0].innerHTML = "NA";
+    document.getElementsByClassName('burn-loader-ctn')[0].classList.remove('active');
+    document.getElementsByClassName('burn-submit-btn')[0].innerHTML = "Submit";
 }
 
 function confirm_burn_num() {
-    document.getElementsByClassName('balance-num')[0].innerHTML = document.getElementsByClassName('pair_input_value')[0].value;
-    document.getElementsByClassName('burn-btn-main')[0].classList.remove('disabled');
-}
-
-function burn_keyup(input) {
-    let tmp = Number(input);
+    let tmp = Number(document.getElementsByClassName('pair_input_value')[0].value);
     if(tmp<1) {
-        document.getElementsByClassName('pair_input_value')[0].value = "1";
+        alert('Please input number greater than 1.');
+    } else {
+        document.getElementsByClassName('balance-num')[0].innerHTML = document.getElementsByClassName('pair_input_value')[0].value;
+        document.getElementsByClassName('burn-btn-main')[0].classList.remove('disabled');
+        document.getElementsByClassName('burn-submit-btn')[0].style.pointerEvents = 'auto';
     }
 }
-
 
 function toggle_login_arrow() {
     document.getElementsByClassName('menu-login-arrow')[0].classList.toggle('active');
@@ -286,8 +292,7 @@ function check_login() {
         console.log(`login success`);
         document.getElementsByClassName('menu-login-btn')[0].style.pointerEvents = 'none';
         clockIntervalId = clock(); // first start
-        mvoteIntervalId = setInterval(()=> {clockIntervalId = clock()}, 1000*10*60);
-        test();
+        mvoteIntervalId = setInterval(()=> {clockIntervalId = clock()}, 10*UPDATE_TIME);
     }
     else {
         console.log(`login fail`);
@@ -311,6 +316,7 @@ async function publickey_login() {
         })
         .catch((e) => {
             console.log(`This account is INVALID!`);
+            alert(`This account is INVALID!`);
             console.error(e);
         });
 
@@ -574,15 +580,17 @@ async function submitTx() {
         alert('Please input value of burn');
         return 0;
     }
-
     let txXDR = generateTxXDR(pairIndex, burnAmount);
 
     if (CURRENT_LOGIN_METHOD === 1) {
+        document.getElementsByClassName('burn-loader-ctn')[0].classList.add('active');
+        document.getElementsByClassName('burn-submit-btn')[0].innerHTML = "";
         try {
             var signedTx = await window.freighterApi.signTransaction(txXDR, NETWORK_TEXT);
         } catch (e) {
             console.log(`Error ${e} in freighter signTransaction().`);
             alert(`Fail to sign the transaction.`);
+            close_burn();
             return 0;
         }
         try{
@@ -590,28 +598,28 @@ async function submitTx() {
         } catch (e) {
             console.log(`Error ${e} in freighter buildTransaction().`);
             alert(`Fail to build the transaction.`);
+            close_burn();
             return 0;
         }
         try{
             var response = await STELLAR_SERVER.submitTransaction(txToSubmit);
             console.log(`Transaction submitted with response ${response}.`);
             alert(`Successfully send the transaction.`);
+            close_burn();
             return 0;
         } catch (e) {
             console.log(`Error ${e} in freighter submitTransaction().`);
             alert(`Fail to submit the transaction.`);
+            close_burn();
             return 0;
         }
     } else if (CURRENT_LOGIN_METHOD === 2) {
-        alert(`Please copy the transaction XDR`);
+        document.getElementsByClassName('burn-loader-ctn')[0].classList.add('active');
+        document.getElementsByClassName('burn-submit-btn')[0].innerHTML = "";
         document.getElementsByClassName('stellar_copy_link')[0].classList.add('active');
         document.getElementsByClassName('link-ctn-text')[0].innerHTML = `${txXDR}`;
+        document.getElementsByClassName('link-ctn-url')[0].href= "https://laboratory.stellar.org/#txsigner?network=public";
         document.getElementsByClassName('burn-submit-btn')[0].style.pointerEvents = 'none';
-        document.getElementsByClassName('burn-submit-btn')[0].setAttribute("target","_blank");
-        document.getElementsByClassName('burn-submit-btn')[0].href = "https://laboratory.stellar.org/#txsigner?network=public";
-    } else {
-        alert('Please login');
-        return 0;
     }
 }
 

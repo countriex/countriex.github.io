@@ -80,6 +80,7 @@ NAME_INDEX_DICT = {
 
 PAIR_NUMBER = 8;
 UPDATE_TIME = 1000*60;  // one min
+UPDATE_SWITCH = 1;
 var mvoteIntervalId;
 var clockIntervalId;
 
@@ -90,9 +91,14 @@ function clock() {
     const clockInterval = setInterval(function() {
         var now = new Date().getTime();
         var distance = now - before;
+        if(UPDATE_SWITCH === 1){
+            test();
+            withoutLogin();
+        }
         if (distance > timeStamp) {
             clearInterval(clockInterval);
             console.log(`clock time is up`);
+            UPDATE_SWITCH = 1;
         } else if(distance >= (9*UPDATE_TIME)) {
             console.log(`last update 9 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = '9 minutes ago';
@@ -123,8 +129,7 @@ function clock() {
         } else if(distance >= (0)) {
             console.log(`last update 0 min`);
             document.getElementsByClassName('modify_tip_num')[0].innerHTML = 'just now';
-            test();
-            withoutLogin();
+            UPDATE_SWITCH = 0;
         }
     }, 1000);
     return clockInterval;

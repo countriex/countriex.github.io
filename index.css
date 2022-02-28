@@ -508,6 +508,17 @@ img[alt*="logo"] {
     align-items: center;    
 }
 
+.pair_content .pair_descr .pair_descr_curr .reward_tip {
+    font-size: 12px;
+    background-color: rgb(125,49,170);
+    padding: 0 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;    
+}
+
 .pair_content .pair_descr .pair_descr_page {
     display: inline-block; 
     font-size: 12px;

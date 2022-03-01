@@ -529,8 +529,8 @@ async function getMVoteBurn(pairIndex, burnAsset=MVT, server=STELLAR_SERVER, use
     if (userAccount !== "") {
         document.getElementsByClassName('mvote_num')[pairIndex].innerHTML = tmpMvoteNum + '%';
     }
-    document.getElementsByClassName('burn_num_1')[pairIndex].innerHTML = `${userAmount}`;
-    document.getElementsByClassName('burn_num_2')[pairIndex].innerHTML = `${totalAmount}`;     
+    document.getElementsByClassName('burn_num_1')[pairIndex].innerHTML = userAmount.toFixed(0);
+    document.getElementsByClassName('burn_num_2')[pairIndex].innerHTML = totalAmount.toFixed(0);   
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 

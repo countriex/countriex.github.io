@@ -544,7 +544,11 @@ img[alt*="logo"] {
 .pair_descr .pair_descr_estimate .pair_estimate_ctn {
     display: inline-flex;
     border-radius: 10px;
-    padding: 0 10px;
+}
+
+.pair_descr_estimate .pair_estimate_ctn .pair_descr_num {
+    display: inline-flex;
+    padding: 0 2px;
     background-color: #e2dede;
 }
 

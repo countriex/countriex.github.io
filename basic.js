@@ -93,7 +93,6 @@ function clock() {
         var distance = now - before;
         if(UPDATE_SWITCH === 1){
             test();
-            withoutLogin();
         }
         if (distance > timeStamp) {
             clearInterval(clockInterval);
@@ -284,6 +283,8 @@ function logout() {
         document.getElementsByClassName('mvote_num')[i].innerHTML = "NA";
         document.getElementsByClassName('your_num')[i].innerHTML = "NA";
         document.getElementsByClassName('burn_num_1')[i].innerHTML = 0;
+        document.getElementsByClassName('estimate_num1')[i].innerHTML = "NA";
+        document.getElementsByClassName('estimate_num2')[i].innerHTML = "NA";
     }
     CURRENT_USER_ACCOUNT = "";
     CURRENT_LOGIN_METHOD = 0;
@@ -541,12 +542,24 @@ function calReward(pairIndex, voteAmount, lpAmount, burnAmount) {
     document.getElementsByClassName('your_num')[pairIndex].innerHTML = (finalReward*100).toFixed(4) + '%';
 }
 
-function calPairReward(pairIndex, totalBurn) {
+function calPairReward(pairIndex, totalBurn, totalVote) {
     var sumBurn = 0;
     for (let i = 0; i < totalBurn.length; i++) {
         sumBurn += totalBurn[i];
     }
     var pairReward = totalBurn[pairIndex] / sumBurn * 0.7;
+    var willVoteNumber = 100000;
+    var hourlyReleaseNum = 1000;
+    var maxPairVoteReward;
+    if(totalVote[pairIndex] > 0){
+        if(pairIndex == 0){
+            maxPairVoteReward = hourlyReleaseNum * (0.3+pairReward) * (willVoteNumber / (willVoteNumber+totalVote[pairIndex]));
+        } else {
+            maxPairVoteReward = hourlyReleaseNum * pairReward * (willVoteNumber / (willVoteNumber+totalVote[pairIndex]));
+        }
+        document.getElementsByClassName('estimate_num1')[pairIndex].innerHTML = (maxPairVoteReward*0.5).toFixed(4);
+        document.getElementsByClassName('estimate_num2')[pairIndex].innerHTML = (maxPairVoteReward).toFixed(4);
+    }
     document.getElementsByClassName('reward_num')[pairIndex].innerHTML = (pairReward*100).toFixed(4) + '%';
 }
 
@@ -659,11 +672,13 @@ function checkTrustline(targetAsset=MVT, server=STELLAR_SERVER, userAccount=CURR
 
 async function withoutLogin() {
     var totalBurn = [];
+    var totalVote = [];
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
         let burnAmount;
         burnAmount = await getMVoteBurn(i).then((MVoteBurn) => {
             totalBurn.push(MVoteBurn['totalAmount']);
+            totalVote.push(0);
             return MVoteBurn['userAmount'] / MVoteBurn['totalAmount']
         });
         console.log(burnAmount);
@@ -673,16 +688,17 @@ async function withoutLogin() {
     }
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
-        calPairReward(i, totalBurn);
+        calPairReward(i, totalBurn, totalVote);
     }
 }
 
 async function test() {
     var totalBurn = [];
+    var totalVote = [];
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
         let voteAmount, lpAmount, burnAmount;
-        voteAmount = await getAquaVote(i).then((AquaVote)=>{ return AquaVote['userAmount']/ AquaVote['totalAmount']});
+        voteAmount = await getAquaVote(i).then((AquaVote)=>{totalVote.push(AquaVote['totalAmount']); return AquaVote['userAmount']/ AquaVote['totalAmount']});
         lpAmount = await getLPShare(i).then((LPShare)=>{ return LPShare['userAmount']/ LPShare['totalAmount']});
         burnAmount = await getMVoteBurn(i).then((MVoteBurn)=>{totalBurn.push(MVoteBurn['totalAmount']); return MVoteBurn['userAmount']/ MVoteBurn['totalAmount']});
         console.log(voteAmount, lpAmount, burnAmount);
@@ -693,7 +709,7 @@ async function test() {
     }
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
-        calPairReward(i, totalBurn);
+        calPairReward(i, totalBurn, totalVote);
     }
 
 }

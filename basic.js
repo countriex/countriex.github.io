@@ -58,24 +58,24 @@ CURRENT_USER_ACCOUNT = "";
 
 PAIRS_LIST = [
     {'VOTE': XLM_MVT_VOTE, 'POOL': XLM_MVT_POOL, 'BURN': XLM_MVT_BURN},
-    {'VOTE': MVT_USDC_VOTE, 'POOL': MVT_USDC_POOL, 'BURN': MVT_USDC_BURN},
-    {'VOTE': MVT_yXLM_VOTE, 'POOL': MVT_yXLM_POOL, 'BURN': MVT_yXLM_BURN},
     {'VOTE': AQUA_MVT_VOTE, 'POOL': AQUA_MVT_POOL, 'BURN': AQUA_MVT_BURN},
-    {'VOTE': LSP_MVT_VOTE, 'POOL': LSP_MVT_POOL, 'BURN': LSP_MVT_BURN},
-    {'VOTE': MVT_PYBC_VOTE, 'POOL': MVT_PYBC_POOL, 'BURN': MVT_PYBC_BURN},
     {'VOTE': BTC_MVT_VOTE, 'POOL': BTC_MVT_POOL, 'BURN': BTC_MVT_BURN},
     {'VOTE': ETH_MVT_VOTE, 'POOL': ETH_MVT_POOL, 'BURN': ETH_MVT_BURN},
+    {'VOTE': MVT_USDC_VOTE, 'POOL': MVT_USDC_POOL, 'BURN': MVT_USDC_BURN},
+    {'VOTE': MVT_yXLM_VOTE, 'POOL': MVT_yXLM_POOL, 'BURN': MVT_yXLM_BURN},
+    {'VOTE': LSP_MVT_VOTE, 'POOL': LSP_MVT_POOL, 'BURN': LSP_MVT_BURN},
+    {'VOTE': MVT_PYBC_VOTE, 'POOL': MVT_PYBC_POOL, 'BURN': MVT_PYBC_BURN},
 ];
 
 NAME_INDEX_DICT = {
     'XLM_MVOTE': 0,
-    'MVOTE_USDC': 1,
-    'MVOTE_yXLM': 2,
-    'AQUA_MVOTE': 3,
-    'LSP_MVOTE': 4,
-    'MVOTE_PYBC': 5,
-    'BTC_MVOTE': 6,
-    'ETH_MVOTE': 7,
+    'AQUA_MVOTE': 1,
+    'BTC_MVOTE': 2,
+    'ETH_MVOTE': 3,
+    'MVOTE_USDC': 4,
+    'MVOTE_yXLM': 5,
+    'LSP_MVOTE': 6,
+    'MVOTE_PYBC': 7,
 };
 
 PAIR_NUMBER = 8;
@@ -283,8 +283,6 @@ function logout() {
         document.getElementsByClassName('mvote_num')[i].innerHTML = "NA";
         document.getElementsByClassName('your_num')[i].innerHTML = "NA";
         document.getElementsByClassName('burn_num_1')[i].innerHTML = 0;
-        document.getElementsByClassName('estimate_num1')[i].innerHTML = "NA";
-        document.getElementsByClassName('estimate_num2')[i].innerHTML = "NA";
     }
     CURRENT_USER_ACCOUNT = "";
     CURRENT_LOGIN_METHOD = 0;
@@ -669,6 +667,52 @@ function checkTrustline(targetAsset=MVT, server=STELLAR_SERVER, userAccount=CURR
     return assetBalance;
 }
 
+async function getAquaTotalVote(pairIndex, voteAsset=AQUA, server=STELLAR_SERVER) {
+    
+    var voteKeypair = PAIRS_LIST[pairIndex]['VOTE'];
+
+    var cursor = "";
+    var records = [];
+
+    while (true) {
+        try {
+            var response = await server
+                .claimableBalances()
+                .claimant(voteKeypair.publicKey())
+                .asset(voteAsset)
+                .cursor(cursor)
+                .limit(200)
+                .call();
+        } catch (e) {
+            console.log(`Error ${e} in getAquaVote().`);
+            return 0;
+        }
+
+        var recordList = response['records'];
+
+        if (recordList.length > 0) {
+            records.push.apply(records, recordList);
+            var nextCursor = recordList[recordList.length - 1]['paging_token'];
+            if (cursor !== nextCursor) {
+                cursor = nextCursor;
+                // console.log(`Get cursor: ${cursor}.`);
+            } else {
+                // console.log(`All votes are retrieved.`);
+                break;
+            }
+        } else {
+            // console.log(`All votes are retrieved.`);
+            break;
+        }
+    }
+
+    var totalAmount = 0;
+    for (var recordIndex in records) {
+        var voteAmount = parseFloat(records[recordIndex]['amount']);
+        totalAmount = totalAmount + voteAmount;
+    }
+    return {'totalAmount': totalAmount};
+}
 
 async function withoutLogin() {
     var totalBurn = [];
@@ -678,15 +722,17 @@ async function withoutLogin() {
         let burnAmount;
         burnAmount = await getMVoteBurn(i).then((MVoteBurn) => {
             totalBurn.push(MVoteBurn['totalAmount']);
-            totalVote.push(0);
-            return MVoteBurn['userAmount'] / MVoteBurn['totalAmount']
+            return MVoteBurn['userAmount'] / MVoteBurn['totalAmount'];
+        });
+        await getAquaTotalVote(i).then((AquaVote)=>{
+            totalVote.push(AquaVote['totalAmount']);
         });
         console.log(burnAmount);
         if (isNaN(burnAmount)) {
             burnAmount = 0;
         }
     }
-
+    console.log(`totalVote`, totalVote);
     for (let i = 0; i < PAIR_NUMBER; i++) {
         calPairReward(i, totalBurn, totalVote);
     }

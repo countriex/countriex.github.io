@@ -72,3 +72,74 @@
 .ppt-image .ppt-image-ctn .ppt-image-col1 {
     border-right: rgb(202, 192, 192) 1.5px solid;
 }
+
+.main_content .gov-choose-1,
+.main_content .gov-choose-2,
+.main_content .gov-choose-3 {
+    display: flex;
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+    height: 80px;
+}
+
+.main_content .gov-col-1 {
+    display: inline-flex;
+    width: 10%;
+    align-items: center;
+}
+
+.main_content .gov-col-2 {
+    display: inline-flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_content .gov-col-3 {
+    display: inline-flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_content .gov-col-4 {
+    display: inline-flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.gov-choose-main .gov-col-4 .confirm-btn {
+    height: 100%;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.gov-choose-main .gov-col-4 .confirm-btn-cotainer {
+    height: 100%;
+    display: inline-block;
+}
+
+.gov-col-4 .confirm-btn-cotainer .gov-confirm-btn {
+    padding: 10px 20px;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    width: 90%; 
+    text-align: center;
+    height: 100%;
+    line-height: 100%;
+    cursor: pointer;
+    background-color: rgb(52,49,203);
+}
+
+.gov-col-4 .confirm-btn-cotainer .gov-confirm-btn:hover {
+    background-color: rgb(10, 12, 146) !important;
+    border: solid 1px black !important;
+}

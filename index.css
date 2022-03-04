@@ -119,6 +119,13 @@ body {
     padding-right: 60px;
 }
 
+.menu .menu-ctn .menu-gov-ctn  {
+    height: 80px;
+    line-height: 80px;
+    min-width: 160px;
+    display: inline-flex;
+}
+
 .menu .menu-ctn .menu-vote-ctn,
 .menu .menu-ctn .menu-list-ctn,
 .menu .menu-ctn .menu-login-ctn {

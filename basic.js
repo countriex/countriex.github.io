@@ -61,8 +61,8 @@ PAIRS_LIST = [
     {'VOTE': AQUA_MVT_VOTE, 'POOL': AQUA_MVT_POOL, 'BURN': AQUA_MVT_BURN},
     {'VOTE': BTC_MVT_VOTE, 'POOL': BTC_MVT_POOL, 'BURN': BTC_MVT_BURN},
     {'VOTE': ETH_MVT_VOTE, 'POOL': ETH_MVT_POOL, 'BURN': ETH_MVT_BURN},
-    {'VOTE': MVT_USDC_VOTE, 'POOL': MVT_USDC_POOL, 'BURN': MVT_USDC_BURN},
     {'VOTE': MVT_yXLM_VOTE, 'POOL': MVT_yXLM_POOL, 'BURN': MVT_yXLM_BURN},
+    {'VOTE': MVT_USDC_VOTE, 'POOL': MVT_USDC_POOL, 'BURN': MVT_USDC_BURN},
     {'VOTE': LSP_MVT_VOTE, 'POOL': LSP_MVT_POOL, 'BURN': LSP_MVT_BURN},
     {'VOTE': MVT_PYBC_VOTE, 'POOL': MVT_PYBC_POOL, 'BURN': MVT_PYBC_BURN},
 ];
@@ -72,8 +72,8 @@ NAME_INDEX_DICT = {
     'AQUA_MVOTE': 1,
     'BTC_MVOTE': 2,
     'ETH_MVOTE': 3,
-    'MVOTE_USDC': 4,
-    'MVOTE_yXLM': 5,
+    'MVOTE_yXLM': 4,
+    'MVOTE_USDC': 5,
     'LSP_MVOTE': 6,
     'MVOTE_PYBC': 7,
 };
@@ -535,7 +535,7 @@ async function getMVoteBurn(pairIndex, burnAsset=MVT, server=STELLAR_SERVER, use
 
 function calReward(pairIndex, voteAmount, lpAmount, burnAmount) {
     let averageReward, finalReward;
-    averageReward = (voteAmount*2 + lpAmount*1 + burnAmount*1) / 4;
+    averageReward = (voteAmount*1 + lpAmount*2 + burnAmount*1) / 4;
     finalReward = Math.min(voteAmount, averageReward);
     document.getElementsByClassName('your_num')[pairIndex].innerHTML = (finalReward*100).toFixed(4) + '%';
 }
@@ -555,7 +555,7 @@ function calPairReward(pairIndex, totalBurn, totalVote) {
         } else {
             maxPairVoteReward = hourlyReleaseNum * pairReward * (willVoteNumber / (willVoteNumber+totalVote[pairIndex]));
         }
-        document.getElementsByClassName('estimate_num1')[pairIndex].innerHTML = (maxPairVoteReward*0.5).toFixed(4);
+        document.getElementsByClassName('estimate_num1')[pairIndex].innerHTML = (maxPairVoteReward*0.25).toFixed(4);
         document.getElementsByClassName('estimate_num2')[pairIndex].innerHTML = (maxPairVoteReward).toFixed(4);
     }
     document.getElementsByClassName('reward_num')[pairIndex].innerHTML = (pairReward*100).toFixed(4) + '%';

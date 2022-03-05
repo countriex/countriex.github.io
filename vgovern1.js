@@ -410,6 +410,14 @@ function checkTrustline(targetAsset=MVT, server=STELLAR_SERVER, userAccount=CURR
 async function withoutLogin() {
 
     var totalBurn = [];
+    // var datum = new Date(Date.UTC('2022','02','05','16','40','30'));  // month start from 0
+    // console.log(datum);
+    // if(new Date().getTime() > datum){
+    //     for(let i=0; i<CHOICE_NUMBER; i++){
+    //         document.getElementsByClassName('gov-confirm-btn')[i].style.pointerEvents = 'none';
+    //         document.getElementsByClassName('gov-confirm-btn')[i].style.backgroundColor= '#d0d0e1';
+    //     }
+    // }
 
     for (let i = 0; i < CHOICE_NUMBER; i++) {
         let burnAmount;

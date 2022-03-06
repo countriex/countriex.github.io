@@ -410,6 +410,7 @@ function checkTrustline(targetAsset=MVT, server=STELLAR_SERVER, userAccount=CURR
 async function withoutLogin() {
 
     var totalBurn = [];
+    var burnPromise = [];
     // var datum = new Date(Date.UTC('2022','02','05','16','40','30'));  // month start from 0
     // console.log(datum);
     // if(new Date().getTime() > datum){
@@ -420,11 +421,14 @@ async function withoutLogin() {
     // }
 
     for (let i = 0; i < CHOICE_NUMBER; i++) {
-        let burnAmount;
-        burnAmount = await getMVoteBurn(i).then((MVoteBurn) => {
-            totalBurn.push(MVoteBurn['totalAmount']);
-        });
+        burnPromise.push(getMVoteBurn(i));
     }
+    await Promise.all(burnPromise)
+    .then((MVoteBurn) => {
+        for (let i = 0; i < CHOICE_NUMBER; i++) {
+            totalBurn.push(MVoteBurn[i]['totalAmount']);
+        }
+    });
     console.log(`gov totalBurn`, totalBurn);
     for (let i = 0; i < CHOICE_NUMBER; i++) {
         document.getElementsByClassName('burn-gov-num-2')[i].innerHTML = totalBurn[i];
@@ -432,13 +436,10 @@ async function withoutLogin() {
 }
 
 async function test() {
-    var totalBurn = [];
+    var burnPromise = [];
 
     for (let i = 0; i < CHOICE_NUMBER; i++) {
-        burnAmount = await getMVoteBurn(i).then((MVoteBurn)=>{totalBurn.push(MVoteBurn['totalAmount']); return MVoteBurn['userAmount']/ MVoteBurn['totalAmount']});
-        console.log(`burnAmount:`, burnAmount);
-        if (isNaN(burnAmount)) {
-            burnAmount = 0;
-        }
+        burnPromise.push(getMVoteBurn(i));
     }
+    await Promise.all(burnPromise);
 }

@@ -717,22 +717,29 @@ async function getAquaTotalVote(pairIndex, voteAsset=AQUA, server=STELLAR_SERVER
 async function withoutLogin() {
     var totalBurn = [];
     var totalVote = [];
+    var burnPromise = [];
+    var votePromise = [];
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
-        let burnAmount;
-        burnAmount = await getMVoteBurn(i).then((MVoteBurn) => {
-            totalBurn.push(MVoteBurn['totalAmount']);
-            return MVoteBurn['userAmount'] / MVoteBurn['totalAmount'];
-        });
-        await getAquaTotalVote(i).then((AquaVote)=>{
-            totalVote.push(AquaVote['totalAmount']);
-        });
-        console.log(burnAmount);
-        if (isNaN(burnAmount)) {
-            burnAmount = 0;
-        }
+        burnPromise.push(getMVoteBurn(i));
+        votePromise.push(getAquaTotalVote(i));
     }
-    console.log(`totalVote`, totalVote);
+
+    await Promise.all(burnPromise)
+    .then((MVoteBurn) => {
+        for (let i = 0; i < PAIR_NUMBER; i++) {
+            totalBurn.push(MVoteBurn[i]['totalAmount']);
+        }
+    });
+    await Promise.all(votePromise)
+    .then((AquaVote) => {
+        for (let i = 0; i < PAIR_NUMBER; i++) {
+            totalVote.push(AquaVote[i]['totalAmount']);
+        }
+    });
+    // console.log(`totalVote`, totalVote);
+    // console.log(`totalBurn`, totalBurn);
+
     for (let i = 0; i < PAIR_NUMBER; i++) {
         calPairReward(i, totalBurn, totalVote);
     }
@@ -741,20 +748,43 @@ async function withoutLogin() {
 async function test() {
     var totalBurn = [];
     var totalVote = [];
+    var votePromise = [];
+    var lpPromise = [];
+    var burnPromise = [];
+    var voteAmount = [];
+    var lpAmount = [];
+    var burnAmount = [];
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
-        let voteAmount, lpAmount, burnAmount;
-        voteAmount = await getAquaVote(i).then((AquaVote)=>{totalVote.push(AquaVote['totalAmount']); return AquaVote['userAmount']/ AquaVote['totalAmount']});
-        lpAmount = await getLPShare(i).then((LPShare)=>{ return LPShare['userAmount']/ LPShare['totalAmount']});
-        burnAmount = await getMVoteBurn(i).then((MVoteBurn)=>{totalBurn.push(MVoteBurn['totalAmount']); return MVoteBurn['userAmount']/ MVoteBurn['totalAmount']});
-        console.log(voteAmount, lpAmount, burnAmount);
-        if (isNaN(burnAmount)) {
-            burnAmount = 0;
-        }
-        calReward(i, voteAmount, lpAmount, burnAmount);
+        votePromise.push(getAquaVote(i));
+        lpPromise.push(getLPShare(i));
+        burnPromise.push(getMVoteBurn(i));
     }
 
+    await Promise.all(votePromise)
+    .then((AquaVote) => {
+        console.log(AquaVote);
+        for (let i = 0; i < PAIR_NUMBER; i++) {
+            totalVote.push(AquaVote[i]['totalAmount']);
+            voteAmount.push(AquaVote[i]['userAmount']/ AquaVote[i]['totalAmount']);
+        }
+    });
+    await Promise.all(lpPromise)
+    .then((LPShare) => {
+        for (let i = 0; i < PAIR_NUMBER; i++) {
+            lpAmount.push(LPShare[i]['userAmount']/ LPShare[i]['totalAmount']);
+        }
+    });
+    await Promise.all(burnPromise)
+    .then((MVoteBurn) => {
+        for (let i = 0; i < PAIR_NUMBER; i++) {
+            totalBurn.push(MVoteBurn[i]['totalAmount']);
+            burnAmount.push(MVoteBurn[i]['userAmount']/ MVoteBurn[i]['totalAmount']);
+        }
+    });
+
     for (let i = 0; i < PAIR_NUMBER; i++) {
+        calReward(i, voteAmount[i], lpAmount[i], burnAmount[i]);
         calPairReward(i, totalBurn, totalVote);
     }
 

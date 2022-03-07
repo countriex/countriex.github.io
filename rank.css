@@ -25,10 +25,6 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-
-    /* filter: blur(2px);
-    pointer-events: none;
-    user-select: none; */
 }
 .container#blur.active {
     filter: blur(2px);
@@ -272,7 +268,6 @@ body {
 }
 
 .content .content_head {
-    /* background-image: url("vote_bg.jpeg"); */
     background: linear-gradient(#e66465, #9198e5);
     text-align: center;
     display: block;
@@ -360,19 +355,19 @@ body {
 .main .main_header .main_header_col1,
 .main .main_content .main_content_col1 {
     display: inline-flex;
-    width: 31%;
+    width: 20%;
 }
 
 .main .main_header .main_header_col2,
 .main .main_content .main_content_col2 {
     display: inline-flex;
-    width: 50%;
+    width: 65%;
 }
 
 .main .main_header .main_header_col3,
 .main .main_content .main_content_col3 {
     display: inline-flex;
-    width: 19%;
+    width: 15%;
 }
 
 .main_header h6{
@@ -388,7 +383,7 @@ body {
 .main .main_header .main_header_col2 .lock,
 .main .main_content .main_content_col2 .lock {
     display: inline-flex;
-    width: 24%;
+    width: 66%;
     text-align: center;
     justify-content: center;
     height: 100%;
@@ -397,51 +392,34 @@ body {
 .main .main_header .main_header_col2 .lp,
 .main .main_content .main_content_col2 .lp {
     display: inline-flex;
-    width: 27%;
-    text-align: center;
+    width: 17%;
     justify-content: center;
+    align-items: center;
 }
 
 .main .main_header .main_header_col2 .mvote,
 .main .main_content .main_content_col2 .mvote {
     display: inline-flex;
-    width: 31%;
-    text-align: center;
+    width: 17%;
     justify-content: center;
+    align-items: center;
 }
 
-.main .main_header .main_header_col2 .your,
-.main .main_content .main_content_col2 .your {
+.main .main_header .main_header_col3 .rank-btn,
+.main .main_content .main_content_col3 .rank-btn {
+    height: 100%;
     display: inline-flex;
-    width: 18%;
-    text-align: center;
+    width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
-.main .main_header .main_header_col3 .burn,
-.main .main_content .main_content_col3 .burn {
-    display: inline-flex;
-    width: 62%;
-    text-align: center;
-    justify-content: center;
-}
-
-.main .main_header .main_header_col3 .reward,
-.main .main_content .main_content_col3 .reward {
-    display: inline-flex;
-    width: 35%;
-    text-align: center;
-    justify-content: center;
-}
-
-.main .main_container .main_XLM_MVOTE,
-.main .main_container .main_MVOTE_USDC,
-.main .main_container .main_MVOTE_yXLM,
-.main .main_container .main_AQUA_MVOTE,
-.main .main_container .main_LSP_MVOTE,
-.main .main_container .main_MVOTE_PYBC,
-.main .main_container .main_BTC_MVOTE,
-.main .main_container .main_ETH_MVOTE {
+.main .main_container .main_XLM,
+.main .main_container .main_AQUA,
+.main .main_container .main_YBX,
+.main .main_container .main_FISH,
+.main .main_container .main_LSP,
+.main .main_container .main_CAFE {
     display: flex;
     text-align: left;
     width: 100%;
@@ -466,20 +444,8 @@ body {
 }
 
 .pair_content .pair_image .xlm_img {
-    z-index: 1;
     position: relative;
-    width: 30px;
-    float: left;
-    display: flex;
-    align-items: center;
-}
-
-.pair_content .pair_image .mvote_img {
-    z-index: 0;
-    box-sizing: content-box;
-    position: relative;
-    left: -5px;
-    width: 30px;
+    width: 100%;
     float: left;
     display: flex;
     align-items: center;
@@ -495,41 +461,19 @@ img[alt*="logo"] {
     display: flex;
     flex-direction: column;
     width: 85%;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .pair_content .pair_descr .pair_descr_curr {
     display: flex; 
     font-size: 19px;
-    height: 40%;
+    height: 55%;
     align-items: center;
 }
 
 .pair_content .pair_descr .pair_descr_curr .curr_content {
     display: inline-flex;
     width: 120px;
-}
-
-.pair_content .pair_descr .pair_descr_curr .curr_tag {
-    font-size: 12px;
-    background-color: #92addd;
-    padding: 0 5px;
-    margin-left: 5px;
-    border-radius: 5px;
-    color: #fff;
-    display: inline-flex;
-    align-items: center;    
-}
-
-.pair_content .pair_descr .pair_descr_curr .reward_tip {
-    font-size: 12px;
-    background-color: rgb(125,49,170);
-    padding: 0 5px;
-    margin-left: 10px;
-    border-radius: 5px;
-    color: #fff;
-    display: inline-flex;
-    align-items: center;    
 }
 
 .pair_content .pair_descr .pair_descr_page {
@@ -547,117 +491,46 @@ img[alt*="logo"] {
     color: #000;
 }
 
-.pair_content .pair_descr .pair_descr_estimate {
-    display: inline-block; 
-    font-size: 12px;
-    line-height: 20px;
-    padding-top: 5px;
-    height: 30%;
-}
-
-.pair_descr .pair_descr_estimate .pair_estimate_ctn {
-    display: inline-flex;
-    border-radius: 10px;
-}
-
-.pair_descr_estimate .pair_estimate_ctn .pair_descr_num {
-    display: inline-flex;
-    padding: 0 2px;
-    background-color: #e2dede;
-}
-
-.main .main_content .lock .lock_ctn,
-.main .main_content .lp .lp_ctn,
-.main .main_content .mvote .mvote_ctn,
-.main .main_content .your .your_ctn,
-.main .main_content .burn .burn_ctn,
-.main .main_content .reward .reward_ctn {
-    display: inline-block;
+.main .main_content .lock .rank-token-desp {
+    font-size: 15px;
+    font-weight: 400;
+    height: 100%;
     width: 100%;
-    height: 60px;
-    line-height: 60px;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
 }
 
-.main .main_content .lock .lock_num,
-.main .main_content .lp .lp_num,
-.main .main_content .mvote .mvote_num,
-.main .main_content .your .your_num {
+.main .main_content .lp .rank-your-burn,
+.main .main_content .mvote .rank-total-burn {
     font-size: 18px;
     font-weight: 400;
     height: 100%;
     display: inline-block;
     text-align: center;
-}
-
-.main .main_content .lock .lock_num,
-.main .main_content .lp .lp_num,
-.main .main_content .mvote .mvote_num{
     width: 35%;
 }
 
-.main .main_content .your .your_num {
-    width: 100%;
-}
-
-.main .main_content .lock .aqua_button_cotainer,
-.main .main_content .lp .lp_button_cotainer,
-.main .main_content .mvote .mvote_button_cotainer {
+.rank-btn .rank-btn-cotainer {
     height: 100%;
     display: inline-block;
-    width: 60%;
+    line-height: 60px;
 }
 
-.main .main_content .lock .aqua_button,
-.main .main_content .lp .lp_button,
-.main .main_content .mvote .mvote_button {
-    padding: 5px 10px;
+.rank-btn .rank-btn-cotainer .rank-burn-btn {
+    padding: 10px 20px;
     border-radius: 0.2em;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:400;
     color:#FFFFFF;
-    box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
-    font-size: 15px;
-    width: 70%; 
+    width: 90%; 
     text-align: center;
     height: 100%;
     line-height: 100%;
     cursor: pointer;
-}
-
-.main .main_content .lock .aqua_button,
-.main .main_content .lp .lp_button {
-    background-color:rgb(93, 93, 173);
-}
-
-.main .main_content .mvote .mvote_button {
-    background-color:rgb(52,49,203);
-}
-
-.main .main_content .lock .aqua_button:active,
-.main .main_content .lp .lp_button:active,
-.main .main_content .mvote .mvote_button:active {
-    box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
-}
-
-.main .main_content .lock .aqua_button:hover,
-.main .main_content .lp .lp_button:hover,
-.main .main_content .mvote .mvote_button:hover {
-    background-color: rgb(10, 12, 146) !important;
-    border: solid 1px black !important;
-}
-
-.burn .total_perc,
-.reward .total_num {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    font-size: 18px;
-    font-weight: 400;
-    height: 100%;
-    line-height: 100%;
-    margin: 0;
+    background-color: rgb(52,49,203);
 }
 
 .footer {

@@ -10,10 +10,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="homepage.css">
-    <!-- below govern external js file -->
-    <script type="text/javascript" src="vgovern1.js"></script>
+    <link rel="stylesheet" type="text/css" href="rank.css">
+    <!-- below mvote external js file -->
+    <script type="text/javascript" src="rank.js"></script>
     <title>MagicCrypto</title>
 </head>
 <body onload="withoutLogin()">
@@ -85,91 +84,314 @@
         <div class="wrapper">
             <div class="content">
                 <div class="content_head">
-                    <h2><b>MagicVoTe Governance</b></h2>
+                    <h2><b>Rank the Value/Future of Stellar Tokens by Crowd Wisdom</b></h2>
                 </div>
                 <div class="main">
                     <header class="explore">
                         <div class="explore-left">
-                            <h3>Governance 1</h3>
-                            <div class="explore-main" style="font-size: 20px;">
-                                (see details at <a target="_blank" href="https://magiccrypto.medium.com/mvote-governance1-adjusting-three-core-parameters-of-mvt-hourly-reward-7b2da868f2c1">this medium article</a>; pls manually refresh this page to see the latest burns)
-                            </div>
+                            <h3>Ranking</h3>
+                            <div class="explore-main">(this page refreshes every 10 minutes; we will provide an interface for any token to be listed here)</div>
                         </div>
                         <div class="explore-right">
-                            <div class="modify_tip" style="font-size: 15px; width: 250px;">Until 16:40 on 2022–03–05 UTC</div>
+                            <div class="modify_tip">Last updated <span class="modify_tip_num">just now</span></div>
                         </div>
                     </header>
                     <div style="padding-top: 10px;">
-                        As the incentivized governance in <a target="_blank" href="https://magiccrypto.github.io/MagicVoTe_whitepaper.pdf">whitepaper</a>, we have assigned 20,000 MVT from the MVT Together account for those who vote for choice 1.
+                        By providing the ranking utility, we have expanded the scope of MVote from a pure voting-based reward token to a more generic voting token for many other areas. By nature, MVote is the most suitable token for doing such a "voting" matter because MVT was born for voting.
                     </div>
                     <div style="padding-top: 10px;">
-                        You can also send your burned MVT using any wallet directly to the choice wallet address to participate in this governance.
+                        As the first use case, we request the community to use their crowd wisdom to rank/vote the (investment) value of different tokens on Stellar by buring one or more MVT. This brings three benefits: (1) for new investors to Stellar, they could quickly know which tokens they could invest; (2) for existing investors on Stellar, you can know other people's attitude towards different tokens; and (3) this gives different token teams to advertise their tokens, especially during the initial launch, by burning at least 100 MVT.
+                    </div>
+                    <div style="padding-top: 10px;">
+                        Disclaimer: you should NOT treat the ranking result here as an investment advice.
                     </div>
                     <div class="main_container">
+                        <div class="main_header">
+                            <div class="main_header_col1">
+                                <div class="pair">
+                                    <h6>Token</h6>
+                                </div>
+                            </div>
+                            <div class="main_header_col2">
+                                <div class="lock"><h6>Description</h6></div>
+                                <div class="lp"><h6>Your Vote</h6></div>
+                                <div class="mvote"><h6>Total Vote</h6></div>
+                            </div>
+                            <div class="main_header_col3">
+                                <div class="rank-btn"><h6>Button</h6></div>
+                            </div>
+                        </div>
                         <div class="main_content">
-                            <div class="gov-choose-1">
-                                <div class="gov-col-1">
-                                    <div class="gov-choose">Choice 1: </div>
-                                </div>
-                                <div class="gov-col-2">
-                                    <div class="gov-desp">Adjust to <b>AQUAShare=1, LPShare=2, BurnShare=1</b>.</div>
-                                </div>
-                                <div class="gov-col-3">
-                                    <div class="burn-display">
-                                        <span class="burn-gov-num-1">0</span> / <span class="burn-gov-num-2">0</span>
+                            <div class="main_XLM">
+                                <div class="main_content_col1">
+                                    <div class="pair">
+                                        <div class="pair_content">
+                                            <div class="pair_image">
+                                                <div class="xlm_img">
+                                                    <img src="./icons/MVOTEicon.png" width="45" height="45" alt="MVT logo">
+                                                </div>
+                                            </div>
+                                            <div class="pair_descr">
+                                                <div class="pair_descr_curr">
+                                                    <div class="curr_content">MVT</div>
+                                                </div>
+                                                <div class="pair_descr_page">
+                                                    MVote (<a href="https://MagicCrypto.github.io/" target="_blank">magiccrypto.github.io</a>)
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="gov-col-4">
-                                    <div class="confirm-btn">
-                                        <div class="confirm-btn-cotainer">
-                                            <a class="gov-confirm-btn" onclick="popup_burn('Choice-1')">Burn for this choice</a>
+                                <div class="main_content_col2">
+                                    <div class="lock">
+                                        <div class="lock_ctn">
+                                            <div class="rank-token-desp">MagicVoTe (MVT or MVote) is a Sustainable and Open Voting Protocol for Voting-based Farm Platforms.</div>
+                                        </div>
+                                    </div>
+                                    <div class="lp">
+                                        <div class="lp_ctn">
+                                            <div class="rank-your-burn">0</div>
+                                        </div>
+                                    </div>
+                                    <div class="mvote">
+                                        <div class="mvote_ctn">
+                                            <div class="rank-total-burn">NA</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_col3">
+                                    <div class="rank-btn">
+                                        <div class="rank-btn-cotainer">
+                                            <a class="rank-burn-btn" onclick="popup_burn('MVT')">Burn To Vote</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div style="padding-top: 10px;">Choice 1 Address: <a target="_blank" href="https://stellar.expert/explorer/public/account/GA3PSJPSQJ237NVFNHHNO6N7FRI4C4JZ2WPTWR5LCFCBPH7XVZYYOWWG">GA3PSJPSQJ237NVFNHHNO6N7FRI4C4JZ2WPTWR5LCFCBPH7XVZYYOWWG</a></div>
-                            <div class="gov-choose-2">
-                                <div class="gov-col-1">
-                                    <div class="gov-choose">Choice 2: </div>
-                                </div>
-                                <div class="gov-col-2">
-                                    <div class="gov-desp">Adjust to <b>AQUAShare=1, LPShare=1, BurnShare=1</b>.</div>
-                                </div>
-                                <div class="gov-col-3">
-                                    <div class="burn-display">
-                                        <span class="burn-gov-num-1">0</span> / <span class="burn-gov-num-2">0</span>
+                            <div class="main_AQUA">
+                                <div class="main_content_col1">
+                                    <div class="pair">
+                                        <div class="pair_content">
+                                            <div class="pair_image">
+                                                <div class="xlm_img">
+                                                    <img src="https://aqua.network/assets/img/aqua-logo.png" width="45" height="45" alt="AQUA logo">
+                                                </div>
+                                            </div>
+                                            <div class="pair_descr">
+                                                <div class="pair_descr_curr">
+                                                    <div class="curr_content">AQUA</div>
+                                                </div>
+                                                <div class="pair_descr_page">
+                                                    AQUA (<a href="https://aqua.network/" target="_blank">aqua.network</a>)
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="gov-col-4">
-                                    <div class="confirm-btn">
-                                        <div class="confirm-btn-cotainer">
-                                            <a class="gov-confirm-btn" onclick="popup_burn('Choice-2')">Burn for this choice</a>
+                                <div class="main_content_col2">
+                                    <div class="lock">
+                                        <div class="lock_ctn">
+                                            <div class="rank-token-desp">Aquarius brings liquidity on Stellar and powers new generation of DeFi projects.</div>
+                                        </div>
+                                    </div>
+                                    <div class="lp">
+                                        <div class="lp_ctn">
+                                            <div class="rank-your-burn">0</div>
+                                        </div>
+                                    </div>
+                                    <div class="mvote">
+                                        <div class="mvote_ctn">
+                                            <div class="rank-total-burn">NA</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_col3">
+                                    <div class="rank-btn">
+                                        <div class="rank-btn-cotainer">
+                                            <a class="rank-burn-btn" onclick="popup_burn('AQUA')">Burn To Vote</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div style="padding-top: 10px;">Choice 2 Address: <a target="_blank" href="https://stellar.expert/explorer/public/account/GDLSNS642OKIQEUMIVZNL2LCSJA6S5WGRMLZJPWWZVKHOAFVZXOTODYS">GDLSNS642OKIQEUMIVZNL2LCSJA6S5WGRMLZJPWWZVKHOAFVZXOTODYS</a></div>
-                            <div class="gov-choose-3">
-                                <div class="gov-col-1">
-                                    <div class="gov-choose">Choice 3: </div>
-                                </div>
-                                <div class="gov-col-2">
-                                    <div class="gov-desp">Keep the current <b>AQUAShare=2, LPShare=1, BurnShare=1</b>.</div>
-                                </div>
-                                <div class="gov-col-3">
-                                    <div class="burn-display">
-                                        <span class="burn-gov-num-1">0</span> / <span class="burn-gov-num-2">0</span>
+                            <div class="main_YBX">
+                                <div class="main_content_col1">
+                                    <div class="pair">
+                                        <div class="pair_content">
+                                            <div class="pair_image">
+                                                <div class="xlm_img">
+                                                    <img src="https://uploads-ssl.webflow.com/607f603d2f412c67690368b8/60df683719cc056004ea932b_YBX%20token%20web%20bad.png" width="45" height="45" alt="YBX logo">
+                                                </div>
+                                            </div>
+                                            <div class="pair_descr">
+                                                <div class="pair_descr_curr">
+                                                    <div class="curr_content">YBX</div>
+                                                </div>
+                                                <div class="pair_descr_page">
+                                                    YBX (<a href="https://www.script3.io/" target="_blank">script3.io</a>)
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="gov-col-4">
-                                    <div class="confirm-btn">
-                                        <div class="confirm-btn-cotainer">
-                                            <a class="gov-confirm-btn" onclick="popup_burn('Choice-3')">Burn for this choice</a>
+                                <div class="main_content_col2">
+                                    <div class="lock">
+                                        <div class="lock_ctn">
+                                            <div class="rank-token-desp">YieldBox is a money market protocol built on Stellar using Stellar Turrets.</div>
+                                        </div>
+                                    </div>
+                                    <div class="lp">
+                                        <div class="lp_ctn">
+                                            <div class="rank-your-burn">0</div>
+                                        </div>
+                                    </div>
+                                    <div class="mvote">
+                                        <div class="mvote_ctn">
+                                            <div class="rank-total-burn">NA</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_col3">
+                                    <div class="rank-btn">
+                                        <div class="rank-btn-cotainer">
+                                            <a class="rank-burn-btn" onclick="popup_burn('YBX')">Burn To Vote</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div>Choice 3 Address: <a target="_blank" href="https://stellar.expert/explorer/public/account/GAXGZRMVNXXPYIDHOBFT4UHEHY5M2JCJC66CGPLOST3ZC3ZZLE7EZQGE">GAXGZRMVNXXPYIDHOBFT4UHEHY5M2JCJC66CGPLOST3ZC3ZZLE7EZQGE</a></div>
+                            <div class="main_LSP">
+                                <div class="main_content_col1">
+                                    <div class="pair">
+                                        <div class="pair_content">
+                                            <div class="pair_image">
+                                                <div class="xlm_img">
+                                                    <img src="https://lumenswap.io/favicon.ico" width="45" height="45" alt="LSP logo">
+                                                </div>
+                                            </div>
+                                            <div class="pair_descr">
+                                                <div class="pair_descr_curr">
+                                                    <div class="curr_content">LSP</div>
+                                                </div>
+                                                <div class="pair_descr_page">
+                                                    LSP (<a href="https://lumenswap.io/" target="_blank">lumenswap.io</a>)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_col2">
+                                    <div class="lock">
+                                        <div class="lock_ctn">
+                                            <div class="rank-token-desp">Lumenswap is an open-source client for the Stellar network that allows you to swap and trade assets on the network using a friendly, minimal interface.</div>
+                                        </div>
+                                    </div>
+                                    <div class="lp">
+                                        <div class="lp_ctn">
+                                            <div class="rank-your-burn">0</div>
+                                        </div>
+                                    </div>
+                                    <div class="mvote">
+                                        <div class="mvote_ctn">
+                                            <div class="rank-total-burn">NA</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_col3">
+                                    <div class="rank-btn">
+                                        <div class="rank-btn-cotainer">
+                                            <a class="rank-burn-btn" onclick="popup_burn('LSP')">Burn To Vote</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main_CAFE">
+                                <div class="main_content_col1">
+                                    <div class="pair">
+                                        <div class="pair_content">
+                                            <div class="pair_image">
+                                                <div class="xlm_img">
+                                                    <img src="https://cafeswap.app/.well-known/CAFE.png" width="45" height="45" alt="CAFE logo">
+                                                </div>
+                                            </div>
+                                            <div class="pair_descr">
+                                                <div class="pair_descr_curr">
+                                                    <div class="curr_content">CAFE</div>
+                                                </div>
+                                                <div class="pair_descr_page">
+                                                    CAFE (<a href="https://cafeswap.app/" target="_blank">cafeswap.app</a>)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_col2">
+                                    <div class="lock">
+                                        <div class="lock_ctn">
+                                            <div class="rank-token-desp">CafeSwap makes greater value for #AMM provider based on Stellar network.</div>
+                                        </div>
+                                    </div>
+                                    <div class="lp">
+                                        <div class="lp_ctn">
+                                            <div class="rank-your-burn">0</div>
+                                        </div>
+                                    </div>
+                                    <div class="mvote">
+                                        <div class="mvote_ctn">
+                                            <div class="rank-total-burn">NA</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_col3">
+                                    <div class="rank-btn">
+                                        <div class="rank-btn-cotainer">
+                                            <a class="rank-burn-btn" onclick="popup_burn('CAFE')">Burn To Vote</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main_FISH">
+                                <div class="main_content_col1">
+                                    <div class="pair">
+                                        <div class="pair_content">
+                                            <div class="pair_image">
+                                                <div class="xlm_img">
+                                                    <img src="https://static.ultrastellar.com/media/assets/img/cc8fb6f1-ccc5-4d6d-bc74-3239aa5bebee.png" width="45" height="45" alt="FISH logo">
+                                                </div>
+                                            </div>
+                                            <div class="pair_descr">
+                                                <div class="pair_descr_curr">
+                                                    <div class="curr_content">FISH</div>
+                                                </div>
+                                                <div class="pair_descr_page">
+                                                    FISH (<a href="https://kittyfish.io" target="_blank">kittyfish.io</a>)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_col2">
+                                    <div class="lock">
+                                        <div class="lock_ctn">
+                                            <div class="rank-token-desp">KittyFish is a new friendly DEX for Stellar.</div>
+                                        </div>
+                                    </div>
+                                    <div class="lp">
+                                        <div class="lp_ctn">
+                                            <div class="rank-your-burn">0</div>
+                                        </div>
+                                    </div>
+                                    <div class="mvote">
+                                        <div class="mvote_ctn">
+                                            <div class="rank-total-burn">NA</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_col3">
+                                    <div class="rank-btn">
+                                        <div class="rank-btn-cotainer">
+                                            <a class="rank-burn-btn" onclick="popup_burn('FISH')">Burn To Vote</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

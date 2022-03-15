@@ -546,16 +546,7 @@ function calPairReward(pairIndex, totalBurn, totalVote) {
         sumBurn += totalBurn[i];
     }
     var pairReward = totalBurn[pairIndex] / sumBurn * 0.7;
-    var willVoteNumber = 100000;
-    var hourlyReleaseNum = 1000;
-    var maxPairVoteReward;
-    if(totalVote[pairIndex] > 0){
-        if(pairIndex == 0){
-            maxPairVoteReward = hourlyReleaseNum * (0.3+pairReward) * (willVoteNumber / (willVoteNumber+totalVote[pairIndex]));
-        } else {
-            maxPairVoteReward = hourlyReleaseNum * pairReward * (willVoteNumber / (willVoteNumber+totalVote[pairIndex]));
-        }
-    }
+    
     document.getElementsByClassName('reward_num')[pairIndex].innerHTML = (pairReward*100).toFixed(4) + '%';
 }
 
@@ -726,10 +717,16 @@ async function withoutLogin() {
             totalBurn.push(MVoteBurn[i]['totalAmount']);
         }
     });
+
+    for (let i = 0; i < PAIR_NUMBER; i++) {
+        calPairReward(i, totalBurn, 0);
+    }
     
 }
 
 async function test() {
+    var totalBurn = [];
+    var totalVote = [];
     var votePromise = [];
     var lpPromise = [];
     var burnPromise = [];
@@ -746,6 +743,7 @@ async function test() {
     await Promise.all(votePromise)
     .then((AquaVote) => {
         for (let i = 0; i < PAIR_NUMBER; i++) {
+            totalVote.push(AquaVote[i]['totalAmount']);
             if (isNaN(AquaVote[i]['userAmount']/ AquaVote[i]['totalAmount'])){
                 voteAmount.push(0);
             } else {
@@ -766,6 +764,7 @@ async function test() {
     await Promise.all(burnPromise)
     .then((MVoteBurn) => {
         for (let i = 0; i < PAIR_NUMBER; i++) {
+            totalBurn.push(MVoteBurn[i]['totalAmount']);
             if (isNaN(MVoteBurn[i]['userAmount']/ MVoteBurn[i]['totalAmount'])){
                 burnAmount.push(0);
             } else {
@@ -776,6 +775,7 @@ async function test() {
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
         calReward(i, voteAmount[i], lpAmount[i], burnAmount[i]);
+        calPairReward(i, totalBurn, totalVote);
     }
 
 }

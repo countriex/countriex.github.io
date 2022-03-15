@@ -501,7 +501,7 @@ img[alt*="logo"] {
 .pair_content .pair_descr .pair_descr_curr {
     display: flex; 
     font-size: 19px;
-    height: 40%;
+    height: 50%;
     align-items: center;
 }
 
@@ -536,7 +536,8 @@ img[alt*="logo"] {
     display: inline-block; 
     font-size: 12px;
     line-height: 20px;
-    height: 30%;
+    padding-top: 5px;
+    height: 50%;
 }
 
 .pair_content .pair_descr .pair_descr_page a {
@@ -545,25 +546,6 @@ img[alt*="logo"] {
 
 .pair_content .pair_descr .pair_descr_page a:visited {
     color: #000;
-}
-
-.pair_content .pair_descr .pair_descr_estimate {
-    display: inline-block; 
-    font-size: 12px;
-    line-height: 20px;
-    padding-top: 5px;
-    height: 30%;
-}
-
-.pair_descr .pair_descr_estimate .pair_estimate_ctn {
-    display: inline-flex;
-    border-radius: 10px;
-}
-
-.pair_descr_estimate .pair_estimate_ctn .pair_descr_num {
-    display: inline-flex;
-    padding: 0 2px;
-    background-color: #e2dede;
 }
 
 .main .main_content .lock .lock_ctn,

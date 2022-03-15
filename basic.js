@@ -555,8 +555,6 @@ function calPairReward(pairIndex, totalBurn, totalVote) {
         } else {
             maxPairVoteReward = hourlyReleaseNum * pairReward * (willVoteNumber / (willVoteNumber+totalVote[pairIndex]));
         }
-        document.getElementsByClassName('estimate_num1')[pairIndex].innerHTML = (maxPairVoteReward*0.25).toFixed(4);
-        document.getElementsByClassName('estimate_num2')[pairIndex].innerHTML = (maxPairVoteReward).toFixed(4);
     }
     document.getElementsByClassName('reward_num')[pairIndex].innerHTML = (pairReward*100).toFixed(4) + '%';
 }
@@ -716,13 +714,10 @@ async function getAquaTotalVote(pairIndex, voteAsset=AQUA, server=STELLAR_SERVER
 
 async function withoutLogin() {
     var totalBurn = [];
-    var totalVote = [];
     var burnPromise = [];
-    var votePromise = [];
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
         burnPromise.push(getMVoteBurn(i));
-        votePromise.push(getAquaTotalVote(i));
     }
 
     await Promise.all(burnPromise)
@@ -731,23 +726,10 @@ async function withoutLogin() {
             totalBurn.push(MVoteBurn[i]['totalAmount']);
         }
     });
-    await Promise.all(votePromise)
-    .then((AquaVote) => {
-        for (let i = 0; i < PAIR_NUMBER; i++) {
-            totalVote.push(AquaVote[i]['totalAmount']);
-        }
-    });
-    // console.log(`totalVote`, totalVote);
-    // console.log(`totalBurn`, totalBurn);
-
-    for (let i = 0; i < PAIR_NUMBER; i++) {
-        calPairReward(i, totalBurn, totalVote);
-    }
+    
 }
 
 async function test() {
-    var totalBurn = [];
-    var totalVote = [];
     var votePromise = [];
     var lpPromise = [];
     var burnPromise = [];
@@ -763,9 +745,7 @@ async function test() {
 
     await Promise.all(votePromise)
     .then((AquaVote) => {
-        console.log(AquaVote);
         for (let i = 0; i < PAIR_NUMBER; i++) {
-            totalVote.push(AquaVote[i]['totalAmount']);
             if (isNaN(AquaVote[i]['userAmount']/ AquaVote[i]['totalAmount'])){
                 voteAmount.push(0);
             } else {
@@ -786,7 +766,6 @@ async function test() {
     await Promise.all(burnPromise)
     .then((MVoteBurn) => {
         for (let i = 0; i < PAIR_NUMBER; i++) {
-            totalBurn.push(MVoteBurn[i]['totalAmount']);
             if (isNaN(MVoteBurn[i]['userAmount']/ MVoteBurn[i]['totalAmount'])){
                 burnAmount.push(0);
             } else {
@@ -797,7 +776,6 @@ async function test() {
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
         calReward(i, voteAmount[i], lpAmount[i], burnAmount[i]);
-        calPairReward(i, totalBurn, totalVote);
     }
 
 }

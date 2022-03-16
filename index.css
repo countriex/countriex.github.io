@@ -501,7 +501,7 @@ img[alt*="logo"] {
 .pair_content .pair_descr .pair_descr_curr {
     display: flex; 
     font-size: 19px;
-    height: 50%;
+    height: 40%;
     align-items: center;
 }
 
@@ -536,8 +536,7 @@ img[alt*="logo"] {
     display: inline-block; 
     font-size: 12px;
     line-height: 20px;
-    padding-top: 5px;
-    height: 50%;
+    height: 30%;
 }
 
 .pair_content .pair_descr .pair_descr_page a {
@@ -546,6 +545,18 @@ img[alt*="logo"] {
 
 .pair_content .pair_descr .pair_descr_page a:visited {
     color: #000;
+}
+
+.pair_content .pair_descr .pair_descr_vote {
+    display: inline-block; 
+    font-size: 12px;
+    line-height: 20px;
+    height: 30%;
+}
+
+.pair_descr .pair_descr_vote .pair_vote_ctn {
+    display: inline-flex;
+    border-radius: 10px;
 }
 
 .main .main_content .lock .lock_ctn,

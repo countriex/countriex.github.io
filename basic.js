@@ -706,9 +706,12 @@ async function getAquaTotalVote(pairIndex, voteAsset=AQUA, server=STELLAR_SERVER
 async function withoutLogin() {
     var totalBurn = [];
     var burnPromise = [];
+    var totalVote = [];
+    var votePromise = [];
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
         burnPromise.push(getMVoteBurn(i));
+        votePromise.push(getAquaTotalVote(i));
     }
 
     await Promise.all(burnPromise)
@@ -717,8 +720,15 @@ async function withoutLogin() {
             totalBurn.push(MVoteBurn[i]['totalAmount']);
         }
     });
+    await Promise.all(votePromise)
+    .then((AquaVote) => {
+        for (let i = 0; i < PAIR_NUMBER; i++) {
+            totalVote.push(AquaVote[i]['totalAmount']);
+        }
+    });
 
     for (let i = 0; i < PAIR_NUMBER; i++) {
+        document.getElementsByClassName('pair_vote_num')[i].innerHTML = totalVote[i].toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');;
         calPairReward(i, totalBurn, 0);
     }
     
@@ -776,6 +786,7 @@ async function test() {
     for (let i = 0; i < PAIR_NUMBER; i++) {
         calReward(i, voteAmount[i], lpAmount[i], burnAmount[i]);
         calPairReward(i, totalBurn, totalVote);
+        document.getElementsByClassName('pair_vote_num')[i].innerHTML = totalVote[i].toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');;
     }
 
 }

@@ -514,7 +514,6 @@ img[alt*="logo"] {
     font-size: 12px;
     background-color: #92addd;
     padding: 0 5px;
-    margin-left: 5px;
     border-radius: 5px;
     color: #fff;
     display: inline-flex;
@@ -557,6 +556,17 @@ img[alt*="logo"] {
 .pair_descr .pair_descr_vote .pair_vote_ctn {
     display: inline-flex;
     border-radius: 10px;
+}
+
+.pair_vote_ctn .pair_vote_text {
+    display: inline-flex;
+    width: 120px;
+}
+
+.pair_vote_ctn .pair_vote_num {
+    background-color: #e2dede;
+    padding: 0 5px;
+    border-radius: 5px;
 }
 
 .main .main_content .lock .lock_ctn,

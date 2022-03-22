@@ -122,23 +122,28 @@ body {
 .menu .menu-ctn .menu-gov-ctn  {
     height: 80px;
     line-height: 80px;
-    min-width: 160px;
+    min-width: 170px;
     display: inline-flex;
 }
 
-.menu .menu-ctn .menu-vote-ctn,
-.menu .menu-ctn .menu-list-ctn,
-.menu .menu-ctn .menu-login-ctn {
+.menu .menu-ctn .menu-vote-ctn {
     height: 80px;
     line-height: 80px;
-    min-width: 145px;
+    min-width: 150px;
+    display: inline-flex;
+}
+
+.menu .menu-ctn .menu-list-ctn {
+    height: 80px;
+    line-height: 80px;
+    min-width: 138px;
     display: inline-flex;
 }
 
 .menu .menu-ctn .menu-rank-ctn {
     height: 80px;
     line-height: 80px;
-    min-width: 175px;
+    min-width: 165px;
     display: inline-flex;
 }
 

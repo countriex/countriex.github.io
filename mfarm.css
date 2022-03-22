@@ -300,22 +300,14 @@ body {
     display: inline-flex;
 }
 
-.main .add-new {
-    height: 50px;
-    width: 100%;
-    display: inline-flex;
-}
-
-.main .explore-left,
-.main .add-new-left {
+.main .explore-left {
     height: 50px;
     width: 100%;
     display: inline-flex;
     float: left;
 }
 
-.main .explore-left h3,
-.main .add-new-left h3 {
+.main .explore-left h3 {
     font-size: 40px;
     font-weight: 600;
     display: inline-block;
@@ -330,6 +322,7 @@ body {
     display: inline-block;
     width: 220px;
     flex-shrink: 0;
+    text-align: right;
 }
 
 .main .explore-right .modify_tip {
@@ -337,7 +330,7 @@ body {
     height: 50px;
     line-height: 50px;
     display: inline-block;
-    text-align: center;
+    text-align: right;
     width: 200px;
 }
 
@@ -543,16 +536,6 @@ img[alt*="logo"] {
     line-height: 100%;
     cursor: pointer;
     background-color: rgb(52,49,203);
-}
-
-.main .add-new-container {
-    padding-top: 20px;
-    width: 100%;
-}
-
-.main .add-new-container .add-new-ctn {
-    display: flex;
-    width: 100%;
 }
 
 .footer {

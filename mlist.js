@@ -142,6 +142,8 @@ function popup_burn(pair) {
     if(pair.includes('_')){
         let imageNames = pair.split('_');
         // console.log(imageNames.length, imageNames);
+        document.getElementsByClassName('pair_input_value')[0].value = "1";
+        document.getElementsByClassName('balance-num')[0].innerHTML = "1";
         for(let i = 0; i < imageNames.length; i++)
         {   
             let tmpIdName = 'burn-pair-image-'+(i+1).toString();
@@ -224,8 +226,8 @@ function close_burn() {
     blur.classList.toggle('active');
     var popup_bn = document.getElementById('signupModal_burn');
     popup_bn.classList.toggle('active');
-    document.getElementsByClassName('pair_input_value')[0].value = "1";
-    document.getElementsByClassName('balance-num')[0].innerHTML = "1";
+    document.getElementsByClassName('pair_input_value')[0].value = "100";
+    document.getElementsByClassName('balance-num')[0].innerHTML = "100";
     document.getElementsByClassName('stellar_copy_link')[0].classList.remove('active');
     document.getElementsByClassName('title-tip-span')[0].classList.add('active');
     document.getElementsByClassName('title-tip-span')[1].classList.remove('active');
@@ -239,8 +241,14 @@ function close_burn() {
 
 function confirm_burn_num() {
     let tmp = Number(document.getElementsByClassName('pair_input_value')[0].value);
-    if(tmp<1) {
-        alert('Please input number greater than 1.');
+    let burnThreshold;
+    if(document.getElementById('signupModal_burn').classList.item(1).includes('_')){
+        burnThreshold = 1;
+    } else {
+        burnThreshold = 100;
+    }
+    if(tmp<burnThreshold) {
+        alert('Please input number greater than '+burnThreshold);
     } else {
         document.getElementsByClassName('balance-num')[0].innerHTML = document.getElementsByClassName('pair_input_value')[0].value;
         document.getElementsByClassName('burn-btn-main')[0].classList.remove('disabled');
@@ -424,7 +432,9 @@ function generateTxXDR(pairIndex, burnAmount, burnAsset=MVT, server=STELLAR_SERV
     }
 
     var burnAccount = MLIST_LIST[pairIndex];
-
+    var tmpName = document.getElementsByClassName('mlist-name-1')[0].value+'-'+document.getElementsByClassName('mlist-issuer-1')[0].value.slice(-4)+':'+
+                  document.getElementsByClassName('mlist-name-2')[0].value+'-'+document.getElementsByClassName('mlist-issuer-2')[0].value.slice(-4);
+    console.log(`tmpName:`, tmpName);
     var tx = new StellarSdk.TransactionBuilder(
         userAccount, {
             fee: '10000',
@@ -437,6 +447,9 @@ function generateTxXDR(pairIndex, burnAmount, burnAsset=MVT, server=STELLAR_SERV
                 asset: burnAsset,
                 amount: burnAmount.toString()
             })
+        )
+        .addMemo(
+            StellarSdk.Memo.text(tmpName)
         )
         .setTimeout(600)
         .build();

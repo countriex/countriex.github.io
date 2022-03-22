@@ -555,6 +555,69 @@ img[alt*="logo"] {
     width: 100%;
 }
 
+.add-new-container .add-new-ctn .add-new-main {
+    display: inline-flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.add-new-container .add-new-ctn .new-curr-1 {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.add-new-container .add-new-ctn .add-col-1 {
+    width: 25%;
+    margin-right: 20px;
+}
+
+.add-new-container .add-new-ctn .add-col-2 {
+    width: 75%;
+}
+
+.add-new-ctn .add-col-1 input,
+.add-new-ctn .add-col-2 input {
+    width: 100%;
+}
+
+.add-new-container .add-new-ctn .add-new-btn {
+    display: inline-flex;
+    width: 15%;
+}
+
+.add-new-container .add-new-ctn .mlist-btn {
+    height: 100%;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mlist-btn .mlist-btn-cotainer {
+    height: 100%;
+    display: inline-block;
+    line-height: 60px;
+}
+
+.mlist-btn .mlist-btn-cotainer .rank-add-burn-btn {
+    padding: 10px 20px;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    width: 90%; 
+    text-align: center;
+    height: 100%;
+    line-height: 100%;
+    cursor: pointer;
+    background-color: rgb(52,49,203);
+}
+
 .footer {
     width: 100%;
     height: 150px;

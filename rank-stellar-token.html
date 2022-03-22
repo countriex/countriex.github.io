@@ -60,8 +60,8 @@
                         </div>
                         <div class="menu-login-ctn">
                             <div class="menu-login-main">
-                                <div class="menu-login-btn">
-                                    <a href="" class="login_button">
+                                <div class="menu-login-btn" onclick="popup_login()">
+                                    <a href="#signupModal" class="login_button">
                                         Connect Wallet
                                     </a>
                                 </div>
@@ -89,8 +89,8 @@
                 <div class="main">
                     <header class="explore">
                         <div class="explore-left">
-                            <h3>Ranking</h3>
-                            <div class="explore-main">(TODO: please manually refresh this page to see the latest result; we will provide an interface for any token to be listed here)</div>
+                            <h3>Ranking Stellar Tokens</h3>
+                            <div class="explore-main">(End Goal: a lightweight and trustless CoinMarketCap. TODO: automatic sort by burn num; integrate into <a href="https://github.com/MagicCrypto/MagicWallet" target="_blank">MagicWallet</a>; cover tokens on other chains)</div>
                         </div>
                         <div class="explore-right">
                             <div class="modify_tip">Last updated <span class="modify_tip_num">just now</span></div>
@@ -162,7 +162,7 @@
                                 <div class="main_content_col3">
                                     <div class="rank-btn">
                                         <div class="rank-btn-cotainer">
-                                            <a class="rank-burn-btn" onclick="popup_burn('MVT')">Burn To Vote</a>
+                                            <a class="rank-burn-btn" onclick="popup_burn('MVT')">Burn To Rank</a>
                                         </div>
                                     </div>
                                 </div>
@@ -207,7 +207,7 @@
                                 <div class="main_content_col3">
                                     <div class="rank-btn">
                                         <div class="rank-btn-cotainer">
-                                            <a class="rank-burn-btn" onclick="popup_burn('AQUA')">Burn To Vote</a>
+                                            <a class="rank-burn-btn" onclick="popup_burn('AQUA')">Burn To Rank</a>
                                         </div>
                                     </div>
                                 </div>
@@ -252,7 +252,7 @@
                                 <div class="main_content_col3">
                                     <div class="rank-btn">
                                         <div class="rank-btn-cotainer">
-                                            <a class="rank-burn-btn" onclick="popup_burn('YBX')">Burn To Vote</a>
+                                            <a class="rank-burn-btn" onclick="popup_burn('YBX')">Burn To Rank</a>
                                         </div>
                                     </div>
                                 </div>
@@ -297,7 +297,7 @@
                                 <div class="main_content_col3">
                                     <div class="rank-btn">
                                         <div class="rank-btn-cotainer">
-                                            <a class="rank-burn-btn" onclick="popup_burn('LSP')">Burn To Vote</a>
+                                            <a class="rank-burn-btn" onclick="popup_burn('LSP')">Burn To Rank</a>
                                         </div>
                                     </div>
                                 </div>
@@ -342,7 +342,7 @@
                                 <div class="main_content_col3">
                                     <div class="rank-btn">
                                         <div class="rank-btn-cotainer">
-                                            <a class="rank-burn-btn" onclick="popup_burn('CAFE')">Burn To Vote</a>
+                                            <a class="rank-burn-btn" onclick="popup_burn('CAFE')">Burn To Rank</a>
                                         </div>
                                     </div>
                                 </div>
@@ -387,7 +387,7 @@
                                 <div class="main_content_col3">
                                     <div class="rank-btn">
                                         <div class="rank-btn-cotainer">
-                                            <a class="rank-burn-btn" onclick="popup_burn('FISH')">Burn To Vote</a>
+                                            <a class="rank-burn-btn" onclick="popup_burn('FISH')">Burn To Rank</a>
                                         </div>
                                     </div>
                                 </div>
@@ -402,6 +402,27 @@
                     </div>
                     <div class="add-new-container">
                         <div class="add-new-ctn">
+                            <div class="add-new-main">
+                                <div class="new-curr-1">
+                                    <div class="add-col-1">
+                                        <div>
+                                            <input placeholder="currency" class="mlist-name-1" style="font-size:20px;height: 40px;">
+                                        </div>
+                                    </div>
+                                    <div class="add-col-2">
+                                        <div>
+                                            <input placeholder="currency-issuer   (if XLM, fill in XLM too in the issuer)" class="mlist-issuer-1" style="font-size:20px;height: 40px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-new-btn">
+                                <div class="mlist-btn">
+                                    <div class="mlist-btn-cotainer">
+                                        <a class="rank-add-burn-btn" onclick="popup_burn('ADD-NEW')">Add New Token</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

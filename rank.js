@@ -23,12 +23,13 @@ RANK_CHOICE_3 = StellarSdk.Keypair.fromPublicKey('GCF7XE4LKRWXVHSLNO5Z3NY3YNWCX6
 RANK_CHOICE_4 = StellarSdk.Keypair.fromPublicKey('GDKGFQ44TD5IWYGFQB4HMNA5KUU62Y5KIT6IOLNWROQ4TWNY55KDZPAR');
 RANK_CHOICE_5 = StellarSdk.Keypair.fromPublicKey('GAUSDEWZGLZJFKZOIN6WJEHJ22JZBNNO5MGOK2MISFEWGYB4V7DC4JPP');
 RANK_CHOICE_6 = StellarSdk.Keypair.fromPublicKey('GCYWV52LUKXQ37G4CG3JILDYCDCXDLNYHACLA6DJ7DUEFAJDFIO65O2P');
+RANK_ADD_NEW = StellarSdk.Keypair.fromPublicKey('GCYWV52LUKXQ37G4CG3JILDYCDCXDLNYHACLA6DJ7DUEFAJDFIO65O2P');
 
 
 CURRENT_LOGIN_METHOD = 0;
 CURRENT_USER_ACCOUNT = "";
 
-RANK_LIST = [RANK_CHOICE_1, RANK_CHOICE_2, RANK_CHOICE_3, RANK_CHOICE_4, RANK_CHOICE_5, RANK_CHOICE_6];
+RANK_LIST = [RANK_CHOICE_1, RANK_CHOICE_2, RANK_CHOICE_3, RANK_CHOICE_4, RANK_CHOICE_5, RANK_CHOICE_6, RANK_ADD_NEW];
 
 NAME_INDEX_DICT = {
     'MVT': 0,
@@ -37,6 +38,7 @@ NAME_INDEX_DICT = {
     'LSP': 3,
     'CAFE': 4,
     'FISH': 5,
+    'ADD-NEW': 6
 };
 
 PAIR_NUMBER = 6;
@@ -135,6 +137,20 @@ function popup_burn(pair) {
         return 0;
     }
     document.getElementById('signupModal_burn').classList.add(pair);
+    if(pair.includes('-')){
+        let tmpName1 = document.getElementsByClassName('mlist-name-1')[0].value;
+        let tmpIssuer1 = document.getElementsByClassName('mlist-issuer-1')[0].value;
+        if(tmpName1 === ""){
+            alert('Please add currency name');
+            return;
+        }
+        if(tmpIssuer1 === "") {
+            alert('Please add currency issuer');
+            return;
+        }
+        document.getElementsByClassName('pair_input_value')[0].value = "100";
+        document.getElementsByClassName('balance-num')[0].innerHTML = "100";
+    }
     
     var blur = document.getElementById('blur');
     blur.classList.toggle('active');
@@ -168,8 +184,14 @@ function close_burn() {
 
 function confirm_burn_num() {
     let tmp = Number(document.getElementsByClassName('pair_input_value')[0].value);
-    if(tmp<1) {
-        alert('Please input number greater than 1.');
+    let burnThreshold;
+    if(document.getElementById('signupModal_burn').classList.item(1).includes('-')){
+        burnThreshold = 100;
+    } else {
+        burnThreshold = 1;
+    }
+    if(tmp<burnThreshold) {
+        alert('Please input number greater than '+burnThreshold);
     } else {
         document.getElementsByClassName('balance-num')[0].innerHTML = document.getElementsByClassName('pair_input_value')[0].value;
         document.getElementsByClassName('burn-btn-main')[0].classList.remove('disabled');
@@ -354,6 +376,8 @@ function generateTxXDR(pairIndex, burnAmount, burnAsset=MVT, server=STELLAR_SERV
     }
 
     var burnAccount = RANK_LIST[pairIndex];
+    var tmpName = document.getElementsByClassName('mlist-name-1')[0].value+'-'+document.getElementsByClassName('mlist-issuer-1')[0].value.slice(-4);
+
 
     var tx = new StellarSdk.TransactionBuilder(
         userAccount, {
@@ -367,6 +391,9 @@ function generateTxXDR(pairIndex, burnAmount, burnAsset=MVT, server=STELLAR_SERV
                 asset: burnAsset,
                 amount: burnAmount.toString()
             })
+        )
+        .addMemo(
+            StellarSdk.Memo.text(tmpName)
         )
         .setTimeout(600)
         .build();

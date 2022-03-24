@@ -29,16 +29,16 @@ RANK_ADD_NEW = StellarSdk.Keypair.fromPublicKey('GBQ5GPUDFBK24QX4VWT6ECTVYWHJZMR
 CURRENT_LOGIN_METHOD = 0;
 CURRENT_USER_ACCOUNT = "";
 
-RANK_LIST = [RANK_CHOICE_1, RANK_CHOICE_2, RANK_CHOICE_3, RANK_CHOICE_4, RANK_CHOICE_5, RANK_CHOICE_6, RANK_ADD_NEW];
+RANK_LIST = [RANK_ADD_NEW, RANK_CHOICE_1, RANK_CHOICE_2, RANK_CHOICE_3, RANK_CHOICE_4, RANK_CHOICE_5, RANK_CHOICE_6];
 
 NAME_INDEX_DICT = {
-    'MVT': 0,
-    'AQUA': 1,
-    'YBX': 2,
-    'LSP': 3,
-    'CAFE': 4,
-    'FISH': 5,
-    'ADD-NEW': 6
+    'ADD-NEW': 0,
+    'MVT': 1,
+    'AQUA': 2,
+    'YBX': 3,
+    'LSP': 4,
+    'CAFE': 5,
+    'FISH': 6,
 };
 
 PAIR_NUMBER = 6;
@@ -213,7 +213,7 @@ function logout() {
     document.getElementsByClassName('login_button')[0].innerHTML = 'Connect Wallet';
     CURRENT_LOGIN_METHOD = 0;
     for (let i = 0; i < PAIR_NUMBER; i++) {
-        document.getElementsByClassName('rank-your-burn')[i].innerHTML = "0";
+        document.getElementsByClassName('rank-your-burn')[i].innerHTML = "NA";
     }
     CURRENT_USER_ACCOUNT = "";
     CURRENT_LOGIN_METHOD = 0;
@@ -363,10 +363,9 @@ async function getMVoteBurn(pairIndex, burnAsset=MVT, server=STELLAR_SERVER, use
         tmpMvoteNum = (tmpMvoteNum).toString();
     }
     if (userAccount !== "") {
-        document.getElementsByClassName('rank-your-burn')[pairIndex].innerHTML = tmpMvoteNum + '%';
+        document.getElementsByClassName('rank-your-burn')[pairIndex-1].innerHTML = userAmount.toFixed(0);
     }
-    document.getElementsByClassName('rank-your-burn')[pairIndex].innerHTML = userAmount.toFixed(0);
-    document.getElementsByClassName('rank-total-burn')[pairIndex].innerHTML = totalAmount.toFixed(0);   
+    document.getElementsByClassName('rank-total-burn')[pairIndex-1].innerHTML = totalAmount.toFixed(0);   
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 
@@ -485,7 +484,7 @@ async function withoutLogin() {
 
     var burnPromise = [];
 
-    for (let i = 0; i < PAIR_NUMBER; i++) {burnPromise.push(getMVoteBurn(i));}
+    for (let i = 1; i <= PAIR_NUMBER; i++) {burnPromise.push(getMVoteBurn(i));}
     await Promise.all(burnPromise);
 }
 
@@ -493,6 +492,6 @@ async function test() {
 
     var burnPromise = [];
 
-    for (let i = 0; i < PAIR_NUMBER; i++) {burnPromise.push(getMVoteBurn(i));}
+    for (let i = 1; i <= PAIR_NUMBER; i++) {burnPromise.push(getMVoteBurn(i));}
     await Promise.all(burnPromise);
 }

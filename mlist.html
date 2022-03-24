@@ -15,7 +15,7 @@
     <script type="text/javascript" src="mlist.js"></script>
     <title>MagicCrypto</title>
 </head>
-<body >
+<body onload="withoutLogin()">
     <div class="container" id="blur">
         <div class="top_navbar">
             <div class="top_navbar_ctn">
@@ -113,55 +113,6 @@
                             </div>
                         </div>
                         <div class="main_content">
-                            <div class="main_XLM_USDC">
-                                <div class="main_content_col1">
-                                    <div class="pair">
-                                        <div class="pair_content">
-                                            <div class="pair_image">
-                                                <div class="xlm_img">
-                                                    <img height="35" width="35" src="https://dynamic-assets.coinbase.com/ddaf9d27a2388105c5568c68ebe4078d057efac1cb9b091af6a57f4d187cf06b2701b95f75bd148d3872df32b69ebb678de71a42da317370aaec7d6448bda379/asset_icons/80782fe2d690f299e7f5bb9b89af87e1db75769e59c14fa0257054c962401805.png" alt="XLM logo">
-                                                </div>
-                                                <div class="mvote_img">
-                                                    <img height="45" width="45" src="https://www.centre.io/images/usdc/usdc-icon-86074d9d49.png" alt="USDC logo">
-                                                </div>
-                                            </div>
-                                            <div class="pair_descr">
-                                                <div class="pair_descr_curr">
-                                                    <div class="curr_content">XLM / USDC</div>
-                                                    <div class="curr_tag">Not Listed</div>
-                                                </div>
-                                                <div class="pair_descr_page">
-                                                    Stellar (<a href="https://stellar.org/" target="_blank">stellar.org</a>) · USD Coin (<a href="https://www.centre.io/" target="_blank">centre.io</a>)
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="main_content_col2">
-                                    <div class="lock">
-                                        <div class="lock_ctn">
-                                            <div class="mlist_your_vote">NA</div>
-                                        </div>
-                                    </div>
-                                    <div class="lp">
-                                        <div class="lp_ctn">
-                                            <div class="mlist_current_vote">0</div>
-                                        </div>
-                                    </div>
-                                    <div class="mvote">
-                                        <div class="mvote_ctn">
-                                            <div class="mlist_total_vote">100,000</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="main_content_col3">
-                                    <div class="mlist-btn">
-                                        <div class="mlist-btn-cotainer">
-                                            <a class="mlist-burn-btn" onclick="popup_burn('XLM_USDC')">Burn To List</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="main_XLM_MVT">
                                 <div class="main_content_col1">
                                     <div class="pair">
@@ -207,6 +158,55 @@
                                     <div class="mlist-btn">
                                         <div class="mlist-btn-cotainer">
                                             <a class="mlist-burn-btn" onclick="popup_burn('XLM_MVOTE')">Burn To List</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main_XLM_USDC">
+                                <div class="main_content_col1">
+                                    <div class="pair">
+                                        <div class="pair_content">
+                                            <div class="pair_image">
+                                                <div class="xlm_img">
+                                                    <img height="35" width="35" src="https://dynamic-assets.coinbase.com/ddaf9d27a2388105c5568c68ebe4078d057efac1cb9b091af6a57f4d187cf06b2701b95f75bd148d3872df32b69ebb678de71a42da317370aaec7d6448bda379/asset_icons/80782fe2d690f299e7f5bb9b89af87e1db75769e59c14fa0257054c962401805.png" alt="XLM logo">
+                                                </div>
+                                                <div class="mvote_img">
+                                                    <img height="45" width="45" src="https://www.centre.io/images/usdc/usdc-icon-86074d9d49.png" alt="USDC logo">
+                                                </div>
+                                            </div>
+                                            <div class="pair_descr">
+                                                <div class="pair_descr_curr">
+                                                    <div class="curr_content">XLM / USDC</div>
+                                                    <div class="curr_tag">Not Listed</div>
+                                                </div>
+                                                <div class="pair_descr_page">
+                                                    Stellar (<a href="https://stellar.org/" target="_blank">stellar.org</a>) · USD Coin (<a href="https://www.centre.io/" target="_blank">centre.io</a>)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_col2">
+                                    <div class="lock">
+                                        <div class="lock_ctn">
+                                            <div class="mlist_your_vote">NA</div>
+                                        </div>
+                                    </div>
+                                    <div class="lp">
+                                        <div class="lp_ctn">
+                                            <div class="mlist_current_vote">0</div>
+                                        </div>
+                                    </div>
+                                    <div class="mvote">
+                                        <div class="mvote_ctn">
+                                            <div class="mlist_total_vote">100,000</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_col3">
+                                    <div class="mlist-btn">
+                                        <div class="mlist-btn-cotainer">
+                                            <a class="mlist-burn-btn" onclick="popup_burn('XLM_USDC')">Burn To List</a>
                                         </div>
                                     </div>
                                 </div>

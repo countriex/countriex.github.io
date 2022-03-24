@@ -34,13 +34,13 @@ ADD_NEW_VOTE = StellarSdk.Keypair.fromPublicKey("GBQ5GPUDFBK24QX4VWT6ECTVYWHJZMR
 CURRENT_LOGIN_METHOD = 0;
 CURRENT_USER_ACCOUNT = "";
 
-MLIST_LIST = [XLM_USDC_VOTE, XLM_MVT_VOTE, MVT_USDC_VOTE, ADD_NEW_VOTE];
+MLIST_LIST = [ADD_NEW_VOTE, XLM_MVT_VOTE, XLM_USDC_VOTE, MVT_USDC_VOTE];
 
 NAME_INDEX_DICT = {
-    'XLM_USDC': 0,
+    'ADD-NEW': 0,
     'XLM_MVOTE': 1,
-    'MVOTE_USDC': 2,
-    'ADD-NEW': 3,
+    'XLM_USDC': 2,
+    'MVOTE_USDC': 3,
 };
 
 PAIR_NUMBER = 3;
@@ -270,7 +270,7 @@ function logout() {
     document.getElementsByClassName('login_button')[0].innerHTML = 'Connect Wallet';
     CURRENT_LOGIN_METHOD = 0;
     for (let i = 0; i < PAIR_NUMBER; i++) {
-        document.getElementsByClassName('mlist_your_vote')[i].innerHTML = 0;
+        document.getElementsByClassName('mlist_your_vote')[i].innerHTML = 'NA';
     }
     CURRENT_USER_ACCOUNT = "";
     CURRENT_LOGIN_METHOD = 0;
@@ -412,17 +412,11 @@ async function getMVoteBurn(pairIndex, burnAsset=MVT, server=STELLAR_SERVER, use
     }
 
     console.log(`${records.length} burns in total, ${userAmount}/${totalAmount}`);
-    let tmpMvoteNum = (userAmount * 100/ totalAmount).toFixed(4);
-    if (isNaN(tmpMvoteNum)) {
-        tmpMvoteNum = (0).toString();
-    } else {
-        tmpMvoteNum = (tmpMvoteNum).toString();
-    }
+
     if (userAccount !== "") {
-        document.getElementsByClassName('mlist_your_vote')[pairIndex].innerHTML = tmpMvoteNum + '%';
+        document.getElementsByClassName('mlist_your_vote')[pairIndex-1].innerHTML = userAmount.toFixed(0);
     }
-    document.getElementsByClassName('mlist_your_vote')[pairIndex].innerHTML = userAmount.toFixed(0);
-    document.getElementsByClassName('mlist_current_vote')[pairIndex].innerHTML = totalAmount.toFixed(0);   
+    document.getElementsByClassName('mlist_current_vote')[pairIndex-1].innerHTML = totalAmount.toFixed(0);   
     return {'userAmount': userAmount, 'totalAmount': totalAmount};
 }
 
@@ -541,7 +535,7 @@ async function withoutLogin() {
 
     var burnPromise = [];
 
-    for (let i = 0; i < PAIR_NUMBER; i++) {
+    for (let i = 1; i <= PAIR_NUMBER; i++) {
         burnPromise.push(getMVoteBurn(i));
     }
 
@@ -551,6 +545,6 @@ async function withoutLogin() {
 async function test() {
     var burnPromise = [];
 
-    for (let i = 0; i < PAIR_NUMBER; i++) {burnPromise.push(getMVoteBurn(i));}
+    for (let i = 1; i <= PAIR_NUMBER; i++) {burnPromise.push(getMVoteBurn(i));}
     await Promise.all(burnPromise);
 }

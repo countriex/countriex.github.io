@@ -29,7 +29,7 @@ PYBC = new StellarSdk.Asset("PYBC", "GBVB43NLVIP2USHXSKI7QQCZKZU2Z6U6A5PAHMIW7LL
 XLM_MVT_VOTE = StellarSdk.Keypair.fromPublicKey("GCVBVPIE36TPOJ2R3VPE2XIUGWHUTGMWFIHHJU4N4CN3VBLDUHLTROC7");
 XLM_USDC_VOTE = StellarSdk.Keypair.fromPublicKey("GDTNR6E3WVQNELVDSQKBEELR2O2PKKD2MPNGOERU42O765RDLVOLE6PL");
 MVT_USDC_VOTE = StellarSdk.Keypair.fromPublicKey("GC6LMZPOLZY2LTJQTD7VVB7UUQP3XBQ2H4IYHX4K7AGGSG42ARRQ3FIG");
-ADD_NEW_VOTE = StellarSdk.Keypair.fromPublicKey("GBQ5GPUDFBK24QX4VWT6ECTVYWHJZMRQFL7GK72A4JWKBLSDFC555QQI");
+ADD_NEW_VOTE = StellarSdk.Keypair.fromPublicKey("GA4O7UXHHTZZG26OYBACM2PA3YB7H3HW3L7F7GSYQRREQSUSMK7NGQPW");
 
 CURRENT_LOGIN_METHOD = 0;
 CURRENT_USER_ACCOUNT = "";
@@ -193,6 +193,7 @@ function popup_burn(pair) {
     } else if(pair.includes('-')){
         document.getElementById('burn-pair-image-1').src="https://pixsector.com/cache/1549118e/av70a149d5d0f534e7ab0.png";
         document.getElementById('burn-pair-image-2').src="https://pixsector.com/cache/1549118e/av70a149d5d0f534e7ab0.png";
+        document.getElementsByClassName('at-least-burn')[0].innerHTML = "100";
         let tmpName1 = document.getElementsByClassName('mlist-name-1')[0].value;
         let tmpName2 = document.getElementsByClassName('mlist-name-2')[0].value;
         let tmpIssuer1 = document.getElementsByClassName('mlist-issuer-1')[0].value;

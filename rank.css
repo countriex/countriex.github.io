@@ -431,7 +431,8 @@ body {
 .main .main_container .main_YBX,
 .main .main_container .main_FISH,
 .main .main_container .main_LSP,
-.main .main_container .main_CAFE {
+.main .main_container .main_CAFE,
+.main .main_container .main_Simpfarm {
     display: flex;
     text-align: left;
     width: 100%;

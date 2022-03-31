@@ -439,6 +439,7 @@ async function submitTx() {
             console.log(`Transaction submitted with response ${response}.`);
             alert(`Successfully send the transaction.`);
             close_burn();
+            test();
             return 0;
         } catch (e) {
             console.log(`Error ${e} in freighter submitTransaction().`);
@@ -483,12 +484,41 @@ function checkTrustline(targetAsset=MVT, server=STELLAR_SERVER, userAccount=CURR
     return assetBalance;
 }
 
+function sortTokenList(res) {
+    let tokenTotalBurnList = {};
+    let original_NAME_INDEX_DICT = Object.assign({}, NAME_INDEX_DICT);  //deep copy
+    let rankObjList = [];
+    let newRankList = [];
+    newRankList.push(RANK_LIST[0]);  // push add-new
+    for (let i = 0; i < PAIR_NUMBER; i++) {
+        let key = Object.keys(NAME_INDEX_DICT).find(key => NAME_INDEX_DICT[key] === i+1);
+        tokenTotalBurnList[key] = res[i]['totalAmount'];
+    }
+    let keysSorted = Object.keys(tokenTotalBurnList).sort(function(a,b){return tokenTotalBurnList[a]-tokenTotalBurnList[b]}).reverse();
+    for (let i = 0; i < PAIR_NUMBER; i++) {
+        NAME_INDEX_DICT[keysSorted[i]] = i+1;   // change NAME_INDEX_DICT order
+    }
+    for (let i = 0; i < PAIR_NUMBER; i++) {
+        let originalDivIndex = original_NAME_INDEX_DICT[Object.keys(NAME_INDEX_DICT).find(key => NAME_INDEX_DICT[key] === i+1)];
+        newRankList.push(RANK_LIST[originalDivIndex]);  // change RANK_LIST order
+        var rankObj = document.getElementsByClassName('main_content')[0].children[originalDivIndex-1];
+        rankObjList.push(rankObj); 
+    }
+    for (let i = 0; i < PAIR_NUMBER; i++) {
+        document.getElementsByClassName('main_content')[0].appendChild(rankObjList.shift());
+    }
+    RANK_LIST = newRankList;
+}
+
 async function withoutLogin() {
 
     var burnPromise = [];
 
     for (let i = 1; i <= PAIR_NUMBER; i++) {burnPromise.push(getMVoteBurn(i));}
-    await Promise.all(burnPromise);
+    await Promise.all(burnPromise)
+    .then(res=>{
+        sortTokenList(res);
+    });
 }
 
 async function test() {
@@ -496,5 +526,8 @@ async function test() {
     var burnPromise = [];
 
     for (let i = 1; i <= PAIR_NUMBER; i++) {burnPromise.push(getMVoteBurn(i));}
-    await Promise.all(burnPromise);
+    await Promise.all(burnPromise)
+    .then(res=>{
+        sortTokenList(res);
+    });
 }

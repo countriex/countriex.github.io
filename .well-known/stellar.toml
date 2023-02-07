@@ -1,32 +1,21 @@
-# MagicCrypto <MagicCrypto.github.io>
-VERSION="2.2.0"
+# Xtra-Hash <Xtra-Hash.github.io>
+
+VERSION = "2.2.0"
 NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
 
 [DOCUMENTATION]
-ORG_NAME="MagicCrypto"
-ORG_URL="https://magiccrypto.github.io/"
-ORG_LOGO = "https://magiccrypto.github.io/favicon.ico"
-ORG_OFFICIAL_EMAIL="0xMagicCrypto@gmail.com"
-ORG_SUPPORT_EMAIL="0xMagicCrypto@gmail.com"
-ORG_TWITTER="0xMagicCrypto"
-ORG_DESCRIPTION="MagicCrypto: Create Value to both Crypto Space and Real World!"
+ORG_NAME = "Xtra-Hash"
+ORG_URL = "https://github.io/"
+ORG_LOGO = "https://acdc.growat.co/wp-content/uploads/2022/11/Sponsor-Gold.png"
 
 [[CURRENCIES]]
-code = "MVT"
-name = "MVote"
-issuer = "GDPTX2Z3HTJKCHTT5JHCL7M5MD7P2HVV7QUDCTBIHW2BYLO3XR4VSRSA"
+code = "GOLDBULLION"
+name = "GOLDBULLION"
+issuer = "GDVNUA7KUHGLYRUYD65II3NDO6ARA23PRTA3DII2ABJZ4QAULG5NOP4Y"
 is_asset_anchored = false
 display_decimals = 7
-desc="MagicVoTe (MVT or MVote) is a Sustainable and Open Voting Protocol for Voting-based Farm Platforms. It introduces an interesting mechanism of calculating hourly MVT reward by incentivizing not only voting but also LP and burning. Visit https://magiccrypto.github.io/mvote.html for details. The total supply of MVT is 26,666,660 only, which is also deflationary due to multiple utility of MVT."
-image="https://magiccrypto.github.io/icons/MVOTEicon.png"
-conditions="90% rewarded to voters via a deflationary distribution so that reward would \"never\" end: initial day is 24,000, and next day is 0.999*LastDay."
+desc = "Bullion refers to physical gold and silver of high purity that is often kept in the form of bars, ingots, or coins. Bullion can sometimes be considered legal tender, and is often held as reserves by central banks or held by institutional investors."
+image = "https://sdbullion.com/media/wysiwyg/Blog/Canadian_kilo_gold_bar_SD_Bullion_SDBullion.com_How_to_buy_gold_wholesale_How_to_buy_gold_at_wholesale_prices.jpg"
+conditions = "Total supply: 922,337,203,685 GOLDBULLION"
 
-[[CURRENCIES]]
-code = "TESTVOTE"
-name = "TESTVOTE"
-issuer = "GDPTX2Z3HTJKCHTT5JHCL7M5MD7P2HVV7QUDCTBIHW2BYLO3XR4VSRSA"
-is_asset_anchored = false
-display_decimals = 7
-desc="TESTVOTE is a test token of MVT (MVote). It can also prevent the copies of MVT token. It safeguards the value of MVT."
-image="https://magiccrypto.github.io/icons/MTESTicon.png"
-conditions="90% rewarded to voters via a deflationary distribution so that reward would \"never\" end: initial day is 24,000, and next day is 0.999*LastDay."
+# GOLDBULLION Token was issued using the Stellar blockchain network

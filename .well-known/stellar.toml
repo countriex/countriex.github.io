@@ -4,18 +4,18 @@ VERSION = "2.2.0"
 NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
 
 [DOCUMENTATION]
-ORG_NAME = "Xtra-Hash"
-ORG_URL = "https://github.io/"
-ORG_LOGO = "https://raw.githubusercontent.com/Xtra-Hash/Xtra-Hash.github.io/main/sponsor-illustration.avif"
+ORG_NAME = ""
+ORG_URL = ""
+ORG_LOGO = ""
 
 [[CURRENCIES]]
-code = "GOLDBULLION"
-name = "GOLDBULLION"
-issuer = "GDVNUA7KUHGLYRUYD65II3NDO6ARA23PRTA3DII2ABJZ4QAULG5NOP4Y"
+code = ""
+name = ""
+issuer = ""
 is_asset_anchored = false
 display_decimals = 7
-desc = "Bullion refers to physical gold and silver of high purity that is often kept in the form of bars, ingots, or coins. Bullion can sometimes be considered legal tender, and is often held as reserves by central banks or held by institutional investors."
-image = "https://raw.githubusercontent.com/Xtra-Hash/Xtra-Hash.github.io/main/Canadian_kilo_gold_bar_SD_Bullion.jpg"
-conditions = "Total supply: 922,337,203,685 GOLDBULLION"
+desc = ""
+image = ""
+conditions = ""
 
-# GOLDBULLION Token was issued using the Stellar blockchain network
+#  Token was issued using the Stellar blockchain network

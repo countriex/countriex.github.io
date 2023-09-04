@@ -4,19 +4,19 @@ VERSION = "2.2.0"
 NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
 
 [DOCUMENTATION]
-ORG_NAME = ""
-ORG_URL = ""
-ORG_LOGO = ""
+ORG_NAME = "Countriex Stellar Token Series"
+ORG_URL = "countriex.github.io"
+ORG_LOGO = "https://avatars.githubusercontent.com/u/143279070?v=4"
 
 [[CURRENCIES]]
-code = ""
-name = ""
+code = "AFGHANISTAN"
+name = "Afghanistan"
 issuer = ""
 is_asset_anchored = false
 display_decimals = 7
-desc = ""
-image = ""
-conditions = ""
+desc = "Afghanistan, officially the Islamic Emirate of Afghanistan, is a landlocked country located at the crossroads of Central Asia and South Asia."
+image = "https://static.history.state.gov/countries/afghan-flag.jpg"
+conditions = "BuySell Trading"
 
 [[CURRENCIES]]
 code = ""

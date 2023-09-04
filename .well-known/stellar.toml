@@ -12,18 +12,94 @@ ORG_LOGO = "https://avatars.githubusercontent.com/u/143279070?v=4"
 code = "AFGHANISTAN"
 name = "Afghanistan"
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = "Afghanistan, officially the Islamic Emirate of Afghanistan, is a landlocked country located at the crossroads of Central Asia and South Asia."
 image = "https://static.history.state.gov/countries/afghan-flag.jpg"
-conditions = "BuySell Trading"
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
+code = "ALBANIA"
+name = "Albania"
+issuer = ""
+desc = "officially the Republic of Albania is a country in Southeast Europe"
+image = "https://static.history.state.gov/countries/albania-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = "ALGERIA"
+name = "Algeria"
+issuer = ""
+desc = "Algeria, officially the People's Democratic Republic of Algeria, is a country in North Africa."
+image = "https://static.history.state.gov/countries/algeria-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = "ANDORA"
+name = "Andorra"
+issuer = ""
+desc = "Andorra,officially the Principality of Andorra,is a sovereign landlocked country and microstate on the Iberian Peninsula, in the eastern Pyrenees, bordered by France to the north and Spain to the south."
+image = "https://static.history.state.gov/countries/algeria-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = "ANGOLA"
+name = "Angola"
+issuer = ""
+desc = "Angola,officially the Republic of Angola (Portuguese: República de Angola), is a country on the west-central coast of Southern Africa."
+image = "https://static.history.state.gov/countries/angolan-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = "ANTIGUABARBUDA"
+name = "Antigua and Barbuda"
+issuer = ""
+desc = "Antigua is Spanish for 'ancient' and barbuda is Spanish for 'bearded'."
+image = "https://static.history.state.gov/countries/antiguan-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = "ARGENTINA"
+name = "Argentina"
+issuer = ""
+desc = "After Argentina gained independence from the Spanish in 1816, the nation was paralyzed by tension between Centralist and Federalist forces."
+image = "https://static.history.state.gov/countries/argentinian-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "Armenia"
+issuer = ""
+desc = "For a brief period from 1918 to 1920 Armenia became an independent republic. In late 1920, local communists came to power following an invasion of Armenia by the Soviet Red Army, and in 1922, Armenia became part of the Trans-Caucasian Soviet Socialist Republic."
+image = "https://static.history.state.gov/countries/armenian-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "Australia"
+issuer = ""
+desc = "On October 9, 1942, Australia’s Statute of Westminster Adoption Act became law."
+image = "https://static.history.state.gov/countries/austrialian-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "Austria"
+issuer = ""
+desc = "Austria (German: Österreich), formally the Republic of Austria (German: Republik Österreich), is a landlocked country in Central Europe, lying in the Eastern Alps. It is a federation of nine provinces, one of which is the capital, Vienna, the most populous city and province."
+image = "https://static.history.state.gov/countries/austria-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "Azerbaijan"
+issuer = ""
+desc = "The United States has paid special attention to encouraging peaceful, negotiated resolution to Azeri-Armenian territorial conflicts."
+image = "https://static.history.state.gov/countries/azerbaijan-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -32,8 +108,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -42,18 +116,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -62,8 +132,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -72,18 +140,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -92,8 +156,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -102,18 +164,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -122,8 +180,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -132,18 +188,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -152,8 +204,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -162,18 +212,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -182,8 +228,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -192,18 +236,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -212,8 +252,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -222,18 +260,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -242,8 +276,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -252,18 +284,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -272,8 +300,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -282,18 +308,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -302,8 +324,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -312,18 +332,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -332,8 +348,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -342,18 +356,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -362,8 +372,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -372,18 +380,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -392,8 +396,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -402,18 +404,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -422,8 +420,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -432,18 +428,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -452,8 +444,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -462,18 +452,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -482,8 +468,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -492,18 +476,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -512,8 +492,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -522,18 +500,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -542,8 +516,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -552,18 +524,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -572,8 +540,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -582,18 +548,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -602,8 +564,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -612,18 +572,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -632,8 +588,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -642,18 +596,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -662,8 +612,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -672,18 +620,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -692,8 +636,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -702,18 +644,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -722,8 +660,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -732,18 +668,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -752,8 +684,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -762,18 +692,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -782,8 +708,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -792,18 +716,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -812,8 +732,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -822,18 +740,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -842,8 +756,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -852,18 +764,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -872,8 +780,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -882,18 +788,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -902,8 +804,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -912,18 +812,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -932,8 +828,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -942,18 +836,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -962,8 +852,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -972,18 +860,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -992,8 +876,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1002,18 +884,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1022,8 +900,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1032,18 +908,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1052,8 +924,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1062,18 +932,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1082,8 +948,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1092,18 +956,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1112,8 +972,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1122,18 +980,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1142,8 +996,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1152,18 +1004,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1172,8 +1020,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1182,18 +1028,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1202,8 +1044,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1212,18 +1052,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1232,8 +1068,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1242,18 +1076,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1262,8 +1092,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1272,18 +1100,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1292,8 +1116,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1302,18 +1124,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1322,8 +1140,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1332,18 +1148,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1352,8 +1164,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1362,18 +1172,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1382,8 +1188,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1392,18 +1196,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1412,8 +1212,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1422,18 +1220,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1442,8 +1236,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1452,18 +1244,14 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
-conditions = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1472,18 +1260,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1492,18 +1284,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1512,18 +1308,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1532,18 +1332,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1552,18 +1356,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1572,8 +1380,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1582,28 +1388,38 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1612,18 +1428,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1632,18 +1452,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1652,18 +1476,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1672,18 +1500,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1692,18 +1524,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1712,18 +1548,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1732,18 +1572,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1752,18 +1596,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1772,18 +1620,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1792,18 +1644,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1812,18 +1668,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1832,18 +1692,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1852,18 +1716,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1872,18 +1740,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1892,18 +1764,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1912,18 +1788,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1932,8 +1812,6 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1942,28 +1820,38 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1972,18 +1860,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -1992,18 +1884,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -2012,18 +1908,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -2032,18 +1932,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -2052,18 +1956,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -2072,18 +1980,22 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
@@ -2092,21 +2004,32 @@ conditions = ""
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
 name = ""
 issuer = ""
-is_asset_anchored = false
-display_decimals = 7
 desc = ""
 image = ""
 conditions = ""
 
+[[CURRENCIES]]
+code = ""
+name = ""
+issuer = ""
+desc = ""
+image = ""
+conditions = ""
 
 #  All Tokens was issued using the Stellar blockchain network

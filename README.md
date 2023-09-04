@@ -1,3 +1,6 @@
+
+# The conditions for a currency asset in TOML
+ 
 The conditions for a currency asset in TOML (Tom's Obvious, Minimal Language) for a profitable token in cryptocurrency can vary based on the specific requirements of the project. However, here are some key considerations:
 
 Supply: Define the maximum supply of the token to ensure scarcity and potential for price appreciation.

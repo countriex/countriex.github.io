@@ -14,7 +14,7 @@ name = "Afghanistan"
 issuer = ""
 desc = "Afghanistan, officially the Islamic Emirate of Afghanistan, is a landlocked country located at the crossroads of Central Asia and South Asia."
 image = "https://static.history.state.gov/countries/afghan-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = "ALBANIA"
@@ -22,7 +22,7 @@ name = "Albania"
 issuer = ""
 desc = "officially the Republic of Albania is a country in Southeast Europe"
 image = "https://static.history.state.gov/countries/albania-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = "ALGERIA"
@@ -30,7 +30,7 @@ name = "Algeria"
 issuer = ""
 desc = "Algeria, officially the People's Democratic Republic of Algeria, is a country in North Africa."
 image = "https://static.history.state.gov/countries/algeria-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = "ANDORA"
@@ -38,7 +38,7 @@ name = "Andorra"
 issuer = ""
 desc = "Andorra,officially the Principality of Andorra,is a sovereign landlocked country and microstate on the Iberian Peninsula, in the eastern Pyrenees, bordered by France to the north and Spain to the south."
 image = "https://static.history.state.gov/countries/algeria-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = "ANGOLA"
@@ -46,7 +46,7 @@ name = "Angola"
 issuer = ""
 desc = "Angola,officially the Republic of Angola (Portuguese: República de Angola), is a country on the west-central coast of Southern Africa."
 image = "https://static.history.state.gov/countries/angolan-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = "ANTIGUABARBUDA"
@@ -54,7 +54,7 @@ name = "Antigua and Barbuda"
 issuer = ""
 desc = "Antigua is Spanish for 'ancient' and barbuda is Spanish for 'bearded'."
 image = "https://static.history.state.gov/countries/antiguan-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = "ARGENTINA"
@@ -62,7 +62,7 @@ name = "Argentina"
 issuer = ""
 desc = "After Argentina gained independence from the Spanish in 1816, the nation was paralyzed by tension between Centralist and Federalist forces."
 image = "https://static.history.state.gov/countries/argentinian-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -70,7 +70,7 @@ name = "Armenia"
 issuer = ""
 desc = "For a brief period from 1918 to 1920 Armenia became an independent republic. In late 1920, local communists came to power following an invasion of Armenia by the Soviet Red Army, and in 1922, Armenia became part of the Trans-Caucasian Soviet Socialist Republic."
 image = "https://static.history.state.gov/countries/armenian-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -78,7 +78,7 @@ name = "Australia"
 issuer = ""
 desc = "On October 9, 1942, Australia’s Statute of Westminster Adoption Act became law."
 image = "https://static.history.state.gov/countries/austrialian-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -86,7 +86,7 @@ name = "Austria"
 issuer = ""
 desc = "Austria (German: Österreich), formally the Republic of Austria (German: Republik Österreich), is a landlocked country in Central Europe, lying in the Eastern Alps. It is a federation of nine provinces, one of which is the capital, Vienna, the most populous city and province."
 image = "https://static.history.state.gov/countries/austria-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -94,23 +94,143 @@ name = "Azerbaijan"
 issuer = ""
 desc = "The United States has paid special attention to encouraging peaceful, negotiated resolution to Azeri-Armenian territorial conflicts."
 image = "https://static.history.state.gov/countries/azerbaijan-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Bahamas"
 issuer = ""
-desc = ""
-image = ""
+desc = "As a close neighbor of the United States, The Bahamas has historically enjoyed good diplomatic relations with the United States. Since achieving full independence from the United Kingdom in 1973, The Bahamas has closely cooperated with the United States to reduce drug trafficking and illegal immigration issues."
+image = "https://static.history.state.gov/countries/bahamian-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Bahrain"
 issuer = ""
-desc = ""
-image = ""
-conditions = ""
+desc = "The nine sheikhdoms still had not agreed on terms of union by 1971, however, prompting Bahrain to declare itself fully independent on August 15, 1971."
+image = "https://static.history.state.gov/countries/bahrain-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Bangladesh"
+issuer = ""
+desc = "The official language is Bengali, one of the easternmost branches of the Indo-European language family."
+image = "https://static.history.state.gov/countries/bangladesh.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Barbados"
+issuer = ""
+desc = "While it is technically an Atlantic island, Barbados is closely associated with the Caribbean and is ranked as one of its leading tourist destinations."
+image = "https://static.history.state.gov/countries/barbados-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Belarus"
+issuer = ""
+desc = "While it is technically an Atlantic island, Barbados is closely associated with the Caribbean and is ranked as one of its leading tourist destinations."
+image = "https://static.history.state.gov/countries/belarus_flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Belgium"
+issuer = ""
+desc = "Belgium is part of an area known as the Low Countries, historically a somewhat larger region than the Benelux group of states, as it also included parts of northern France."
+image = "https://static.history.state.gov/countries/belgium.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Belize"
+issuer = ""
+desc = "In 1840 it became a British colony known as British Honduras, and a Crown colony in 1862. Belize achieved its independence from the United Kingdom on 21 September 1981."
+image = "https://static.history.state.gov/countries/belize-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Benin"
+issuer = ""
+desc = "In 1960, Dahomey gained full independence from France."
+image = "https://static.history.state.gov/countries/benin-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Bolivia"
+issuer = ""
+desc = "The country's population, estimated at 12 million, is multiethnic, including Amerindians, Mestizos, Europeans, Asians, and Africans. Spanish is the official and predominant language, although 36 indigenous languages also have official status, of which the most commonly spoken are Guarani, Aymara, and Quechua languages."
+image = "https://static.history.state.gov/countries/bolivia-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Bosnia and Herzegovina"
+issuer = ""
+desc = "After World War II, it was granted full republic status in the newly formed Socialist Federal Republic of Yugoslavia."
+image = "https://static.history.state.gov/countries/bosnia-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Botswana"
+issuer = ""
+desc = "A country of slightly over 2.3 million people, Botswana is one of the most sparsely populated countries in the world."
+image = "https://static.history.state.gov/countries/botswana-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Brazil"
+issuer = ""
+desc = "Brazil remained a Portuguese colony until 1808 when the capital of the empire was transferred from Lisbon to Rio de Janeiro."
+image = "https://static.history.state.gov/countries/brazil-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Brunei"
+issuer = ""
+desc = "Brunei has been led by Sultan Hassanal Bolkiah since 1967."
+image = "https://static.history.state.gov/countries/brunei-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Bulgaria"
+issuer = ""
+desc = "Bulgaria is a developing country, with an upper-middle-income economy, ranking 68th in the Human Development Index."
+image = "https://static.history.state.gov/countries/bulgarian-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Burkina Faso"
+issuer = ""
+desc = "Burkina Faso is one of the least developed countries, with a GDP of $16.226 billion."
+image = "https://static.history.state.gov/countries/burkinafaso-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Burma"
+issuer = ""
+desc = "On 4 January 1948, Myanmar declared independence under the terms of the Burma Independence Act 1947."
+image = "https://static.history.state.gov/countries/burmese-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = ""
+name = "Burundi"
+issuer = ""
+desc = "The sovereign state of Burundi's political system is that of a presidential representative democratic republic based upon a multi-party state."
+image = "https://static.history.state.gov/countries/burundi.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -118,127 +238,7 @@ name = ""
 issuer = ""
 desc = ""
 image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
+conditions = "BuySell "
 
 [[CURRENCIES]]
 code = ""

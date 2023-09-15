@@ -201,7 +201,7 @@ image = "https://static.history.state.gov/countries/brunei-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "BULGARIA"
 name = "Bulgaria"
 issuer = ""
 desc = "Bulgaria is a developing country, with an upper-middle-income economy, ranking 68th in the Human Development Index."
@@ -209,7 +209,7 @@ image = "https://static.history.state.gov/countries/bulgarian-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "BURKINAFASO"
 name = "Burkina Faso"
 issuer = ""
 desc = "Burkina Faso is one of the least developed countries, with a GDP of $16.226 billion."
@@ -217,7 +217,7 @@ image = "https://static.history.state.gov/countries/burkinafaso-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "BURMA"
 name = "Burma"
 issuer = ""
 desc = "On 4 January 1948, Myanmar declared independence under the terms of the Burma Independence Act 1947."
@@ -225,7 +225,7 @@ image = "https://static.history.state.gov/countries/burmese-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "BURUNDI"
 name = "Burundi"
 issuer = ""
 desc = "The sovereign state of Burundi's political system is that of a presidential representative democratic republic based upon a multi-party state."
@@ -233,43 +233,43 @@ image = "https://static.history.state.gov/countries/burundi.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
-name = ""
+code = "CABOVERDE"
+name = "Cabo Verde"
 issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell "
+desc = "Since the early 1990s, Cape Verde has been a stable representative democracy and has remained one of the most developed and democratic countries in Africa. Lacking natural resources, its developing economy is mostly service-oriented, with a growing focus on tourism and foreign investment."
+image = "https://static.history.state.gov/countries/cape-verde-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "CAMBODIA"
+name = "Cambodia"
+issuer = ""
+desc = "In 802 AD, Jayavarman II declared himself king, uniting the warring Khmer princes of Chenla under the name "Kambuja"."
+image = "https://static.history.state.gov/countries/cambodian-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "CAMEROON"
+name = "Cameroon"
+issuer = ""
+desc = "The Union des Populations du Cameroun (UPC) political party advocated independence, but was outlawed by France in the 1950s, leading to the national liberation insurgency fought between French and UPC militant forces until early 1971"
+image = "https://static.history.state.gov/countries/cameroon-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "CANADA"
+name = "Canada"
+issuer = ""
+desc = "The United States recognized Canada as an independent state with autonomous control over its foreign relations on February 18, 1927, when Vincent Massey presented his credentials in Washington as Canadian Envoy Extraordinary and Minister Plenipotentiary."
+image = "https://static.history.state.gov/countries/canada-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Cayman Islands"
 issuer = ""
 desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/cayman-islands-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]

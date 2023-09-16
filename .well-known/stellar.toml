@@ -274,10 +274,74 @@ conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Central African Republic"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/central-african-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Chad"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/chad-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "Chile"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/chile-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "China"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/china-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Colombia"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/colombia-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "Comoros"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/comoros-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Costa Rica"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/costa-rica-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Cote d’Ivoire"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/cote-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "Croatia"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/croatia-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
@@ -286,6 +350,14 @@ name = ""
 issuer = ""
 desc = ""
 image = ""
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Cuba"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/cuban-flag.jpg"
 conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
@@ -298,10 +370,10 @@ conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Cyprus"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/cyprus-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
@@ -314,18 +386,114 @@ conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Czechia"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/czech-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Czechoslovakia"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/czech-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Democratic Republic of the Congo"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/congo-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "Denmark"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/denmark-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Djibouti"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/djibouti-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Dominica"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/dominica.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "Dominican Republic"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/dominican-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Ecuador"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/ecuador-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Egypt"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/egypt-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "El Salvador"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/els-salvador-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Equatorial Guinea"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/equatorial-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Eritrea"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/eritrea.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "Estonia"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/estonia-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Eswatini"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/swaziland-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
@@ -338,18 +506,42 @@ conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Ethiopia"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/ethiopia-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Fiji"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/fiji-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Finland"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/finland-flag.jpg"
+conditions = "BuySell Sterategy"
+
+[[CURRENCIES]]
+code = ""
+name = "France"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/france-flag.jpg"
+conditions = ""
+
+[[CURRENCIES]]
+code = ""
+name = "Gabon"
+issuer = ""
+desc = ""
+image = "https://static.history.state.gov/countries/gabon-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
@@ -362,282 +554,90 @@ conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "The Gambia"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/gambia-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Georgia"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/georgia-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Germany"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/germany-flag.jpg"
 conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Ghana"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/ghana-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Greece"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/greece-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Grenada"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/grenada-flag.jpg"
 conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Guatemala"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/guatemala.jpg"
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Guinea"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/guinea.jpg"
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Guinea-Bissau"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/guinea-bissau.jpg"
 conditions = "BuySell Sterategy"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Guyana"
 issuer = ""
 desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/guyana-flag.jpg"
 conditions = ""
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Haiti"
 issuer = ""
 desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
+image = "https://static.history.state.gov/countries/haiti.jpg"
 conditions = ""
 
 [[CURRENCIES]]

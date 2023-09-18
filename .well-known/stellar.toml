@@ -270,7 +270,7 @@ name = "Cayman Islands"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/cayman-islands-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -278,7 +278,7 @@ name = "Central African Republic"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/central-african-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -286,7 +286,7 @@ name = "Chad"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/chad-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -294,7 +294,7 @@ name = "Chile"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/chile-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -302,7 +302,7 @@ name = "China"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/china-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -318,7 +318,7 @@ name = "Comoros"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/comoros-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -326,7 +326,7 @@ name = "Costa Rica"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/costa-rica-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -342,15 +342,7 @@ name = "Croatia"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/croatia-flag.jpg"
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -358,15 +350,7 @@ name = "Cuba"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/cuban-flag.jpg"
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -374,15 +358,7 @@ name = "Cyprus"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/cyprus-flag.jpg"
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -390,7 +366,7 @@ name = "Czechia"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/czech-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -398,7 +374,7 @@ name = "Czechoslovakia"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/czech-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -406,7 +382,7 @@ name = "Democratic Republic of the Congo"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/congo-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -414,7 +390,7 @@ name = "Denmark"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/denmark-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -422,7 +398,7 @@ name = "Djibouti"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/djibouti-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -430,7 +406,7 @@ name = "Dominica"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/dominica.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -438,7 +414,7 @@ name = "Dominican Republic"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/dominican-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -446,7 +422,7 @@ name = "Ecuador"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/ecuador-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -454,7 +430,7 @@ name = "Egypt"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/egypt-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -462,7 +438,7 @@ name = "El Salvador"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/els-salvador-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -470,7 +446,7 @@ name = "Equatorial Guinea"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/equatorial-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -478,7 +454,7 @@ name = "Eritrea"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/eritrea.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -486,7 +462,7 @@ name = "Estonia"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/estonia-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -494,7 +470,7 @@ name = "Eswatini"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/swaziland-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -502,7 +478,7 @@ name = ""
 issuer = ""
 desc = ""
 image = ""
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -510,7 +486,7 @@ name = "Ethiopia"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/ethiopia-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -518,7 +494,7 @@ name = "Fiji"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/fiji-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -526,7 +502,7 @@ name = "Finland"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/finland-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -534,7 +510,7 @@ name = "France"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/france-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -542,7 +518,7 @@ name = "Gabon"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/gabon-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -550,7 +526,7 @@ name = ""
 issuer = ""
 desc = ""
 image = ""
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -558,7 +534,7 @@ name = "The Gambia"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/gambia-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -566,7 +542,7 @@ name = "Georgia"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/georgia-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -574,7 +550,7 @@ name = "Germany"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/germany-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -582,7 +558,7 @@ name = "Ghana"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/ghana-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -590,7 +566,7 @@ name = "Greece"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/greece-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -598,7 +574,7 @@ name = "Grenada"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/grenada-flag.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -606,7 +582,7 @@ name = "Guatemala"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/guatemala.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -614,7 +590,7 @@ name = "Guinea"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/guinea.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -622,7 +598,7 @@ name = "Guinea-Bissau"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/guinea-bissau.jpg"
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -630,7 +606,7 @@ name = "Guyana"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/guyana-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
@@ -638,151 +614,135 @@ name = "Haiti"
 issuer = ""
 desc = ""
 image = "https://static.history.state.gov/countries/haiti.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Honduras"
 issuer = ""
 desc = ""
-image = ""
-conditions = "BuySell Sterategy"
+image = "https://static.history.state.gov/countries/honduras-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Hungary"
 issuer = ""
-desc = ""
-image = ""
-conditions = ""
+desc = "During World War II Hungary fought on the side of Germany, although the country fell under German military occupation after an unsuccessful attempt to switch sides on October 15, 1944."
+image = "https://static.history.state.gov/countries/hungary.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Iceland"
 issuer = ""
-desc = ""
-image = ""
-conditions = ""
+desc = "Located on a rift between tectonic plates, Iceland's geologic activity includes geysers and frequent volcanic eruptions."
+image = "https://static.history.state.gov/countries/iceland.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "INDIA"
+name = "India"
+issuer = ""
+desc = "India, officially the Republic of India is a country in South Asia"
+image = "https://static.history.state.gov/countries/india.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "INDONESIA"
+name = "Indonesia"
+issuer = ""
+desc = "Indonesia,officially the Republic of Indonesia is an island nation in Southeast Asia and Oceania between the Indian and Pacific oceans"
+image = "https://static.history.state.gov/countries/indonesia.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "IRAN"
+name = "Iran"
+issuer = ""
+desc = "Iran,also known as Persia and officially as the Islamic Republic of Iran is a country in West Asia"
+image = "https://static.history.state.gov/countries/iran-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "IRAQ"
+name = "Iraq"
+issuer = ""
+desc = "Iraq,officially the Republic of Iraq is a country in the Middle East. It is a federal parliamentary republic that consists of 19 governorates"
+image = "https://static.history.state.gov/countries/iraq-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Ireland"
 issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
+desc = "A war of independence in the early 20th century was followed by the partition of the island, leading to the creation of the Irish Free State, which became increasingly sovereign over the following decades, and Northern Ireland, which remained a part of the United Kingdom. Northern Ireland saw much civil unrest from the late 1960s until the 1990s. This subsided following the Good Friday Agreement in 1998"
+image = "https://static.history.state.gov/countries/ireland-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Israel"
 issuer = ""
 desc = ""
-image = ""
-conditions = ""
+image = "https://static.history.state.gov/countries/israel-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Italy"
 issuer = ""
-desc = ""
-image = ""
-conditions = ""
+desc = "The Italian peninsula was historically the native place of numerous ancient peoples and destination of a myriad of different peoples and cultures who immigrated throughout history."
+image = "https://static.history.state.gov/countries/italy-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Jamaica"
 issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
+desc = "Throughout the 19th century the United States maintained several consular posts throughout Colonial British Jamaica, the earliest at Montego Bay and Falmouth dating from 1861. These posts, which were placed to monitor American trade interests in the Caribbean, were all closed by September 1919."
+image = "https://static.history.state.gov/countries/jamaica.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Japan"
 issuer = ""
-desc = ""
-image = ""
-conditions = ""
+desc = "citizens and the Japanese to interact. There were, however, isolated cases of interaction. By the 1850s, a combination of growing U.S. interests in expanding a regional presence and internal shifts in Japan brought about a dramatic opening in U.S.-Japanese relations."
+image = "https://static.history.state.gov/countries/japan-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Jordan"
 issuer = ""
-desc = ""
-image = ""
-conditions = ""
+desc = "Jordan, officially the Hashemite Kingdom of Jordan, is a country in West Asia. It is situated at the crossroads of Asia, Africa, and Europe, within the Levant region, on the East Bank of the Jordan River. Jordan is bordered by Saudi Arabia to the south and east, Iraq to the northeast, Syria to the north, and the Palestinian West Bank and Israel to the west."
+image = "https://static.history.state.gov/countries/jordan-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Kazakhstan"
 issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
+desc = "Kazakhstan, officially the Republic of Kazakhstan, is a landlocked country located mainly in Central Asia and partly in Eastern Europe."
+image = "https://static.history.state.gov/countries/kazakh-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Kenya"
 issuer = ""
-desc = ""
-image = ""
-conditions = ""
+desc = "Kenya, officially the Republic of Kenya , is a country in East Africa. A member of the Commonwealth with a population of more than 47.6 million in the 2019 census, Kenya is the 28th most populous country in the world and 7th most populous in Africa."
+image = "https://static.history.state.gov/countries/kenya-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Kiribati"
 issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
+desc = "Kiribati, officially the Republic of Kiribati (Gilbertese: [Ribaberiki] Kiribati),[8][9][10] is an island country in the Micronesia subregion of Oceania in the central Pacific Ocean. Its permanent population is over 119,000 as of the 2020 census, with more than half living on Tarawa atoll. The state comprises 32 atolls and one remote raised coral island, Banaba. Its total land area is 811 km2 (313 sq mi) dispersed over 3,441,810 km2 (1,328,890 sq mi) of ocean."
+image = "https://static.history.state.gov/countries/kiribati-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""

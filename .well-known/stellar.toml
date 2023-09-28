@@ -625,7 +625,7 @@ image = "https://static.history.state.gov/countries/honduras-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "HUNGARY"
 name = "Hungary"
 issuer = ""
 desc = "During World War II Hungary fought on the side of Germany, although the country fell under German military occupation after an unsuccessful attempt to switch sides on October 15, 1944."
@@ -633,7 +633,7 @@ image = "https://static.history.state.gov/countries/hungary.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "ICELAND"
 name = "Iceland"
 issuer = ""
 desc = "Located on a rift between tectonic plates, Iceland's geologic activity includes geysers and frequent volcanic eruptions."
@@ -673,7 +673,7 @@ image = "https://static.history.state.gov/countries/iraq-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "IRELAND"
 name = "Ireland"
 issuer = ""
 desc = "A war of independence in the early 20th century was followed by the partition of the island, leading to the creation of the Irish Free State, which became increasingly sovereign over the following decades, and Northern Ireland, which remained a part of the United Kingdom. Northern Ireland saw much civil unrest from the late 1960s until the 1990s. This subsided following the Good Friday Agreement in 1998"
@@ -681,7 +681,7 @@ image = "https://static.history.state.gov/countries/ireland-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "ISRAEL"
 name = "Israel"
 issuer = ""
 desc = ""
@@ -689,7 +689,7 @@ image = "https://static.history.state.gov/countries/israel-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "ITALY"
 name = "Italy"
 issuer = ""
 desc = "The Italian peninsula was historically the native place of numerous ancient peoples and destination of a myriad of different peoples and cultures who immigrated throughout history."
@@ -697,7 +697,7 @@ image = "https://static.history.state.gov/countries/italy-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "JAMAICA"
 name = "Jamaica"
 issuer = ""
 desc = "Throughout the 19th century the United States maintained several consular posts throughout Colonial British Jamaica, the earliest at Montego Bay and Falmouth dating from 1861. These posts, which were placed to monitor American trade interests in the Caribbean, were all closed by September 1919."
@@ -705,7 +705,7 @@ image = "https://static.history.state.gov/countries/jamaica.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "JAPAN"
 name = "Japan"
 issuer = ""
 desc = "citizens and the Japanese to interact. There were, however, isolated cases of interaction. By the 1850s, a combination of growing U.S. interests in expanding a regional presence and internal shifts in Japan brought about a dramatic opening in U.S.-Japanese relations."
@@ -713,7 +713,7 @@ image = "https://static.history.state.gov/countries/japan-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "JORDAN"
 name = "Jordan"
 issuer = ""
 desc = "Jordan, officially the Hashemite Kingdom of Jordan, is a country in West Asia. It is situated at the crossroads of Asia, Africa, and Europe, within the Levant region, on the East Bank of the Jordan River. Jordan is bordered by Saudi Arabia to the south and east, Iraq to the northeast, Syria to the north, and the Palestinian West Bank and Israel to the west."
@@ -721,7 +721,7 @@ image = "https://static.history.state.gov/countries/jordan-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "KAZAKHSTAN"
 name = "Kazakhstan"
 issuer = ""
 desc = "Kazakhstan, officially the Republic of Kazakhstan, is a landlocked country located mainly in Central Asia and partly in Eastern Europe."
@@ -729,7 +729,7 @@ image = "https://static.history.state.gov/countries/kazakh-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "KENYA"
 name = "Kenya"
 issuer = ""
 desc = "Kenya, officially the Republic of Kenya , is a country in East Africa. A member of the Commonwealth with a population of more than 47.6 million in the 2019 census, Kenya is the 28th most populous country in the world and 7th most populous in Africa."
@@ -737,11 +737,179 @@ image = "https://static.history.state.gov/countries/kenya-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "KIRIBATI"
 name = "Kiribati"
 issuer = ""
-desc = "Kiribati, officially the Republic of Kiribati (Gilbertese: [Ribaberiki] Kiribati),[8][9][10] is an island country in the Micronesia subregion of Oceania in the central Pacific Ocean. Its permanent population is over 119,000 as of the 2020 census, with more than half living on Tarawa atoll. The state comprises 32 atolls and one remote raised coral island, Banaba. Its total land area is 811 km2 (313 sq mi) dispersed over 3,441,810 km2 (1,328,890 sq mi) of ocean."
+desc = "Kiribati, officially the Republic of Kiribati is an island country in the Micronesia subregion of Oceania in the central Pacific Ocean. Its permanent population is over 119,000 as of the 2020 census, with more than half living on Tarawa atoll. The state comprises 32 atolls and one remote raised coral island, Banaba. Its total land area is 811 km2 (313 sq mi) dispersed over 3,441,810 km2 (1,328,890 sq mi) of ocean."
 image = "https://static.history.state.gov/countries/kiribati-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "KOSOVO"
+name = "Kosovo"
+issuer = ""
+desc = "Kosovo is a partially recognized country in Southeast Europe."
+image = "https://static.history.state.gov/countries/kosovo-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "KUWAIT"
+name = "Kuwait"
+issuer = ""
+desc = "Kuwait, officially the State of Kuwait is a country in the Middle East."
+image = "https://static.history.state.gov/countries/kuwait-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "KYRGYZSTAN"
+name = "Kyrgyzstan"
+issuer = ""
+desc = "Kyrgyzstan, officially the Kyrgyz Republic,is a landlocked country in Central Asia"
+image = "https://static.history.state.gov/countries/kyrgyzstan-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "LAOS"
+name = "Laos"
+issuer = ""
+desc = "Laos, officially the Lao People's Democratic Republic is a landlocked country in Southeast Asia"
+image = "https://static.history.state.gov/countries/laos-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "LATVIA"
+name = "Latvia"
+issuer = ""
+desc = "Latvia is a country in the Baltic region of Northern Europe. It is one of the three Baltic states, along with Estonia."
+image = "https://static.history.state.gov/countries/latvia-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "LEBANON"
+name = "Lebanon"
+issuer = ""
+desc = "Lebanon, officially the Republic of Lebanon, is a country in West Asia."
+image = "https://static.history.state.gov/countries/lebanon-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "LESOTHO"
+name = "Lesotho"
+issuer = ""
+desc = "Lesotho, formally the Kingdom of Lesotho, is a landlocked country in Southern Africa. "
+image = "https://static.history.state.gov/countries/lesotho-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "LIBERIA"
+name = "Liberia"
+issuer = ""
+desc = "Liberia, officially the Republic of Liberia, is a country on the West African coast"
+image = "https://static.history.state.gov/countries/liberia-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "LIBYA"
+name = "Libya"
+issuer = ""
+desc = "The country's official religion is Islam, with 96.6% of the Libyan population being Sunni Muslims."
+image = "https://static.history.state.gov/countries/libya-flag.png"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "LENSTEIN"
+name = "Liechtenstein"
+issuer = ""
+desc = "It is Europe's fourth-smallest country, with an area of just over 160 square kilometres (62 square miles) and a population of 38,749 (as of 2019)."
+image = "https://static.history.state.gov/countries/liechtenstein-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "LITHUANIA"
+name = "Lithuania"
+issuer = ""
+desc = "It is one of three Baltic states and lies on the eastern shore of the Baltic Sea."
+image = "https://static.history.state.gov/countries/lithuania-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "LUXEMBOURG"
+name = "Luxembourg"
+issuer = ""
+desc = "Luxembourg is a developed country with an advanced economy and one of the world's highest GDP (PPP) per capita as per IMF and World Bank estimates."
+image = "https://static.history.state.gov/countries/luxembourg-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "MADAGASCAR"
+name = "Madagascar"
+issuer = ""
+desc = "Madagascar, officially the Republic of Madagascar, is an island country lying off the southeastern coast of Africa. It is the world's fourth largest island, the second-largest island country and the 46th largest country in the world."
+image = "https://static.history.state.gov/countries/madagascar-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "MALAWI"
+name = "Malawi"
+issuer = ""
+desc = "The part of Africa now known as Malawi was settled around the 10th century by migrating Bantu groups."
+image = "https://static.history.state.gov/countries/malawi-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "MALAYSIA"
+name = "Malaysia"
+issuer = ""
+desc = "Peninsular Malaysia shares a land and maritime border with Thailand and maritime borders with Singapore, Vietnam, and Indonesia."
+image = "https://static.history.state.gov/countries/malaysia-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "MALDIVES"
+name = "Maldives"
+issuer = ""
+desc = "The Maldives chain of 26 atolls stretches across the equator from Ihavandhippolhu Atoll in the north to Addu Atoll in the south."
+image = "https://static.history.state.gov/countries/maldives-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "MALI"
+name = "Mali"
+issuer = ""
+desc = "The country is bordered on the north by Algeria, on the east by Niger, on the northwest by Mauritania, on the south by Burkina Faso and Côte d'Ivoire, and on the west by Guinea and Senegal."
+image = "https://static.history.state.gov/countries/mali-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "MALTA"
+name = "Malta"
+issuer = ""
+desc = "The official languages are Maltese and English, and 66% of the population is at least conversant in Italian."
+image = "https://static.history.state.gov/countries/malta-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "MARSHALLESE"
+name = "Marshall Islands"
+issuer = ""
+desc = "It has the largest portion of its territory composed of water of any sovereign state, at 97.87%."
+image = "https://static.history.state.gov/countries/marshall-islands-flag.png"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "MAURITANIA"
+name = "Mauritania"
+issuer = ""
+desc = "Mauritania is the 11th-largest country in Africa and the 28th-largest in the world, and 90% of its territory is situated in the Sahara. "
+image = "https://static.history.state.gov/countries/mauritania-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "MAURITIUS"
+name = "Mauritius"
+issuer = ""
+desc = "The main island of Mauritius, where most of the people live, has the capital and largest city, Port Louis. "
+image = "https://static.history.state.gov/countries/mauritius-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
@@ -750,175 +918,7 @@ name = ""
 issuer = ""
 desc = ""
 image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""

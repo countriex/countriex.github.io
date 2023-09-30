@@ -913,36 +913,36 @@ image = "https://static.history.state.gov/countries/mauritius-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
-name = ""
+code = "MEXICO"
+name = "Mexico"
 issuer = ""
-desc = ""
-image = ""
+desc = "Mexico, officially the United Mexican States, is a country in the southern portion of North America"
+image = "https://static.history.state.gov/countries/mexico-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "MICRONESIA"
+name = "Micronesia"
+issuer = ""
+desc = "Micronesia is a subregion of Oceania, consisting of about 2,000 small islands in the Northwestern Pacific Ocean"
+image = "https://static.history.state.gov/countries/micronesia-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "MOLDOVA"
+name = "Moldova"
+issuer = ""
+desc = "Moldova, officially the Republic of Moldova, is a landlocked country in Eastern Europe"
+image = "https://static.history.state.gov/countries/moldova-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""
-name = ""
+name = "Monaco"
 issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = ""
-
-[[CURRENCIES]]
-code = ""
-name = ""
-issuer = ""
-desc = ""
-image = ""
-conditions = "BuySell Sterategy"
+desc = "Monaco, officially the Principality of Monaco, is a sovereign city-state and microstate on the French Riviera a few kilometres west of the Italian region of Liguria, in Western Europe, on the Mediterranean Sea"
+image = "https://static.history.state.gov/countries/monaco-flag.jpg"
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = ""

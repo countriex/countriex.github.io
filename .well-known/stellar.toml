@@ -243,7 +243,7 @@ conditions = "BuySell"
 code = "CAMBODIA"
 name = "Cambodia"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = "In 802 AD, Jayavarman II declared himself king, uniting the warring Khmer princes of Chenla under the name "Kambuja"."
+desc = "In 802 AD, Jayavarman II declared himself king, uniting the warring Khmer princes of Chenla under the name Kambuja"
 image = "https://static.history.state.gov/countries/cambodian-flag.jpg"
 conditions = "BuySell"
 

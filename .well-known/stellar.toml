@@ -168,7 +168,7 @@ image = "https://static.history.state.gov/countries/bolivia-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = "B&H"
+code = "BOSNIA"
 name = "Bosnia and Herzegovina"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
 desc = "After World War II, it was granted full republic status in the newly formed Socialist Federal Republic of Yugoslavia."

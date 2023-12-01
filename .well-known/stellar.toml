@@ -320,6 +320,14 @@ image = "https://static.history.state.gov/countries/comoros-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
+code = "CONGO"
+name = "Democratic Republic of the Congo"
+issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
+desc = ""
+image = "https://static.history.state.gov/countries/congo-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
 code = "COSTARICA"
 name = "Costa Rica"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
@@ -365,14 +373,6 @@ name = "Czechia"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
 desc = ""
 image = "https://static.history.state.gov/countries/czech-flag.jpg"
-conditions = "BuySell"
-
-[[CURRENCIES]]
-code = "CONGO"
-name = "Democratic Republic of the Congo"
-issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = ""
-image = "https://static.history.state.gov/countries/congo-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]

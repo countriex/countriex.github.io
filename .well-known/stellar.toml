@@ -48,7 +48,7 @@ image = "https://static.history.state.gov/countries/angolan-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = "ANTIGUABARBUDA"
+code = "ANTIGUA"
 name = "Antigua and Barbuda"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
 desc = "Antigua is Spanish for 'ancient' and barbuda is Spanish for 'bearded'."

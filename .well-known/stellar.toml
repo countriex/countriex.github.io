@@ -101,7 +101,7 @@ name = "Bahamas"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
 desc = "As a close neighbor of the United States, The Bahamas has historically enjoyed good diplomatic relations with the United States. Since achieving full independence from the United Kingdom in 1973, The Bahamas has closely cooperated with the United States to reduce drug trafficking and illegal immigration issues."
 image = "https://static.history.state.gov/countries/bahamian-flag.jpg"
-conditions = ""
+conditions = "BuySell"
 
 [[CURRENCIES]]
 code = "BAHRAIN"

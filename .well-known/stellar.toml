@@ -1,5 +1,5 @@
 
-VERSION = "2.2.0"
+VERSION = "2.0.0"
 NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
 
 [DOCUMENTATION]
@@ -515,85 +515,87 @@ conditions = "BuySell"
 code = "GEORGIA"
 name = "Georgia"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
+desc = "Georgia, a country at the intersection of Europe and Asia, is a former Soviet republic that’s home to Caucasus Mountain villages and Black Sea beaches."
+image = "https://static.history.state.gov/countries/georgia-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "GERMANY"
 name = "Germany"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = ""
+desc = "Germany is a Western European country with a landscape of forests, rivers, mountain ranges and North Sea beaches."
 image = "https://static.history.state.gov/countries/germany-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "GHANA"
 name = "Ghana"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = ""
+desc = "Ghana, officially the Republic of Ghana, is a country in West Africa."
 image = "https://static.history.state.gov/countries/ghana-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "GREECE"
 name = "Greece"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = ""
+desc = "Greece is a country in southeastern Europe with thousands of islands throughout the Aegean and Ionian seas. Influential in ancient times, it's often called the cradle of Western civilization."
 image = "https://static.history.state.gov/countries/greece-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "GRENADA"
 name = "Grenada"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = ""
+desc = "Grenada is a Caribbean country comprising a main island, also called Grenada, and smaller surrounding islands. Dubbed the “Spice Isle,” the hilly main island is home to numerous nutmeg plantations."
 image = "https://static.history.state.gov/countries/grenada-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "GUATEMALA"
 name = "Guatemala"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = ""
+desc = "Guatemala, a Central American country south of Mexico, is home to volcanoes, rainforests and ancient Mayan sites. The capital, Guatemala City, features the stately National Palace of Culture and the National Museum of Archaeology and Ethnology."
 image = "https://static.history.state.gov/countries/guatemala.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "GUINEA"
 name = "Guinea"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = ""
+desc = "Guinea is a country in West Africa, bordered on the west by the Atlantic Ocean. It's known for the Mount Nimba Strict Nature Reserve, in the southeast."
 image = "https://static.history.state.gov/countries/guinea.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "GUINEABISSAU"
 name = "Guinea-Bissau"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = ""
+desc = "Guinea-Bissau is a tropical country on West Africa’s Atlantic coast that’s known for national parks and wildlife. The forested, sparsely populated Bijagós archipelago is a protected biosphere reserve."
 image = "https://static.history.state.gov/countries/guinea-bissau.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "GUYANA"
 name = "Guyana"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = ""
+desc = "Guyana, a country on South America’s North Atlantic coast, is defined by its dense rainforest. English-speaking, with cricket and calypso music, it's culturally connected to the Caribbean region."
 image = "https://static.history.state.gov/countries/guyana-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "HAITI"
 name = "Haiti"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = ""
+desc = "Haiti is a Caribbean country that shares the island of Hispaniola with the Dominican Republic to its east. Though it’s still recovering from a 2010 earthquake, many of Haiti's landmarks dating to the early 19th century remain intact."
 image = "https://static.history.state.gov/countries/haiti.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = ""
+code = "HONDURAS"
 name = "Honduras"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = ""
+desc = "Honduras is a Central American country with Caribbean Sea coastlines to the north and the Pacific Ocean to the south."
 image = "https://static.history.state.gov/countries/honduras-flag.jpg"
 conditions = "BuySell"
 

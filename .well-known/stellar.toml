@@ -738,7 +738,7 @@ conditions = "BuySell"
 [[CURRENCIES]]
 code = "KYRGYZSTAN"
 name = "Kyrgyzstan"
-issuer = ""
+issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
 desc = "Kyrgyzstan, officially the Kyrgyz Republic,is a landlocked country in Central Asia"
 image = "https://static.history.state.gov/countries/kyrgyzstan-flag.jpg"
 conditions = "BuySell"

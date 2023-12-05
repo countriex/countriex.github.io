@@ -786,7 +786,7 @@ conditions = "BuySell"
 [[CURRENCIES]]
 code = "LIBYA"
 name = "Libya"
-issuer = ""
+issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
 desc = "The country's official religion is Islam, with 96.6% of the Libyan population being Sunni Muslims."
 image = "https://static.history.state.gov/countries/libya-flag.png"
 conditions = "BuySell"

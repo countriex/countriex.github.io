@@ -1112,14 +1112,6 @@ image = "https://static.history.state.gov/countries/qatar-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = "SOUTHKOREA"
-name = "South Korea"
-issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
-desc = "South Korea, officially the Republic of Korea, is a country in East Asia"
-image = "https://static.history.state.gov/countries/korea-south-flag.png"
-conditions = "BuySell"
-
-[[CURRENCIES]]
 code = "ROMANIA"
 name = "Romania"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
@@ -1213,6 +1205,14 @@ name = "South Africa"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
 desc = "South Africa, officially the Republic of South Africa, is the southernmost country in Africa"
 image = "https://static.history.state.gov/countries/south-africa-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "SOUTHKOREA"
+name = "South Korea"
+issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
+desc = "South Korea, officially the Republic of Korea, is a country in East Asia"
+image = "https://static.history.state.gov/countries/korea-south-flag.png"
 conditions = "BuySell"
 
 [[CURRENCIES]]

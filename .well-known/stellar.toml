@@ -792,7 +792,7 @@ image = "https://static.history.state.gov/countries/libya-flag.png"
 conditions = "BuySell"
 
 [[CURRENCIES]]
-code = "LENSTEIN"
+code = "LICHTENSTEIN"
 name = "Liechtenstein"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
 desc = "It is Europe's fourth-smallest country, with an area of just over 160 square kilometres (62 square miles) and a population of 38,749 (as of 2019)."

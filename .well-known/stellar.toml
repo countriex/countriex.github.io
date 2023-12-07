@@ -1136,6 +1136,55 @@ image = "https://static.history.state.gov/countries/rwanda-flag.jpg"
 conditions = "BuySell"
 
 [[CURRENCIES]]
+code = "SAINTKITTS"
+name = "Saint Kitts and Nevis"
+issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
+desc = "Saint Kitts and Nevis is a dual-island nation situated between the Atlantic Ocean and Caribbean Sea. It's known for cloud-shrouded mountains and beaches."
+image = "https://static.history.state.gov/countries/st-kitts-nevis-flag.jpg"
+conditions = "BuySell"
+
+
+[[CURRENCIES]]
+code = "SAINTLUCIA"
+name = "Saint Lucia"
+issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
+desc = "Saint Lucia is an Eastern Caribbean island nation with a pair of dramatically tapered mountains, the Pitons, on its west coast."
+image = "https://static.history.state.gov/countries/saint-lucia-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "SAINTVINCENT"
+name = "Saint Vincent and the Grenadines"
+issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
+desc = "St. Vincent and the Grenadines is a southern Caribbean nation comprising a main island, St. Vincent, and a chain of smaller islands."
+image = "https://static.history.state.gov/countries/saint-vincent-grenadines-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "SAMOA"
+name = "Samoa"
+issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
+desc = "Samoa, officially the Independent State of Samoa and until 1997 known as Western Samoa, is a Polynesian island country consisting of two main islands; two smaller, inhabited islands; and several smaller, uninhabited islands, including the Aleipata Islands."
+image = "https://static.history.state.gov/countries/samoa-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "SANMARINO"
+name = "San Marino"
+issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
+desc = "San Marino is a mountainous microstate surrounded by north-central Italy. Among the world’s oldest republics, it retains much of its historic architecture. On the slopes of Monte Titano sits the capital, also called San Marino, known for its medieval walled old town and narrow cobblestone streets."
+image = "https://static.history.state.gov/countries/san-marino-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
+code = "SAOTOME"
+name = "Sao Tome and Principe"
+issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
+desc = "São Tomé and Príncipe, an African island nation close to the equator, is part of a volcano chain featuring striking rock and coral formations, rainforests and beaches. On the larger island, São Tomé, is the Lagoa Azul lagoon."
+image = "https://static.history.state.gov/countries/sao-tome-principe-flag.jpg"
+conditions = "BuySell"
+
+[[CURRENCIES]]
 code = "SAUDIARABIA"
 name = "Saudi Arabia"
 issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"

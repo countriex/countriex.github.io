@@ -1307,7 +1307,7 @@ conditions = "BuySell"
 [[CURRENCIES]]
 code = "SYRIA"
 name = "Syria"
-issuer = ""
+issuer = "GAFYE26ATPYPID4TDX43NWBVFLHD44TBXSOBEMWZVKARV3HQFXDJQQOQ"
 desc = "Syria, officially the Syrian Arab Republic, is a country in West Asia located in the Eastern Mediterranean and the Levant"
 image = "https://static.history.state.gov/countries/syria-flag.jpg"
 conditions = "BuySell"

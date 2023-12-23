@@ -1,32 +1,7 @@
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Origin: *
+<Location "/.well-known/stellar.toml">
+    Header set Access-Control-Allow-Origin "*"
+</Location>
+
 Access-Control-Allow-Origin: *
 
-a2enmod headers
-  <IfModule mod_headers.c>
-   Header set Access-Control-Allow-Origin "*"
- </IfModule>
-add_header Access-Control-Allow-Origin *;
-<?xml version="1.0" encoding="utf-8"?>
-  <configuration>
-    <system.webServer>
-      <httpProtocol>
-        <customHeaders>
-          <add name="Access-Control-Allow-Origin" value="*" />
-        </customHeaders>
-      </httpProtocol>
-    </system.webServer>
-  </configuration>
-enable 'CrossOrigin', origins => '*';
-Access-Control-Allow-Origin: *
-  print header(
-    -type                        => 'text/turtle',
-    -content_location            => 'mydata.ttl',
-    -access_control_allow_origin => '*',
-    );
-  print "Content-Type: text/turtle"
-  print "Content-Location: mydata.ttl"
-  print "Access-Control-Allow-Origin: *"
-  print
-<?php
- header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: *");

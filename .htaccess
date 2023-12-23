@@ -26,3 +26,7 @@ Access-Control-Allow-Origin: *
   print
 <?php
  header("Access-Control-Allow-Origin: *");
+
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: *

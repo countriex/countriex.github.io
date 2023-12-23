@@ -1,4 +1,8 @@
- a2enmod headers
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: *
+
+a2enmod headers
   <IfModule mod_headers.c>
    Header set Access-Control-Allow-Origin "*"
  </IfModule>

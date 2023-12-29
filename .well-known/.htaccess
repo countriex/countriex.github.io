@@ -1,7 +1,0 @@
-<Location "/.well-known/stellar.toml">
-    Header set Access-Control-Allow-Origin "*"
-</Location>
-
-Access-Control-Allow-Origin: *
-
-header("Access-Control-Allow-Origin: *");
